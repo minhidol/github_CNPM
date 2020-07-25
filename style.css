@@ -1,7 +1,25 @@
+body {
+    display: grid;
+    background-color: #404549 !important;
+    grid-template-rows: auto auto auto 10em;
+    grid-template-columns: 1fr 20em;
+    grid-template-areas: 
+    "header header"
+    "menubar menubar"
+    "content sidebar"
+    "footer footer";
+}
+
 #header 
 {
     background-color:#ddd;
+    grid-area: header;
 }
+
+nav {
+    grid-area: menubar;
+}
+
 .dropbtn {
     background-color:#343a40;
     color: #fff;
@@ -10,13 +28,13 @@
     border: none;
 }
 .lesfourmis
-    {
-        background-color:#343a40;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-    }
+{
+    background-color:#343a40;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
 .lesfourmis:hover{
         color:yellow;
       }
@@ -45,6 +63,25 @@
 .dropdown-content a:hover {background-color:#ddd;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #323031; opacity: 0,1;}
+
+main {
+    border: 1px solid red;
+    padding: 0;
+    grid-area: content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.trailer {
+    border: 1px solid blue;
+    padding: 5px;
+}
+
+footer {
+    grid-area: footer;
+}
     
 .footer-link a
 {
