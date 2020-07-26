@@ -97,7 +97,7 @@ main {
     grid-area: sidebar;
 }
 
-.trailer {
+.trailer, .week {
     border: 1px solid gray;
     border-radius: 5px;
     box-shadow: 1px 1px 5px black; 
@@ -109,7 +109,7 @@ main {
 }
 
 
-.trailer-title {
+.trailer-title, .week-title {
     color: yellow;
     text-transform: uppercase;
     margin-top: auto;
@@ -131,8 +131,13 @@ main {
     line-height: 2.5rem;
 }
 
+.week .media-body {
+    line-height: 1.8rem;
+}
+
 p.imdb-pts {
     color: white;
+    font-size: smaller;
 }
 
 *:hover {
