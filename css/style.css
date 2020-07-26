@@ -148,3 +148,68 @@ footer {
 {
     color:yellow;
 }
+
+/*Detail page*/
+.movie-details
+{
+    margin: 3% 15%;
+    height: 600px !important;
+}
+.left-box
+{
+    color:#fff;
+    padding: 20px;
+    margin: 0px 0;
+    width: 50% !important;
+}
+
+.download-btn 
+{
+    border: 2px solid #fff;
+    background: transparent;
+}
+.play-btn
+{
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+.left-box a
+{
+    text-decoration: none !important;
+    border-radius: 30px;
+    padding: 7px 10px;
+    margin-top: 35px;
+    color: #fff !important;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+}
+.casting img
+{
+    height: 80px;
+    width: 55px;
+    border: 2px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.movie-img
+{
+    height: 500px;
+    box-shadow: -4px 4px 5px 0 #000;
+    margin-top: 40px;
+}
+.series img
+{
+    width: 100%;
+}
+.series img
+{
+    width: 100%;
+}
+.container-series img
+{
+    width: 140px;
+    height: 200px
+}
