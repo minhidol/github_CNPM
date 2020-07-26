@@ -100,21 +100,26 @@ main {
 .trailer {
     border: 1px solid gray;
     border-radius: 5px;
-    padding: 5px;
     box-shadow: 1px 1px 5px black; 
     margin-top: 20px;
     background-color: #404549;
+    width: auto;
+    height: 600px;
+    overflow-y: scroll;
 }
+
 
 .trailer-title {
     color: yellow;
     text-transform: uppercase;
     margin-top: auto;
     margin-bottom: auto;
+    padding: 10px;
 }
 
 .media {
     padding: 20px;
+    border-bottom: 1px solid black;
 }
 
 .media-left img {
@@ -128,6 +133,10 @@ main {
 
 p.imdb-pts {
     color: white;
+}
+
+*:hover {
+    color: yellow;
 }
 
 footer {
