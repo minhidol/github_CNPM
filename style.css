@@ -65,9 +65,26 @@ nav {
 .dropdown:hover .dropbtn {background-color: #323031; opacity: 0,1;}
 
 main {
-    border: 1px solid red;
-    padding: 0;
+    border: 1px solid gray;
+    padding: 5px;
     grid-area: content;
+}
+
+.card {
+    padding: 30px;
+}
+
+.movies h3 {
+    text-transform: uppercase;
+    color: yellow;
+}
+
+.movies .view-all {
+    color: white;
+}
+
+.movies .view-all:hover {
+    color: yellow;
 }
 
 .sidebar {
@@ -75,7 +92,7 @@ main {
 }
 
 .trailer {
-    border: 1px solid blue;
+    border: 1px solid gray;
     padding: 5px;
 }
 
