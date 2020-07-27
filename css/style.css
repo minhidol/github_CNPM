@@ -108,8 +108,16 @@ main {
     overflow-y: scroll;
 }
 
+.category {
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black; 
+    margin-top: 20px;
+    background-color: #404549;
+    width: auto;
+}
 
-.trailer-title, .week-title {
+.trailer-title, .week-title, .category-title {
     color: yellow;
     text-transform: uppercase;
     margin-top: auto;
@@ -138,6 +146,21 @@ main {
 p.imdb-pts {
     color: white;
     font-size: smaller;
+}
+
+.category a {
+    text-decoration: none;
+    color: white;
+}
+
+.category a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.category-items {
+    padding: 20px;
+    line-height: 3rem;
 }
 
 *:hover {
@@ -266,4 +289,9 @@ footer {
 #item-name{
     margin-left: -15px;
     margin-top: -15px;
+}
+
+.card-body {
+    text-align: center;
+    margin-top: 10px;
 }
