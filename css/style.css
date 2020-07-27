@@ -227,3 +227,43 @@ footer {
     width: 140px;
     height: 200px
 }
+
+
+/* Section product */
+
+.product-img:hover{
+    opacity: 0.7;
+    transform: scale(0.8);
+}
+.product-img{
+    cursor: pointer;
+    border: 5px solid white;
+}
+.title_header{
+    
+    cursor: pointer;
+    margin-left: 395px;
+    margin-top: 15px;
+    color: whitesmoke;
+}
+.title_header:hover, .title_header:focus, .title_header:active{
+    color: yellow;
+}
+.overlay{
+   margin-left: 40px;
+   background-color: #4da6ff;
+   opacity: 0.7;
+}
+.overlay:hover, .overlay:focus, .overlay:active{
+   opacity: 1;
+   transform: scale(1.2);
+}
+.movies h3{
+   color: yellow;
+   margin-left: 15px;
+}
+
+#item-name{
+    margin-left: -15px;
+    margin-top: -15px;
+}
