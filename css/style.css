@@ -4,7 +4,7 @@ html {
 
 body {
     display: grid;
-    background-color: #404549 !important;
+    background-color: #6A6C6E!important;
     grid-template-rows: auto auto auto 10em;
     grid-template-columns: auto 30em;
     grid-template-areas: 
@@ -16,8 +16,10 @@ body {
 
 #header 
 {
-    background-color:#ddd;
+    background-color:#6A6C6E;
     grid-area: header;
+    background-image: url(images/hihi123.jpg);
+    /* background-repeat:repeat; */
 }
 
 nav {
