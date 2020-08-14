@@ -1,0 +1,303 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    background-color: #6A6C6E!important;
+    grid-template-rows: auto auto auto 10em;
+    grid-template-columns: auto 30em;
+    grid-template-areas: 
+    "header header"
+    "menubar menubar"
+    "content sidebar"
+    "footer footer";
+}
+
+#header 
+{
+    background-color:#6A6C6E;
+    grid-area: header;
+    background-image: url(images/hihi123.jpg);
+    /* background-repeat:repeat; */
+}
+
+nav {
+    grid-area: menubar;
+}
+
+.dropbtn {
+    background-color:#343a40;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.lesfourmis
+{
+    background-color:#343a40;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+.lesfourmis:hover{
+        color:yellow;
+      }
+.dropdown {
+    position: relative;
+    display: inline-block;
+ }
+.dropdown-content {
+    font-size: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+
+.dropdown-content a {
+      color:black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      }
+
+.dropbtn:hover{color:yellow}
+.dropdown-content a:hover {background-color:#ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #323031; opacity: 0,1;}
+
+main {
+    border: 1px solid gray;
+    padding: 5px;
+    grid-area: content;
+    box-shadow: 1px 1px 5px black;
+    margin-top: 20px;
+}
+
+.card {
+    padding: 30px;
+}
+
+.movies h3 {
+    text-transform: uppercase;
+    color: yellow;
+}
+
+.movies .view-all {
+    color: white;
+}
+
+.movies .view-all:hover {
+    color: yellow;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.trailer, .week {
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black; 
+    margin-top: 20px;
+    background-color: #404549;
+    width: auto;
+    height: 600px;
+    overflow-y: scroll;
+}
+
+.category {
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black; 
+    margin-top: 20px;
+    background-color: #404549;
+    width: auto;
+}
+
+.trailer-title, .week-title, .category-title {
+    color: yellow;
+    text-transform: uppercase;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 10px;
+}
+
+.media {
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.media-left img {
+    border: 1px solid white;
+}
+
+.media-body {
+    padding: 10px;
+    line-height: 2.5rem;
+}
+
+.week .media-body {
+    line-height: 1.8rem;
+}
+
+p.imdb-pts {
+    color: white;
+    font-size: smaller;
+}
+
+.category a {
+    text-decoration: none;
+    color: white;
+}
+
+.category a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.category-items {
+    padding: 20px;
+    line-height: 3rem;
+}
+
+*:hover {
+    color: yellow;
+}
+
+footer {
+    grid-area: footer;
+}
+    
+.footer-link a
+{
+    color:#fff;
+    text-decoration: none;
+    margin-top: 40px;
+}
+.footer-link h3
+{
+    margin-top: 40px;
+}
+.footer-link  a:hover
+{
+    color:yellow;
+}
+
+/*Detail page*/
+.movie-details
+{
+    margin: 3% 15%;
+    height: 600px !important;
+}
+.left-box
+{
+    color:#fff;
+    padding: 20px;
+    margin: 0px 0;
+    width: 50% !important;
+}
+
+.download-btn 
+{
+    border: 2px solid #fff;
+    background: transparent;
+}
+.play-btn
+{
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+.left-box a
+{
+    text-decoration: none !important;
+    border-radius: 30px;
+    padding: 7px 10px;
+    margin-top: 35px;
+    color: #fff !important;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+}
+.casting img
+{
+    height: 80px;
+    width: 55px;
+    border: 2px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.movie-img
+{
+    height: 500px;
+    box-shadow: -4px 4px 5px 0 #000;
+    margin-top: 40px;
+}
+.series img
+{
+    width: 100%;
+}
+.series img
+{
+    width: 100%;
+}
+.container-series img
+{
+    width: 140px;
+    height: 200px
+}
+
+
+/* Section product */
+
+.product-img:hover{
+    opacity: 0.7;
+    transform: scale(0.8);
+}
+.product-img{
+    cursor: pointer;
+    border: 5px solid white;
+}
+.title_header{
+    
+    cursor: pointer;
+    margin-left: 395px;
+    margin-top: 15px;
+    color: whitesmoke;
+}
+.title_header:hover, .title_header:focus, .title_header:active{
+    color: yellow;
+}
+.overlay{
+   margin-left: 40px;
+   background-color: #4da6ff;
+   opacity: 0.7;
+}
+.overlay:hover, .overlay:focus, .overlay:active{
+   opacity: 1;
+   transform: scale(1.2);
+}
+.movies h3{
+   color: yellow;
+   margin-left: 15px;
+}
+
+#item-name{
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+.card-body {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.play-video {
+    margin-left: 200px;
+}

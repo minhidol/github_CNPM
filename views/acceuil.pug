@@ -1,0 +1,603 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet', href='css/style.css')
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css', integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.7.0/css/all.css', integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ', crossorigin='anonymous')
+#header.navbar.navbar-expand-sm(style='height: 150px;')
+  .container(style='margin-top: 18px; margin-left: 30px;')
+    .logo
+      a.navbar-brand(href='#')
+        img(src='images/hihi1.png', alt='', style='height: 100px; width:100; position:relative; top:-25px;')
+    .name_web(style='margin-top:-5em;')
+      span(style='font-size: 35px; font-weight:bold; margin-top: 0px; color:white; margin-left: -150px;position: relative;top:10px;left:-50px;') LesFourmisCinema.com
+      br
+      span(style='font-size:13px; position:relative; top:10px;left:-180px; color:cyan')
+        | Xem phim m&#x1EDB;i ch&#x1EA5;t
+        | l&#x1B0;&#x1EE3;ng cao
+    .input-group.md-form.form-sm.form-2.pl-0(style='width:350px; position:relative; top:0px;left:-150px')
+      input.form-control.my-0.py-1.lime-border(type='text', placeholder='Tìm: tên phim, đạo diễn, diễn viên', aria-label='Search')
+      .input-group-append(style='background-color: rgb(51, 51, 133);')
+        span#basic-text1.input-group-text.lime.lighten-2
+          i.fas.fa-search.text-grey(aria-hidden='true')
+  | &gt;
+nav.navbar.navbar-expand-sm.bg-dark.navbar-dark.sticky-top(style='padding-left:150px; border-top:2px solid yellow')
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive')
+    span.navbar-toggler-icon
+  #navbarResponsive.collapse.navbar-collapse(style='position:relative; top:0px;left:-100px;')
+    .dropdown
+      button.lesfourmis(style='font-weight: bold;') Les Fourmis
+    .dropdown
+      button.dropbtn(style='font-weight: bold;') Th&#x1EC3; lo&#x1EA1;i
+      .dropdown-content
+        a(href='#') Phim h&agrave;nh &dstrok;&#x1ED9;ng
+        a(href='#') Phim vi&#x1EC5;n t&#x1B0;&#x1EDF;ng
+        a(href='#') Phim t&acirc;m l&yacute;
+    .dropdown
+      button.dropbtn(style='font-weight: bold;') Qu&#x1ED1;c gia
+      .dropdown-content
+        a(href='#') Vi&#x1EC7;t Nam
+        a(href='#') Nh&#x1EAD;t B&#x1EA3;n
+        a(href='#') H&agrave;n Qu&#x1ED1;c
+    .dropdown
+      button.dropbtn(style='font-weight: bold;') Phim l&#x1EBB;
+      .dropdown-content
+        a(href='#') Phim l&#x1EBB; 2019
+        a(href='#') Phim l&#x1EBB; 2020
+        a(href='#') Phim l&#x1EBB; 2021
+    .dropdown
+      button.dropbtn(style='font-weight: bold;') Phim b&#x1ED9;
+      .dropdown-content(style='width:180px')
+        a(href='#') Phim b&#x1ED9; H&agrave;n Qu&#x1ED1;c
+        a(href='#') Phim b&#x1ED9; Vi&#x1EC7;t Nam
+        a(href='#') Phim b&#x1ED9; &Dstrok;&agrave;i Loan
+    .dropdown
+      button.lesfourmis(style='font-weight: bold;') Phim thuy&#x1EBF;t minh
+    .dropdown
+      button.lesfourmis(style='font-weight: bold;') Phim chi&#x1EBF;u r&#x1EA1;p
+    .dropdown
+      button.lesfourmis(style='font-weight: bold;') Trailer
+    .dropdown
+      button.lesfourmis(style='font-weight: bold;') Top IMDB 2019
+main
+  .container-fluid.py-3.movies
+    .container
+      .container-lg
+        .row
+          h3
+            | Phim l&#x1EBB; m&#x1EDB;i c&#x1EAD;p nh&#x1EAD;t
+            hr
+          a.view-all.ml-auto(href='')
+            p.title_header
+              | Xem t&#x1EA5;t c&#x1EA3; 
+              i.fa.fa-play(style='font-size: 7px;')
+        .card.single-item.bg-dark
+          .row
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/avenger.jpg', alt='Avenger', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='/'+film[0].id, style='text-decoration: none; font-size: 14px;') Avenger: End Game
+                    br
+                    | 150 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/p2.jpg', alt='Weathring', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Weathering With You
+                    br
+                    | 114 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/one_piece.jpg', alt='One_piece', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') One Piece
+                    br
+                    | 120 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/jumanji.jpg', alt='jumanji', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Jumanji
+                    br
+                    | 134 minute
+          .row
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/justice_league.jpg', alt='Justice_League', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Justice League&quot;
+                    br
+                    | 205 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/conan.jpg', alt='conan', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Detective Conan Movie
+                    br
+                    | 190 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/Ant_Man.jpg', alt='Ant_Man', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Ant Man
+                    br
+                    | 178 minute
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/wonder_woman.jpg', alt='Wonder_Woman', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Wonder Woman
+                    br
+                    | 227 minute
+    .container(style='margin-top: 50px;')
+      .container-lg
+        .row
+          h3
+            | Phim b&#x1ED9; m&#x1EDB;i c&#x1EAD;p nh&#x1EAD;t
+            hr
+          a.view-all.ml-auto(href='')
+            p.title_header
+              | Xem t&#x1EA5;t c&#x1EA3; 
+              i.fa.fa-play(style='font-size: 7px;')
+        .card.single-item.bg-dark
+          .row
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/trutien.jpg', alt='trutien', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Tru ti&ecirc;n Thanh V&acirc;n Ch&iacute;
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/YETCNDT.jpg', alt='YETCNDT', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Y&ecirc;u em t&#x1EEB; c&aacute;i nh&igrave;n &dstrok;&#x1EA7;u ti&ecirc;n
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/OP.jpg', alt='OP', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') One Piece
+                    br
+                    | 23 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/BMNPG.jpg', alt='BMNPG', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') B&iacute; m&#x1EAD;t n&agrave;ng Fangirl
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+          .row
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/LHDP.jpg', alt='LHDP', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') L&ecirc; H&#x1EA5;p &Dstrok;&#x1B0;&#x1EDD;ng Ph&egrave;n
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/XCNXA.jpg', alt='XCNXA', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Xin ch&agrave;o ng&agrave;y x&#x1B0;a &#x1EA5;y
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/HDMT.jpg', alt='HDMT', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') H&#x1EAD;u du&#x1EC7; m&#x1EB7;t tr&#x1EDD;i
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/Naruto.jpg', alt='Naruto', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Naruto Shippuden
+                    br
+                    | 23 ph&uacute;t/t&#x1EAD;p
+          .row
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/Doaremon.jpg', alt='Doraemon', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Doaremon
+                    br
+                    | 23 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/The_FLash.jpg', alt='The Flash', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') The Flash
+                    br
+                    | 45 ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/CGNHT.jpg', alt='CGNHT', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') C&ocirc; g&aacute;i ngo&agrave;i h&agrave;nh tinh S&agrave;i Ti&#x1EC3;u Th&#x1EA5;t
+                    br
+                    | 45
+                    |                       ph&uacute;t/t&#x1EAD;p
+            .col.mx-auto
+              .img-container
+                img.card-img-top.product-img(src='./img_movie/Dz.jpg', alt='Dragon_Ball_Super', width='150px', height='215px')
+                input.overlay.btn.btn-primary(type='submit', value='Watching')
+              .card-body
+                .card-text.d-flex.justify-content-center
+                  p#item-name(style='color: white;font-size: 12px;')
+                    a(href='', style='text-decoration: none; font-size: 14px;') Dragon Ball Super
+                    br
+                    | 23 ph&uacute;t/t&#x1EAD;p
+    div
+aside
+  .container-fluid.sidebar
+    .trailer
+      h4.trailer-title Trailer phim m&#x1EDB;i
+      hr
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/parasite.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong K&yacute; sinh tr&ugrave;ng
+              div
+                a.eng-sub(href='#') Parasite
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 9.0 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/Black-widow.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong Go&aacute; ph&#x1EE5; &dstrok;en
+              div
+                a.eng-sub(href='#') Black Widows
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 0 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/background.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='detail_index.html')
+                    strong Bird of Prey
+              div
+                a.eng-sub(href='#') Bird of Prey
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 8.5 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/EndGame.jpeg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='detail_index.html')
+                    strong Bi&#x1EC7;t &dstrok;&#x1ED9;i Si&ecirc;u Anh H&ugrave;ng 4: H&#x1ED3;i k&#x1EBF;t
+              div
+                a.eng-sub(href='#') Avenger: End Game
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 8.5 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/IT.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='detail_index.html')
+                    strong IT: Ch&uacute; h&#x1EC1; ma qu&aacute;i 2
+              div
+                a.eng-sub(href='#') IT: Chapter Two
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 8.0 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/your_name.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='detail_index.html')
+                    strong T&ecirc;n c&#x1EAD;u l&agrave; g&igrave; ?
+              div
+                a.eng-sub(href='#') Your Name
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 8.0 / 10
+    .week
+      h4.week-title Phim hot trong tu&#x1EA7;n
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/parasite.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong K&yacute; sinh tr&ugrave;ng
+              div
+                a.eng-sub(href='#') Parasite
+              div
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 9.0 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/venom.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong Venom
+              div
+                a.eng-sub(href='#') Venom
+              div
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 7.0 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/train_to_busan.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong Train to Busan
+              div
+                a.eng-sub(href='#') Train to Busan
+              div
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 7.5 / 10
+      .row
+        .col-12
+          .media.bg-dark
+            .media-left
+              a(href='#')
+                img(src='images/Bird-Box.jpg', width='100')
+            .media-body.justify-content-center
+              div
+                h5.media-heading
+                  a(href='')
+                    strong Bird Box
+              div
+                a.eng-sub(href='#') Bird Box
+              div
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+                img(src='images/rating.png', width='5%')
+              div
+                p.imdb-pts &Dstrok;i&#x1EC3;m IMDB: 8.0 / 10
+    .category
+      h4.category-title Th&#x1EC3; lo&#x1EA1;i
+      .category-items.bg-dark
+        .row
+          .col-4
+            a(href='') H&agrave;nh &dstrok;&#x1ED9;ng
+          .col-4
+            a(href='') Trinh th&aacute;m
+          .col-4
+            a(href='') Kinh d&#x1ECB;
+        .row
+          .col-4
+            a(href='') H&#x1ECD;c &dstrok;&#x1B0;&#x1EDD;ng
+          .col-4
+            a(href='') H&agrave;i h&#x1B0;&#x1EDB;c
+          .col-4
+            a(href='') Si&ecirc;u nhi&ecirc;n
+        .row
+          .col-4
+            a(href='') T&igrave;nh c&#x1EA3;m
+          .col-4
+            a(href='') Gi&#x1EAD;t g&acirc;n
+          .col-4
+            a(href='') H&agrave;nh &dstrok;&#x1ED9;ng
+        .row
+          .col-4
+            a(href='') Ng&#x1B0;&#x1EDD;i m&aacute;y
+          .col-4
+            a(href='') Si&ecirc;u anh h&ugrave;ng
+          .col-4
+            a(href='') Sci-Fi
+        .row
+          .col-4
+            a(href='') Zombie
+          .col-4
+            a(href='') T&#x1EAD;n th&#x1EBF;
+          .col-4
+            a(href='') Ho&#x1EA1;t h&igrave;nh
+        .row
+          .col-4
+            a(href='') Vi&#x1EC5;n t&#x1B0;&#x1EDF;ng
+          .col-4
+            a(href='') Qu&aacute;i v&#x1EAD;t
+          .col-4
+            a(href='') Drama
+footer
+  #footer(style='height:auto;background-color:#6A6C6E')
+    .container
+      .row
+        .col-sm-3
+          a.navbar-brand(href='#')
+            img(src='images/hihi1.png', alt='', style='position:relative; top:20px; left:-50px; height: 100px;weight:100px;')
+          div(style='font-size:20px; position:relative; top:-80px;left:100px; color:white') LesFourmis.com
+          div(style='font-size:10px; position:relative; top:-80px;left:100px;color:cyan')
+            | Xem phim m&#x1EDB;i ch&#x1EA5;t l&#x1B0;&#x1EE3;ng cao
+        .col-sm-2
+          .footer-link
+            h3.footer-link-header(style='font-size: 18px; position: relative;top:10px; font-weight:bold; color:aqua') Phim les fourmis
+            br
+            a(href='#', title='phim lẻ mới')
+              small Phim l&#x1EBB; m&#x1EDB;i
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim b&#x1ED9; m&#x1EDB;i
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim chi&#x1EBF;u r&#x1EA1;p m&#x1EDB;i
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim kinh &dstrok;i&#x1EC3;n
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim s&#x1EAF;p chi&#x1EBF;u
+            br
+            br
+        .col-sm-2
+          .footer-link
+            h3.footer-link-header(style='font-size: 18px; position: relative;top:10px; font-weight:bold; color:aqua') Phim l&#x1EBB;
+            br
+            a(href='#', title='phim le moi')
+              small Phim h&agrave;nh &dstrok;&#x1ED9;ng
+            br
+            a(href='#', title='phim chieu rap')
+              small Phiem ki&#x1EBF;m hi&#x1EC7;p
+            br
+            a(href='#', title='phim chieu rap')
+              small Phiem kinh d&#x1ECB;
+            br
+            a(href='#', title='phim chieu rap')
+              small Phiem vi&#x1EC5;n t&#x1B0;&#x1EDF;ng
+            br
+            a(href='#', title='phim chieu rap')
+              small Phiem ho&#x1EA1;t h&igrave;nh
+            br
+        .col-sm-2
+          .footer-link
+            h3.footer-link-header(style='font-size: 18px; position: relative;top:10px; font-weight:bold; color:aqua') Phim B&#x1ED9;
+            br
+            a(href='#', title='phim le moi')
+              small Phim b&#x1ED9; H&agrave;n Qu&#x1ED1;c
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim b&#x1ED9; Trung Qu&#x1ED1;c
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim b&#x1ED9; M&#x1EF9;
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim b&#x1ED9; Vi&#x1EC7;t Nam
+            br
+            a(href='#', title='phim chieu rap')
+              small Phim b&#x1ED9; H&#x1ED3;ng k&ocirc;ng
+            br
+        .col-sm-3(style='margin-top: 45px;')
+          p(style='font-weight:bold; font-size:13px;color:aliceblue')
+            | Thong tin lien he 
+            br
+            span
+              | Email:
+              | contact@phimmoi.net
+            br
+            | IP cua ban: 115.79.4.48
+          p(style='font-weight:bold; font-size:13px;color:aliceblue') Aurevoir, A Bientot!
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js', integrity='sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI', crossorigin='anonymous')
