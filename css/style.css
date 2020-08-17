@@ -253,6 +253,10 @@ footer {
     height: 200px
 }
 
+.play-video {
+    margin-left: 200px;
+}
+
 
 /* Section product */
 
@@ -296,8 +300,4 @@ footer {
 .card-body {
     text-align: center;
     margin-top: 10px;
-}
-
-.play-video {
-    margin-left: 200px;
 }
