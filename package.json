@@ -1,0 +1,28 @@
+{
+  "name": "cnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhidol/github_CNPM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhidol/github_CNPM/issues"
+  },
+  "homepage": "https://github.com/minhidol/github_CNPM#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.0",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
