@@ -1,3 +1,7 @@
+body {
+    width: 100%;
+}
+
 .grid-body .row-home:hover, .grid-body .row-check:hover, .grid-body .row-infor:hover, .grid-body .row-support:hover{
   background-color: #0088cc;
 }
@@ -72,3 +76,76 @@ h5.news-heading {
 .news-date {
     text-align: right   ;
 }
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 34px;
+  z-index: 2;
+}
+.ellipse {
+  position: absolute;
+  top: 18px;
+  left: 30px;
+  z-index: 2;
+}
+.text {
+  color: #fff;
+  position: absolute;
+  top: 40px;
+  left: 25%;
+  text-shadow: 0 0 0.2em #33bbff, 0 0 0.2em #33bbff,        0 0 0.2em #33bbff;
+  font-size: 50px;
+}
+/*Footer*/
+
+.footer-content
+{
+  font-family: 'Source Sans Pro', sans-serif !important;
+  width: 100% !important;
+  border: 2px solid #003242;
+  height: 240px;
+  display: flex;
+  color: white;
+  background-color: #414141;
+  font-size: 15px;
+}
+.footer-content h2
+{
+  color: #0084ff;
+}
+.f-section li a
+{
+  text-decoration: none !important;
+  color: white !important;
+}
+.social
+{
+  text-align: center;
+}
+.social i{
+  font-size: 30px;
+  padding: 2%;
+}
+.f-section i
+{
+  text-decoration: none !important;
+  color: white !important;
+}
+.footer-section
+{
+  width: 100% !important;
+  padding-left: 3%;
+  border: 1px double rgb(221, 221, 221);
+  padding-right: 3%;
+  padding-top: 1%
+}
+.footer-bottom
+{
+  width: 100%;
+  text-align: center;
+  background-color: #414141;
+  color: white;
+  border: 1px solid rgb(221, 221, 221)
+}
+/*footer*/
