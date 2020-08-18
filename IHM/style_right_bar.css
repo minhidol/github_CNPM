@@ -1,0 +1,29 @@
+
+div#right_bar
+{
+    background-color:#DEDEDE;
+    text-align: center;
+    font-weight: bold;
+    font-family: Roboto Slab;
+}
+p#total 
+{
+    font-weight: bold;;
+}
+p#case 
+{
+    color:#005AC5;  
+}
+td#number_case
+{
+    color:red;
+} 
+td#pays 
+{
+    width:100px;
+}
+table, td {
+    border:1px solid black;
+    margin:0px auto;
+
+}

@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="./css/style.css" />
 
+    <link rel="stylesheet" href="style_right_bar.css">
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Hello, world!</title>
 
@@ -64,8 +66,6 @@
 
     <div class="row grid-body">
         <div class="col-2 col-sm-2 col-lg-2" style="background-color: #33bbff;">
-
-
           <div class="row user_account" style="text-align: center; border: 3px solid purple;">
             <div class="col-12" style="margin-top: 20px;">
               <img src="./img/app-game.jpg" style="text-align: center;" class="rounded-circle" width="100px" height="100px">
@@ -91,9 +91,7 @@
 
           </div>
 
-
-
-          <div class="row row-check" style="font-size: 20px; border: 3px solid purple; border-top: none; 
+         <div class="row row-check" style="font-size: 20px; border: 3px solid purple; border-top: none; 
           padding: 10px; padding-bottom: 0px;">
             <div class="col-6 col-sm-6 col-lg-6" style="margin-left: 30px;">
               <a href="#"><p>Tiến hành kiểm tra</p></a>
@@ -104,8 +102,7 @@
 
             <div class="col-2 col-lg-2 col-sm-2">
             </div>
-
-          </div>
+         </div>
           
 
           <div class="row row-infor" style="font-size: 20px; border: 3px solid purple; border-top: none; 
@@ -162,9 +159,49 @@
 
               </div>
               <!--Này là sider right-->
-              <div class="col-3 col-sm-3 col-lg-3" style="background-color: blueviolet;">
+              <div class="col-3 col-sm-3 col-lg-3" id="right_bar">
                 <div class="title">
-                  <p>Tổng số ca</p>
+                  <p id="total"> Tổng số <br> <span style="color:red">19 869 127</span> </p>
+                  <p id="case">Số ca theo <br> Quốc gia/Khu vực</p>
+                  <table>
+                    <tr>
+                      <td id="number_case">5 044 864</td>
+                      <td id="pays">USA</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">3 035 422</td>
+                      <td id="pays">Brazil</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">2 215 074</td>
+                      <td id="pays">India</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">890 799</td>
+                      <td id="pays">Russia</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">559 859</td>
+                      <td id="pays">Korean</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">480 278</td>
+                      <td id="pays">Mexico</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">890 799</td>
+                      <td id="pays">Russia</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">480 278</td>
+                      <td id="pays">Mexico</td>
+                    </tr>
+                    <tr>
+                      <td id="number_case">480 278</td>
+                      <td id="pays">Mexico</td>
+                    </tr>
+                  </table>
+
                 </div>
               </div>
           </div>
