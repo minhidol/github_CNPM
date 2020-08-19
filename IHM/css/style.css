@@ -164,6 +164,7 @@ main {
     text-align: right   ;
 }
 
+<<<<<<< HEAD
 .page6 {
     background-color: #33bbff;
 }
@@ -171,6 +172,7 @@ main {
 main p {
     font-size: 20px;
     font-style: bold;
+    font-family: Roboto Slab;
 }
 
 main table {
@@ -193,6 +195,39 @@ main table {
     top: 100px
 }
 
+=======
+<<<<<<< HEAD
+
+div#right_bar
+{
+    background-color:#DEDEDE;
+    text-align: center;
+    font-weight: bold;
+    font-family: Roboto Slab;
+}
+p#total 
+{
+    font-weight: bold;;
+}
+p#case 
+{
+    color:#005AC5;  
+}
+td#number_case
+{
+    color:red;
+} 
+td#pays 
+{
+    width:100px;
+}
+table, td {
+    border:1px solid black;
+    margin:0px auto;
+
+}
+=======
+>>>>>>> b06591dfffbe99b78475ae58a122f3d05cd63570
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
@@ -288,3 +323,4 @@ footer p {
     color: white;
     margin: auto;
 }
+>>>>>>> d3473c2f4533a3398da8fc3257b639b95affa4b4
