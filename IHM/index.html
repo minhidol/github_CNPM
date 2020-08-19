@@ -1,242 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/style_right_bar.css" />
     
 
+=======
+    <link rel="stylesheet" href="./css/style.css" />
+>>>>>>> d3473c2f4533a3398da8fc3257b639b95affa4b4
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <title>Hello, world!</title>
+    <title>Demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <style>
-      .grid-body .row-home:hover, .grid-body .row-check:hover, .grid-body .row-infor:hover, .grid-body .row-support:hover{
-        background-color: #0088cc;
-      }
-      .grid-body .row-home .col-6 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-home .col-4 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-check .col-6 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-check .col-4 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-infor .col-6 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-infor .col-4 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-support .col-6 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .grid-body .row-support .col-4 a{
-        text-decoration: none;
-        color: black;
-      }
-
-      .logo {
-        position: absolute;
-        top: 25px;
-        left: 34px;
-        z-index: 2;
-      }
-
-      .ellipse {
-        position: absolute;
-        top: 18px;
-        left: 30px;
-        z-index: 2;
-      }
-
-      .text {
-        color: #fff;
-        position: absolute;
-        top: 40px;
-        left: 500px;
-        text-shadow: 0 0 0.2em #33bbff, 0 0 0.2em #33bbff,        0 0 0.2em #33bbff;
-        font-size: 50px;
-      }
-      /*Footer*/
-      
-      .footer-content
-      {
-        font-family: 'Source Sans Pro', sans-serif !important;
-        width: 100% !important;
-        border: 2px solid #003242;
-        height: 240px;
-        display: flex;
-        color: white;
-        background-color: #414141;
-        font-size: 15px;
-      }
-      .footer-content h2
-      {
-        color: #0084ff;
-      }
-      .f-section li a
-      {
-        text-decoration: none !important;
-        color: white !important;
-      }
-      .social
-      {
-        text-align: center;
-      }
-      .social i{
-        font-size: 30px;
-        padding: 2%;
-      }
-      .f-section i
-      {
-        text-decoration: none !important;
-        color: white !important;
-      }
-      .footer-section
-      {
-        width: 100% !important;
-        padding-left: 3%;
-        border: 1px double rgb(221, 221, 221);
-        padding-right: 3%;
-        padding-top: 1%
-      }
-      .footer-bottom
-      {
-        width: 100%;
-        text-align: center;
-        background-color: #414141;
-        color: white;
-        border: 1px solid rgb(221, 221, 221)
-      }
-    /*footer*/
-    </style>
-
-  </head>
-  <body class>
-
-    <div class="row grid-body">
-        <div class="col-2 col-sm-2 col-lg-2" style="background-color: #33bbff;">
-
-
-          <div class="row user_account" style="text-align: center; border: 3px solid purple;">
-            <div class="col-12" style="margin-top: 20px;">
-              <img src="./img/app-game.jpg" style="text-align: center;" class="rounded-circle" width="100px" height="100px">
-            </div>
-            <div class="col-12 h4">
-              <p>Thông tin người dùng</p>
-            </div>
-              
-          </div>
-
-
-          <div class="row row-home" style="font-size: 20px; border: 3px solid purple; border-top: none; 
-          padding: 10px; padding-bottom: 0px;">
-            <div class="col-6 col-sm-6 col-lg-6" style="margin-left: 30px;">
-              <a href="#">Trang chủ</p></a><p>
-            </div>
-            <div class="col-4 col-lg-4 col-sm-4">
-              <a href="#"><i class="far fa-address-card"></i></a>
-            </div>
-
-            <div class="col-2 col-lg-2 col-sm-2">
-            </div>
-
-          </div>
-
-
-
-          <div class="row row-check" style="font-size: 20px; border: 3px solid purple; border-top: none; 
-          padding: 10px; padding-bottom: 0px;">
-            <div class="col-6 col-sm-6 col-lg-6" style="margin-left: 30px;">
-              <a href="#"><p>Tiến hành kiểm tra</p></a>
-            </div>
-            <div class="col-4 col-lg-4 col-sm-4" style="padding-top: 15px;">
-              <a href="#"><i class="far fa-edit"></i></a>
-            </div>
-
-            <div class="col-2 col-lg-2 col-sm-2">
-            </div>
-
-          </div>
-          
-
-          <div class="row row-infor" style="font-size: 20px; border: 3px solid purple; border-top: none; 
-          padding: 10px; padding-bottom: 0px;">
-            <div class="col-6 col-sm-6 col-lg-6" style="margin-left: 30px;">
-              <a href="#"><p>Tin tức</p></a>
-            </div>
-            <div class="col-4 col-lg-4 col-sm-4">
-              <a href="#" ><i class="fas fa-cloud"></i></a>
-            </div>
-
-            <div class="col-2 col-lg-2 col-sm-2">
-            </div>
-
-          </div>
-
-          <div class="row row-support" style="font-size: 20px; border: 3px solid purple; border-top: none; 
-          padding: 10px; padding-bottom: 0px;">
-            <div class="col-6 col-sm-6 col-lg-6" style="margin-left: 30px;">
-              <a href="#"><p>Thông tin & hỗ trợ</p></a>
-            </div>
-            <div class="col-4 col-lg-4 col-sm-4" style="padding-top: 15px;">
-              <a href="#"><i class="fa fa-exclamation-circle"></i></a>
-            </div>
-
-            <div class="col-2 col-lg-2 col-sm-2">
-            </div>
-
-          </div>
-
-        <div class="row" style="border: 3px solid purple; border-top: none">
-          <p style="margin-left: 20px;">Phần rỗng</p>
+</head>
+<body>
+    <!--Left sidebar-->
+    <aside class="">
+        <div class="profile">
+            <img src="./images/Ellipse.png" alt="Avatar">
+            <h5>Thông tin người dùng </h5>
         </div>
-
+        <div class="item">
+            <a href="#" class="link">Trang chủ <i class="fa fa-home"></i></a>
         </div>
-        <div class="col-10 col-sm-10 col-lg-10">
+        <div class="item">
+            <a href="#" class="link">Tiến hành kiểm tra <i class="fa fa-edit"></i></a>
+        </div>
+        <div class="item">
+            <a href="#" class="link">Tin tức <i class="fa fa-cloud"></i></a>
+        </div>
+        <div class="item">
+            <a href="#" class="link">Thông tin & hỗ trợ <i class="fa fa-exclamation-circle"></i></a>
+        </div>
+    </aside>
+    <!--End left sidebar-->
 
-          <!--Này là back ground-->
-          <div class="row row_background">
-            <h1 class="text">KIỂM TRA TÌNH TRẠNG COVID-19</h1>
-            <img src="./images/Header.png" class="header" width="100%" height="150px">
-            <img src="./images/Ellipse.png" class="ellipse">
-            <img src="./images/logo.png" class="logo">
-          </div>
+    <!--Header-->
+    <div class="header">
+        <!-- <img src="./images/Header.png" class="header-img"> -->
+        <img src="./images/Ellipse.png" class="ellipse">
+        <img src="./images/logo.png" class="logo">
+        <h5 class="text-uppercase heading">Kiểm tra tình trạng sức khoẻ</h5>
+    </div>
+    <!--End Header-->
 
-          <!--Này là phần content-->
-          <div class="row row_content">
+    <!--Main-->
+    <main>
+        <div class="intro">
+            <div class="intro-text">
+                <p>
+                    Trong tình hình diễn biến dịch COVID-19 ngày càng trở nên trầm trọng, tổ chức
+                    của chúng tôi đã tiến hành liên hệ với Chính Phủ và Bộ Y Tế để bàn bạc và tạo
+                    nên trang web này.
+                </p>
+                <p>
+                    Đây là một trang web để giúp mọi người có thể tự tiến hành kiểm tra tình trạng
+                    cũng như khai báo y tế tại đây:
+                </p>
+            </div>
+            <a href="#" class="btn btn-primary">Tiến hành kiểm tra</a>
+        </div>
+        <div class="news">
+            <h5 class="news-header">Tin tức COVID-19</h5>
+            <table>
+                <tr>
+                  <td class="news-text">1. Thêm 10 ca tử vong tại Hà Nội</td>
+                  <td class="news-date">14:08 - 10/08/2020</td>
+                </tr>
+                <tr>
+                  <td class="news-text">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</td>
+                  <td class="news-date">22:30 - 09/08/2020</td>
+                </tr>
+                <tr>
+                  <td class="news-text">3. Dịch bệnh bùng phát tại Đà Nẵng</td>
+                  <td class="news-date">10:30 - 07/08/2020</td>
+                </tr>
+                <tr>
+                  <td class="news-text">4. Nước ta tạm thời chưa ghi nhận ca mắc mới</td>
+                  <td class="news-date">09:30 - 07/08/2020</td>
+                </tr>
+              </table>
+        </div>
+    </main>
+    <!--End Main-->
 
-            <div class="col-9 col-sm-9 col-lg-9">
-              <div class="row" style="background-color: burlywood;">
-                <p>Tiến hành kiểm tra</p>
-              </div>
+    <!--Right sidebar-->
+    <div class="right-sidebar">
+        <h6 style="font-weight: bold;">Tổng số ca: </h6>
+        <p class="case-number">19 869 127</p>
+        <p style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+        <table class="case-detail">
+            </tr>
+            <tr>
+                <td class="number">5 044 864</td>
+                <td class="country">USA</td>
+            </tr>
+            <tr>
+                <td class="number">3 035 422</td>
+                <td class="country">Brazil</td>
+            </tr>
+            <tr>
+                <td class="number">2 215 074</td>
+                <td class="country">India</td>
+            </tr>
+            <tr>
+                <td class="number">890 799</td>
+                <td class="country">Russia</td>
+            </tr>
+            <tr>
+                <td class="number">559 859</td>
+                <td class="country">Korea</td>
+            </tr>
+            <tr>
+                <td class="number">480 278</td>
+                <td class="country">Mexico</td>
+            </tr>
+            <tr>
+                <td class="number">890 799</td>
+                <td class="country">Russia</td>
+            </tr>
+            <tr>
+                <td class="number">890 799</td>
+                <td class="country">Russia</td>
+            </tr>
+            <tr>
+                <td class="number">890 799</td>
+                <td class="country">Russia</td>
+        </table>
+    </div>
+    <!--End right sidebar-->
 
-                  <div class="row" style="background-color: chocolate;">
-                    <p>Tin tức</p>
+    <!--Footer-->
+    <footer>
+        <div class="row">
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase">Tài trợ: </h5>
+                <p class="text-uppercase">Tài trợ dự án</p>
+                <ul class="sponsor list-unstyled" style="margin-left: 15px;">
+                    <li><a href="#">Tổ chức giáo dục Việt Nam</a></li>
+                    <li><a href="#">Tổ chức y tế thế giới WHO</a></li>
+                    <li><a href="#">Bộ y tế Việt Nam</a></li>
+                    <li><a href="#">Công đoàn y tế Việt Nam</a></li>
+                </ul>
+            </div>
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase"> Liên hệ </h5>
+                <p class="text-uppercase">Thông tin liên hệ: </p>
+                <p><i class="fas fa-phone"></i>  099-999-9999</p>
+                <p><i class="fas fa-envelope"></i> &nbsp; groupD_ihm@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                   </div>
+<<<<<<< HEAD
 
               </div>
               <!--Này là sider right-->
@@ -322,35 +246,28 @@
                   <h2>HỖ TRỢ</h2>
                   <b>GIÁO VIÊN HƯỚNG DẪN:</b>
                   <div class="instructor f-section">
+=======
+            </div>
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase">Hỗ trợ: </h5>
+                <p class="text-uppercase"><b>Giáo viên hướng dẫn</b></p>
+                <ul class="instructor list-unstyled" style="margin-left: 15px;">
+>>>>>>> d3473c2f4533a3398da8fc3257b639b95affa4b4
                     <li>TS. Thái Lê Vinh</li>
                     <li>ThS. Hồ Thị Hoàng Vy</li>
-                  </div>
-                  <b>HOTLINE:</b>
-                  <div class="hotline f-section">
-                    <span><i class="fas fa-phone"></i>0337907047</span>
-                  </div>
-
-              </div>
+                </ul>
+                <p class="text-uppercase"><b>Hotline: </b><i class="fas fa-phone"></i>  0337907047</p>
             </div>
-            <div class="footer-bottom">
-              &copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên
-            </div>
-          </div>
         </div>
+    </footer>
+    <!--End footer-->
+    <div class="credit">
+        <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
 
 
-
-    <div class="form-card">
-      <div class="title">
-        {{#product.title}}
-      </div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
