@@ -164,6 +164,35 @@ main {
     text-align: right   ;
 }
 
+.page6 {
+    background-color: #33bbff;
+}
+
+main p {
+    font-size: 20px;
+    font-style: bold;
+}
+
+main table {
+    border: #000 solid 2px;
+}
+
+.submit {
+    background-color: #1D8EF7;
+    border: #000 solid 2px;
+}
+
+.submit:hover {
+    color: #fff;
+    background-color: none;
+}
+
+#ctnbutton {
+    padding: 5px 30px;
+    left: 500px;
+    top: 100px
+}
+
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
