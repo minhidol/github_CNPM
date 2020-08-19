@@ -7,52 +7,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+    <link rel="stylesheet" href="./css/style_right_bar.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/style_right_bar.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <style>
-        .title_main{
-            margin-left: 10px;
-            margin-top: 20px;
-            height: 30px;
-        }
-        .title_main input{
-            width: 100px;
-            margin-left: 10px;
-        }
-
-        .content_p6{
-            margin-left: 10px;
-            height: auto;
-            margin-top: 0px;
-            margin-bottom: 50px;
-        }
-        .content_p6 .nb_pp{
-            text-align: center;
-            background-color: #b3ecff;
-            line-height: 230px;
-            
-        }
-        .content_p6 .content_pb .row{
-            margin-top: 25px;
-            padding-left: 20px;
-        }
-        .sbm{
-            width: 150px;
-            margin-left: 42%;
-            margin-top: -20px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            background-color: #99ccff;
-            color:black;
-        }
-        .sbm:hover{
-            color: white;
-            background-color: #0080ff;
-        }
-    </style>
 </head>
 <body>
     <!--Left sidebar-->
@@ -68,10 +28,10 @@
             <a href="#" class="link">Bước 2: Đo thân nhiệt <i class="fa fa-check text-primary"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-check text-primary"></i></a>
+            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-ellipsis-h"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 4: Kết nối <i class="fa fa-ellipsis-h"></i></a>
+            <a href="#" class="link">Bước 4: Kết nối </a>
         </div>
     </aside>
     <!--End left sidebar-->
@@ -86,42 +46,75 @@
     <!--End Header-->
 
     <!--Main-->
-    <main>
-       <label class="title_main">Số người tiếp xúc: <input type="number" class="nb" name="nb_people"/></label>
-       <div class="content_p6 row">
-            <div class="col-2 nb_pp">
-                Người thứ 1
+    <div class="status-box">
+        <div class="status">
+            <h2 class="text-center text-uppercase text-success" style="margin: 15px auto;"> <span class="fa fa-check"></span> Cơ thể bình thường</h2>
+        </div>
+        <div class="recommendation">
+            <div id="part_1" class="text-left">
+                <div class="recommend-title ">
+                    <h5 class="text-center">Điều bạn phải lưu ý và tự cách ly</h5>
+                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <p>A. Hạn chế tối đa ra ngoài, chỉ khi thực sự cần thiết</p>
+                    </li>
+                    <li>
+                        <p>B. Đeo khẩu trang khi ra ngoài, giữ khoảng cách 2m</p>
+                    </li>
+                    <li>
+                        <p>C. Thường xuyên rửa tay bằng xà phòng và dung dịch sát khuẩn</p>
+                    </li>
+                    <li>
+                        <p>D. Thường xuyên vệ sinh nhà cửa, sinh hoạt lành mạnh</p>
+                    </li>
+                    <li>
+                        <p>E. Đo và kiểm tra thân nhiệt thường xuyên</p>
+                    </li>
+                    <li>
+                        <p>F. Đảm bảo chế độ dinh dưỡng phù hợp</p>
+                    </li>
+                </ul>
             </div>
-            <div class="col-5 content_pb" style="border-left: 1px solid blue; background-color: #b3ecff;">
-                <div class="row">
-                    SĐT: 0123456789
+            <div id="part_2">
+                <div class="recommend-title ">
+                    <h5 class="text-center">Chế độ dinh dưỡng</h5>
                 </div>
-                <div class="row">
-                    Thời gian tiếp xúc: 9h30 - 07/10/2020
+                <ul class="list-unstyled">
+                    <li>
+                        <p>- Bổ sung đầy đủ lượng vitamin và khoáng chất cần thiết cho cơ thể.</p>
+                    </li>
+                    <li>
+                        <p>- Bổ sung đầy đủ lượng vitamin và khoáng chất cần thiết cho cơ thể.</p>
+                    </li>
+                    <li>
+                        <p>- Bổ sung đầy đủ lượng vitamin và khoáng chất cần thiết cho cơ thể.</p>
+                    </li>
+                </ul>
+                <div class="guides">
+                    <p>Hướng dẫn:</p>
+                    <ol type="none">
+                        <li>
+                            <p>- Chú thích: cung cấp thông tin những người tiếp xúc và những
+                                nơi đã đi qua. 
+                            </p>
+                        </li>
+                        <li>
+                            <p>- Tuân theo những chỉ đạo của cơ quan Y Tế</p>
+                        </li>
+                    </ol>
                 </div>
-                <div class="row">
-                    Dấu hiệu: Bình thường
-                </div>
-                <div class="row">Tên: ABC</div>
-                <div class="row">
-                    <p>Tuổi: xxx </p>
-                    <a href="#" class="btn btn-primary" style="margin-left: 270px; margin-top: 30px;"><i style="font-size:15px" class="fa">&#xf061;</i></a>
-                </div>
+                <button class="btn btn-primary" style="float: right;">Tiếp tục</button>
             </div>
-            <div class="col-5">
-                <img src="/IHM/images/luffy.png" width="98%" height="300px"/>
-            </div>
-           
-       </div>
-       <button type="submit" class="sbm">Xác nhận</button>
-    </main>
+        </div>
+    </div>
     <!--End Main-->
 
     <!--Right sidebar-->
-    <div class="right-sidebar">
+    <div class="right-sidebar" id="right_bar">
         <h6 style="font-weight: bold;">Tổng số ca: </h6>
-        <p class="case-number">19 869 127</p>
-        <p style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+        <p class="total">19 869 127</p>
+        <p id = "case" style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
         <table class="case-detail">
             </tr>
             <tr>
@@ -164,7 +157,7 @@
     <!--End right sidebar-->
 
     <!--Footer-->
-    <footer>
+   <footer>
         <div class="row">
             <div class="box col-4">
                 <h5 class="footer-header text-uppercase">Tài trợ: </h5>
@@ -204,7 +197,6 @@
     <div class="credit">
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

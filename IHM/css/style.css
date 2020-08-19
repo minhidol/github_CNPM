@@ -164,9 +164,6 @@ main {
     text-align: right   ;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 .page6 {
     background-color: #33bbff;
 }
@@ -197,10 +194,6 @@ main table {
     top: 100px
 }
 
-=======
-<<<<<<< HEAD
-
->>>>>>> 97170b8cb7f52ac7ea7175f95fca398a7edc73a8
 div#right_bar
 {
     background-color:#DEDEDE;
@@ -229,11 +222,7 @@ table, td {
     margin:0px auto;
 
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b06591dfffbe99b78475ae58a122f3d05cd63570
->>>>>>> 97170b8cb7f52ac7ea7175f95fca398a7edc73a8
+
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
@@ -444,4 +433,52 @@ main {
 .checkbox label input[type="checkbox"]:disabled + .cr,
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
+}
+
+/* Page 5 */
+div.status-box {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 4em auto;
+    /* grid-template-columns: auto; */
+    grid-template-areas: "status" "recommendation";
+    border: 3px solid #1D8EF7;
+}
+
+div.status {
+    grid-area: status;
+}
+
+div.recommendation {
+    grid-area: recommendation;
+    display: grid;
+    grid-template-columns: 30em auto;
+    grid-template-areas: "part1 part2";
+}
+
+div#part_1 {
+    grid-area: part1;
+    margin-left: 10px;
+}
+
+div#part_2 {
+    grid-area: part2;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+div#part_2 ul {
+    height: 130px;
+    overflow-y: scroll;
+}
+
+.recommend-title {
+    padding: 5px;
+    background-color: #1D8EF7;
+}
+
+.recommendation ul {
+    padding: 5px;
+    background-color: #33bbff;
 }
