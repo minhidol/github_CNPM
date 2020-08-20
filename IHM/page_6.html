@@ -71,7 +71,7 @@
             <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-check text-primary"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 4: Kết nối <i class="fa fa-ellipsis-h"></i></a>
+            <a href="#" class="link text-primary">Bước 4: Kết nối <i class="fa fa-ellipsis-h text-dark"></i></a>
         </div>
     </aside>
     <!--End left sidebar-->
@@ -113,7 +113,32 @@
             </div>
            
        </div>
-       <button type="submit" class="sbm">Xác nhận</button>
+       <button type="submit" class="sbm" data-toggle="modal" data-target="#Confirm_Form">Xác nhận</button>
+       
+
+       <div class="modal fade" role="dialog" id="Confirm_Form">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-title h4 text-center text-info">Xác nhận thành công</div>
+              <button type="button" class="close" data-dismiss ="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+              <p>Cảm ơn bạn đã cung cấp thông tin cho chúng tôi, nhấp nút tiếp tục để trở về trang chủ</p>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="return_pagehome()">Tiếp tục</button>
+            </div>
+            <script>
+                function return_pagehome(){
+                    location.href = "index.html";
+                }
+            </script>
+          </div>
+        </div>
+      </div>
     </main>
     <!--End Main-->
 
