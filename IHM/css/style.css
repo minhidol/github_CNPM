@@ -164,7 +164,7 @@ main {
     text-align: right   ;
 }
 
-<<<<<<< HEAD
+
 .page6 {
     background-color: #33bbff;
 }
@@ -195,8 +195,6 @@ main table {
     top: 100px
 }
 
-=======
-<<<<<<< HEAD
 
 div#right_bar
 {
@@ -226,8 +224,6 @@ table, td {
     margin:0px auto;
 
 }
-=======
->>>>>>> b06591dfffbe99b78475ae58a122f3d05cd63570
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
@@ -323,4 +319,4 @@ footer p {
     color: white;
     margin: auto;
 }
->>>>>>> d3473c2f4533a3398da8fc3257b639b95affa4b4
+
