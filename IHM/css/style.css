@@ -21,6 +21,11 @@ aside {
     border-bottom: 3px solid #1D8EF7;
 }
 
+aside .item:hover {
+    box-shadow: 0px 5px 10px black;
+    font-size: large;
+}
+
 .profile {
     padding: 20px;
     border-bottom: 1px solid black;
@@ -33,6 +38,10 @@ aside {
 
 .item {
     padding: 20px;
+}
+
+.item.active {
+    background-color: rgb(109, 104, 104);
 }
 
 .item:nth-child(even) {
@@ -147,12 +156,12 @@ main {
     padding: 5px;
 }
 
-.news h5 {
+.news h5.news-header {
     padding: 2px;
     border-bottom: 1px solid black;
 }
 
-.news table {
+/* .news table {
     width: 100%;
 }
 
@@ -162,6 +171,47 @@ main {
 
 .news-date {
     text-align: right   ;
+} */
+
+.news-list {
+    margin-top: 20px;
+}
+
+.media {
+    margin-bottom: 20px;
+}
+
+.media-body:nth-child(odd) {
+    border-right: 1px solid black;
+}
+
+.media-left img {
+    width: 300px;
+    height: 150px;
+}
+
+.media-body {
+    padding: 10px;
+}
+
+.media-body span {
+    font-size: smaller;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.media-heading {
+    padding: 5px;
+}
+
+.media-heading a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.media-heading a:hover {
+    color: #33bbff;
 }
 
 .page6 {
