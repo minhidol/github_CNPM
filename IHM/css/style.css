@@ -164,9 +164,7 @@ main {
     text-align: right   ;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 .page6 {
     background-color: #33bbff;
 }
@@ -197,10 +195,7 @@ main table {
     top: 100px
 }
 
-=======
-<<<<<<< HEAD
 
->>>>>>> 97170b8cb7f52ac7ea7175f95fca398a7edc73a8
 div#right_bar
 {
     background-color:#DEDEDE;
@@ -229,11 +224,7 @@ table, td {
     margin:0px auto;
 
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> b06591dfffbe99b78475ae58a122f3d05cd63570
->>>>>>> 97170b8cb7f52ac7ea7175f95fca398a7edc73a8
+
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
