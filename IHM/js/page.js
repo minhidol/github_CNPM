@@ -8,10 +8,12 @@ camera.onclick = function()
    warning.remove();
    var html ='';
    html =  '   <div class ="column-2-6" style="margin-left:35%;margin-top:7%" id="img">   '  + 
-   '            <img src="images/m.jpeg" id="users">  '+
+   '            <img src="images/avatar.jpg" id="users">  '+
    '               <div class="scanning">  '  + 
-   '                   <h5>Trạng thái scanning:</h5>  '  + 
-   '                   <h4>100%</h4>  '  + 
+   '                   <div class="loading-bar-box">  '  + 
+   '                        <div class="loading-bar" id="loading-bar"></div>  ' + 
+   '                   </div>   ' +   
+   '                   <button class="btn btn-primary scan-btn" onclick="Scanning()">Bắt đầu scan</button>    ' +
    '               </div>  '  + 
    '    <div class="_button" style="margin-top:5%">    '  + 
    '           <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" style="width:100px">Hủy</button>  '  + 
@@ -78,4 +80,37 @@ function confirm()
     var main = document.getElementById("main");
     main.innerHTML = html;
 
+}
+
+var width = 0;
+var interval; 
+function Scanning() {
+    var scanning = document.querySelector('button.scan-btn'); 
+    var bar = document.getElementById('loading-bar');
+    var img = document.getElementById('users'); 
+    img.src = 'images/avatar.jpg';
+    bar.style.display = 'block';
+    resetLoading(); 
+    interval = setInterval(Load, 50); 
+    function Load() {
+        scanning.innerText = 'Scanning : ' + width + '%'; 
+        if (width >= 101) {
+            clearInterval(interval); 
+            scanning.innerText = 'RESCAN'; 
+            img.src = 'images/m.jpeg';
+            alert('Qúa trình kiểm tra hoàn tất ! Vui lòng nhấn xác nhận để thực hiện bước tiếp theo.')
+            bar.style.display = 'none'; 
+        }
+        else {
+            width++; 
+            bar.style.width = width + '%'; 
+        }
+    }
+}
+
+function resetLoading() {
+    var bar = document.getElementById('loading-bar');
+    width = 0;
+    clearInterval(interval)
+    bar.style.width = width + '%';
 }

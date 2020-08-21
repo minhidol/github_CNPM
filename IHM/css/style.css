@@ -628,3 +628,20 @@ input[type="file"]{
     display: inline-block;
     width: 50%;
 }
+
+/* scanning camera */ 
+.loading-bar-box {
+    width: 100%;
+    background-color: rgba(155, 155, 255, 0.36);
+    transition: width 10s linear;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loading-bar {
+    height: 5px;
+    background-color: #aff;
+    width: 1%;
+    position: relative;
+    transition: linear;
+}
