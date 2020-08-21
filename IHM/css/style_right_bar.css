@@ -1,29 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
+.right-sidebar
+{
+    font-family: 'Bitter', serif !important;
+    border-left: 1px solid #2e0000;
+    border-right: 1px solid #2e0000;
+}
 
 div#right_bar
 {
-    background-color:#DEDEDE;
-    /* text-align: center; */
-    font-weight: bold;
+    background-color:#f37070;
+    text-align: center;
     font-family: Roboto Slab;
 }
-p#total 
+.total
 {
-    font-weight: bold;;
+    color: rgb(209, 0, 0);
+    font-size: 35px;
 }
 p#case 
 {
-    color:#005AC5;  
+    color:#000000;  
 }
 td#number_case
 {
-    color:red;
+    color:rgb(0, 0, 0);
 } 
 td#pays 
 {
-    width:100px;
+    width:100%;
 }
 table, td {
-    border:1px solid black;
-    /* margin:0px auto; */
-    /* padding: 5px; */
+    border:1px solid rgb(73, 0, 0);
+    margin:0px auto;
+    padding: 5px;
 }

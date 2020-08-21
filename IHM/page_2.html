@@ -19,67 +19,43 @@
     <!------ Include the above in your HEAD tag ---------->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
-        .info{
-            display:flex;
-        }
-        .info-detailed{
-            padding-left: 0%;
-        }
-        .info1{
-            border-right: 1px solid black;
-        }
-        .info2{
-            border-left: 1px solid black;
-        }
-        label{
-            display: inline-block;
-            clear: left;
-            width: 25%;
-            text-align: right;
-            margin-right: 2%;
-            margin-top: 2%;
-        }
-        input, textarea{
-            display: inline-block;
-            width: 50%;
-        }
-        input[type="number"]{
-            width: 15%;
-        }
-        input[type="file"]{
-            display: inline-block;
-            width: 50%;
-        }
+        
     </style>
 </head>
 <body>
     <!--Left sidebar-->
-    <aside class="">
+    <aside>
         <div class="profile">
-            <img src="./images/Ellipse.png" alt="Avatar">
+            <img src="./images/avatar.png" alt="Avatar" heigh="92px" width="92px">
             <h5>Thông tin người dùng </h5>
+            <p>
+                Tên đăng nhập: <span id="username">ihmk18vpD</span><br>
+                Giới tính: <span id="gender">Nam</span><br>
+                Quốc tịch: <span id="nation">Việt Nam</span><br>
+                
+            </p>
         </div>
         <div class="item">
-            <a href="#" class="link">Trang chủ <i class="fa fa-home"></i></a>
+            <a href="#" class="link">Bước 1: Điền thông tin <i class="fa fa-ellipsis-h"></i> </a>
         </div>
         <div class="item">
-            <a href="#" class="link">Tiến hành kiểm tra <i class="fa fa-edit"></i></a>
+            <a href="#" class="link">Bước 2: Đo thân nhiệt</a>
         </div>
         <div class="item">
-            <a href="#" class="link">Tin tức <i class="fa fa-cloud"></i></a>
+            <a href="#" class="link">Bước 3: Lời khuyên </a>
         </div>
         <div class="item">
-            <a href="#" class="link">Thông tin & hỗ trợ <i class="fa fa-exclamation-circle"></i></a>
+            <a href="#" class="link">Bước 4: Kết nối </a>
         </div>
     </aside>
     <!--End left sidebar-->
 
     <!--Header-->
     <div class="header">
-        <!-- <img src="./images/Header.png" class="header-img"> -->
+        <img src="./images/Header.png" class="header-img">
         <img src="./images/Ellipse.png" class="ellipse">
         <img src="./images/logo.png" class="logo">
-        <h5 class="text-uppercase heading">Kiểm tra tình trạng sức khoẻ</h>
+        <h5>HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h5>
     </div>
     <!--End Header-->
 
@@ -87,7 +63,7 @@
     <main>
         <div class="info">
             <div class="info-detailed info1" style="width:100%;">
-                <h4 style="text-align:center">Thông tin cá nhân</h4>
+                <h3 style="text-align:center">Thông tin cá nhân</h3>
                 <form method="post" action="#">
                     <label for="name">Họ và tên: </label>
                     <input type="text" name="fullname" id="fullname">
@@ -127,10 +103,11 @@
                 </form>
                 <p id="notice" style="font-size: 15px; color: red; padding-left: 27%">Đây là thông tin cung cấp cho chính phủ, (*) yêu cầu phải khai báo chính xác, trung thực.</p>
                 <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
-                <button type="submit" id="submit-page2" style="display:inline-block; margin-right:15%; width:15%; margin-left: 70%">Hoàn tất</button>
+                <a href="page_3.html"><button submit" id="submit-page2" style="display:inline-block; margin-right:15%; width:15%; margin-left: 70%">Hoàn tất</button></a>
                 <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
             </div>
         </div>
+        
     </main>
     <!--End Main-->
 

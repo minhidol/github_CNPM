@@ -1,65 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+
 body {
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: 16em auto 13em;
+    grid-template-columns: 18em auto 17em;
     /* grid-template-areas: "nav-aside content"; */
     grid-template-areas: 
     "nav-aside header header"
     "nav-aside main rightside"
     "footer footer footer"
     "credit credit credit";
+    font-family: 'Bitter', serif !important;
 }
 
 /* left sidebar */
 
 aside {
+    
     grid-area: nav-aside;
-    background-color: #DADADA;
+    background-color: #9b1700;
     display: flex;
     flex-direction: column;
     /* border: 1px solid rgb(78, 78, 78); */
-    border-bottom: 3px solid #1D8EF7;
+    border-top: 1px solid #2e0000;
+    border-right: 1px solid #2e0000;
+    border-left: 1px solid #2e0000;
+
 }
 
 aside .item:hover {
-    box-shadow: 0px 5px 10px black;
+    background-color: #cc0000;
     font-size: large;
 }
 
 .profile {
-    padding: 20px;
-    border-bottom: 1px solid black;
+    padding: 25px;
 }
 
 .profile img {
     display: block;
     margin: 5px auto;
 }
-
+.profile h5{
+    color: white;
+    padding-top: 5%;
+    font-size: 20px;
+}
+.profile p{
+    color: white;
+    text-align: left;
+    font-size: 13px;
+}
+.profile span
+{
+    color: rgb(255, 187, 0);
+    text-align: left;
+    font-size: 13px;
+}
 .item {
+    font-size: 18px;
     padding: 20px;
 }
 
 .item.active {
-    background-color: rgb(109, 104, 104);
+    background-color: #5c0e00 !important;
+    font-size: 18px;
+    padding: 20px;
 }
 
 .item:nth-child(even) {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #2e0000;
+    border-bottom: 1px solid #2e0000;
 }
 
 .item:nth-child(5) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #2e0000;
 }
 
 .link {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .link:hover {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 182, 182);
 }
 
 aside i {
@@ -74,12 +98,18 @@ aside i {
     padding: 0;
     position: relative;
     margin: 0;
-    /* border: 3px solid rebeccapurple; */
+    /* border: 3px solid rebeccapurple;
     background: url('../images/Header.png');
     height: 150px;
+    */
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    border: 2px solid #2e0000;
+}
+.header-img
+{
+    width: 100%;
 }
 
 .header-logo {
@@ -92,7 +122,6 @@ aside i {
     margin-left: 0;
     margin-right: auto;
 }
-
 .ellipse {
     position: absolute;
     left: 2%;
@@ -108,12 +137,12 @@ aside i {
 }
 
 .header h5 {
-    color: #fff;
+    color: rgb(255, 196, 0);
     position: absolute;
     top: 35%;
     left: 25%;
-    text-shadow: 0 0 0.2em #33bbff, 0 0 0.2em #33bbff,        0 0 0.2em #33bbff;
-    font-size: 30px;
+    text-shadow: 0 0 0.2em #7d8000, 0 0 0.2em #7d8000,  0 0 0.2em #7d8000;
+    font-size: 35px;
 }
 
 /* main */
@@ -123,7 +152,7 @@ main {
     grid-template-rows: auto auto;
     /* grid-template-columns: auto; */
     grid-template-areas: "intro" "news";
-    border: 3px solid #1D8EF7;
+    border: 1px solid #8a0000;
 }
 
 /* content */
@@ -132,8 +161,7 @@ main {
     padding: 25px;
     padding-bottom: 5px;
     margin-bottom: 5px;
-    border-bottom: 3px solid #1D8EF7;
-    box-shadow: 0px 1px 10px black;
+    border-bottom: 2px solid #8a0000;
 }
 
 .intro-text {
@@ -142,7 +170,7 @@ main {
 }
 
 .intro-text p {
-    font-size: large;
+    font-size: medium;
 }
 
 .intro a {
@@ -156,6 +184,17 @@ main {
     padding: 5px;
 }
 
+.intro a
+{
+    background-color:#cc0000 ;
+    border: 1px solid black !important;
+}
+.intro a:hover
+{
+    background-color:#940000 ;
+    border: 1px solid black !important;
+}
+
 .news h5.news-header {
     padding: 2px;
     border-bottom: 1px solid black;
@@ -164,6 +203,7 @@ main {
 .news table {
     width: 100%;
     border: none;
+    border-bottom: 1px solid black;
 }
 
 .news-table td {
@@ -176,7 +216,7 @@ main {
 }
 
 .news-table tr td a:hover {
-    color: #33bbff;
+    color: #ff0000;
 }
 
 .news-text {
@@ -230,7 +270,7 @@ main {
 }
 
 .page6 {
-    background-color: #33bbff;
+    background-color: #dadada;
 }
 
 main p {
@@ -240,11 +280,11 @@ main p {
 }
 
 main table {
-    /* border: #000 solid 2px; */
+    border: #000 solid 2px;
 }
 
 .submit {
-    background-color: #1D8EF7;
+    background-color: #f71d1d;
     border: #000 solid 2px;
 }
 
@@ -259,11 +299,10 @@ main table {
     top: 100px
 }
 
-
 div#right_bar
 {
     background-color:#DEDEDE;
-    /* text-align: center; */
+    text-align: center;
     font-weight: bold;
     font-family: Roboto Slab;
 }
@@ -273,7 +312,7 @@ p#total
 }
 p#case 
 {
-    color:#005AC5;  
+    color:#c50700;  
 }
 td#number_case
 {
@@ -284,50 +323,52 @@ td#pays
     width:100px;
 }
 table, td {
-    /* border:1px solid black; */
-    
+    border:1px solid black;
+    margin:0px auto;
 
 }
 
+.box{
+    padding-top: 2%;
+    padding-left: 3%;
+}
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
-    background-color: #DADADA;
-    border-top: 3px solid #1D8EF7;
-    border-bottom: 3px solid #1D8EF7;
-    /* padding: 20px;
-    text-align: center; */
+    color: rgb(0, 0, 0);
+    background-color: DADADA !important;
+    padding: 20px;
+    text-align: center;
 }
-
+.right-sidebar h6{
+    font-size: 20px;
+}
 .case-number {
     color: red;
-    font-weight: bold;
 }
 
 table.case-detail {
-    /* margin: auto; */
+    width: 96% !important;
+    margin: auto;
 }
 
 table.case-detail .number {
-    color: red;
-    font-weight: bold;
+    color: rgb(0, 0, 0);
     text-align: left;
-    /* padding-right: 20px; */
+    padding-right: 20px;
 }
 
 table.case-detail .country {
     color: black;
-    font-weight: bold;
-    /* text-align: left; */
+    text-align: left;
 }
 
 /* footer */ 
 footer {
     grid-area: footer;
-    background-color: #4F4A4A;
+    background-color: #9b1700;
     padding: 10px;
-    border-bottom: 3px solid #1D8EF7;
-    font-family: 'Source Sans Pro', sans-serif !important;
+    border: 2px solid #2e0000;
 }
 
 footer .row {
@@ -336,7 +377,7 @@ footer .row {
 
 footer .footer-header {
     font-weight: bold;
-    color: #1D8EF7;
+    color: #ffae00;
 }
 
 footer p {
@@ -344,8 +385,8 @@ footer p {
 }
 
 .box:nth-child(even) {
-    border-left: 2px solid #1D8EF7;
-    border-right: 2px solid #1D8EF7;
+    border-left: 2px solid #2e0000;
+    border-right: 2px solid #2e0000;
 }
 
 .sponsor li a, .instructor li {
@@ -375,8 +416,9 @@ footer p {
 .credit {
     grid-area: credit;
     padding: 5px;
-    background-color: #4F4A4A;
-    border-bottom: 3px solid #1D8EF7;
+    background-color: #700000;
+    border-bottom: 2px solid #2e0000;
+    border-top: 1px solid #2e0000;
 }
 
 .credit p {
@@ -413,7 +455,7 @@ main {
  }  
  .column-3-6-2
  {
-    width:60%;
+    width:70%;
  }
  
  [class^=column]
@@ -548,28 +590,41 @@ div#part_2 ul {
     padding: 5px;
     background-color: #33bbff;
 }
-
-td.number 
-{
-    /* font-size:1.2019rem; */
-
-}
-td.country
-{
-    /* font-size: 1.2019rem; */
-}
-table.case-detail tr a 
-{
-    
-}
-.scrollspy-example {
-    position: relative;
-    height: 300px;
-    margin-top: 0;
-    overflow: auto;
+main{
     width: 100%;
-    float: right;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    padding: 10px;
+}
+.info{
+    border-bottom: 1px solid #8a0000;
+}
+.info{
+    display:flex;
+    width: 100%;
+}
+.info-detailed{
+    padding-left: 0%;
+}
+.info1{
+    border-right: 1px solid black;
+}
+.info2{
+    border-left: 1px solid black;
+}
+label{
+    display: inline-block;
+    clear: left;
+    width: 25%;
+    text-align: right;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+input, textarea{
+    display: inline-block;
+    width: 50%;
+}
+input[type="number"]{
+    width: 15%;
+}
+input[type="file"]{
+    display: inline-block;
+    width: 50%;
 }
