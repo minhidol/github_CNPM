@@ -7,6 +7,7 @@ const homePage = (req,res)=>
         res.render('acceuil',{film:films});
     })
 }
+
 const detail_Film = (req,res)=>
 {
     Film.find().then(function(films)
