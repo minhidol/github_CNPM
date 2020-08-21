@@ -65,7 +65,7 @@
             <div class="info-detailed info1" style="width:100%;">
                 <h3 style="text-align:center">Thông tin cá nhân</h3>
                 <form method="post" action="#">
-                    <label for="name">Họ và tên: </label>
+                    <label for="name" id="name">Họ và tên:<span></span> </label>
                     <input type="text" name="fullname" id="fullname">
                     <span id="warn1" style="font-size: 25px; color: red;">*</span><br>
                     <label for="address">Địa chỉ: </label>
@@ -103,7 +103,7 @@
                 </form>
                 <p id="notice" style="font-size: 15px; color: red; padding-left: 27%">Đây là thông tin cung cấp cho chính phủ, (*) yêu cầu phải khai báo chính xác, trung thực.</p>
                 <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
-                <a href="page_3.html"><button submit" id="submit-page2" style="display:inline-block; margin-right:15%; width:15%; margin-left: 70%">Hoàn tất</button></a>
+                <a href="page_3.html"><button submit" id="submit-page2" style="display:inline-block; margin-right:15%; width:15%; margin-left: 70%" onclick="next()">Hoàn tất</button></a>
                 <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
             </div>
         </div>
@@ -199,6 +199,7 @@
       <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
   </div>
 
+    <script src="js/page2.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
