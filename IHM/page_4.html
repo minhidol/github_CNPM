@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -60,6 +59,26 @@
             color: white;
             background-color: #0080ff;
         }
+        #location1,#location2,#location3,#location4,#location5,#location6{
+            margin-top: 2%;
+            font-size: 15px;
+            text-align: left;
+            background-color: rgb(255, 208, 0);
+            padding-left: 10%;
+        }
+        #location1 p,#location2 p,#location3 p,#location4 p,#location5 p,#location6 p{
+        
+            font-size: 15px;
+        }
+        .all-location div:hover{
+            margin-top: 2%;
+            font-size: 10px;
+            text-align: left;
+            background-color: rgb(202, 165, 0) !important;
+            padding-left: 10%;
+            font-size: 15px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -101,46 +120,78 @@
     <!--End Header-->
 
     <!--Main-->
-    <main>
+    <main style="color:rgb(68, 0, 0) !important;">
+        <div class="status" >
+            <h2 class="text-center text-uppercase text-danger" style="margin: 15px auto;"> <span class="fas fa-times"></span> Cơ thể có nguy cơ mắc bệnh</h2>
+        </div>
+        <div class="content" style="background-color: #dadada;">
+        <div class="location-recom">
+
+        </div>
        <table border="2" cellspacing="0" cellpadding="0" align="center">
-            <tr>
-                <td>
-                    <p align="center">Có dấu hiệu nhiểm COVID-19 - Liên hệ tổ chức y tế</p>
-                </td>
-                <td>
-                    <p>Địa điểm 1: Bệnh viện Đại học Y Dược<br>
-                        Hotline: 096969969</p>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="3">
-                    <img src="./images/map.png" width="73%" height="300px" vspace="30" hspace="100">
-                </td>
-                <td>
-                    <p>
-                        Địa điểm 2: Bệnh viện Chợ Rẫy<br>
-                            Hotline: 092845023 
+            <tr colspan="2">
+                <td colspan="3">
+                    <p align="center" style="text-indent: 10px; font-size: 17px;">
+                        Có dấu hiệu nhiễm COVID-19 - Liên hệ tổ chức y tế. Sau đây là những địa điểm đề xuất đáng tin cậy để xét nghiệm, bạn hãy vui lòng chọn địa điểm phù hợp cũng như là gần nhất:
                     </p>
                 </td>
             </tr>
-            <div>
-                <tr>
-                    <td>
+            <tr>
+                <td class="map" style="padding: 1%;">
+                    <iframe id="frame" style="border:2px solid #830000" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7305199538746!2d106.66228201474868!3d10.755239892335908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efa87dc6d6d%3A0x4feb0a1e755b6d62!2zQuG7h25oIHZp4buHbiDEkOG6oWkgaOG7jWMgWSBkxrDhu6NjIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1598016828152!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.707145314885!2d106.65754181474875!3d10.75703849233467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef1efebf7d7%3A0x9014ce53b8910a58!2zQuG7h25oIHZp4buHbiBDaOG7oyBS4bqreQ!5e0!3m2!1svi!2s!4v1598016858078!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>-->
+                    
+                </td>
+                <td class="all-location" style="width: 40%; padding: 1%;">
+                    <h3>ĐỊA ĐIỂM GẦN NHẤT:</h3>
+                    <div class="location" onclick="displayMap(this.id)" id="location1" style="border: 1px solid black;">
                         <p>
-                            Hướng dẫn:<br>
-                            - Chú thích: cung cấp thông tin những người tiếp xúc và những nơi đã đi qua.<br>
-                            - Tuân theo những chỉ đạo của cơ quan y tế.
+                            Địa điểm 1: Bệnh viện Đại học Y Dược TPHCM<br>
+                            Hotline: 096969969<br>
+                            Khoảng cách: 1.21 km
                         </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="page_5.html"><button id="ctnbutton" type="submit" class="submit">Tiếp tục</button>
-                    </td>
-                </tr>
+                    </div>
+                    <div class="location" onclick="displayMap(this.id)" id="location2" style="border: 1px solid black;">
+                        <p>
+                            Địa điểm 2: Bệnh viện Chợ Rẫy TPHCM<br>    
+                            Hotline: 096969969<br>
+                            Khoảng cách: 1.51 km
+                        </p>
+                    </div>
+                    <div class="location" onclick="displayMap(this.id)" id="location3" style="border: 1px solid black;">
+                        <p>
+                            Địa điểm 1: Bệnh viện Nhiệt đới TPHCM<br>
+                            Hotline: 096969969<br>
+                            Khoảng cách: 5.67 km
+                        </p>
+                    </div>
+                    <div class="location" onclick="displayMap(this.id)" id="location4" style="border: 1px solid black;">
+                        <p>
+                            Địa điểm 1: Bệnh viện Nhi Đồng TPHCM<br>
+                            Hotline: 096969969<br>
+                            Khoảng cách: 3.12 km
+                        </p>
+                    </div>
+                    <div class="location" onclick="displayMap(this.id)" id="location5" style="border: 1px solid black;">
+                        <p>
+                            Địa điểm 1: Bệnh viện Hùng Vương TPHCM<br>
+                            Hotline: 096969969<br>
+                            Khoảng cách: 2.50 km
+                        </p>
+                    </div>
+                </td>
+            </tr>     
+        </table>
+        <p>
+            <div class="instruction" style="font-size: 15px; text-align:center;">
+                Hướng dẫn:<br>
+                Chú thích: cung cấp thông tin những người tiếp xúc và những nơi đã đi qua.<br>
+                Tuân theo những chỉ đạo của cơ quan y tế.
+                <br><a href="page_5.html"><button style="color:white;" id="ctnbutton" type="submit" class="submit">Tiếp tục</button><br><br>
             </div>
-            
-       </table>
+        </p>
+        
+        </div>
     </main>
     <!--End Main-->
 
@@ -231,7 +282,41 @@
     <div class="credit">
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
-
+    <script>
+        function displayMap(id)
+        {
+            var locationid = document.getElementById(id);
+            var map = document.getElementById("frame");
+            switch (id)
+            {
+                case "location1":
+                {
+                    map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7305199538746!2d106.66228201474868!3d10.755239892335908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efa87dc6d6d%3A0x4feb0a1e755b6d62!2zQuG7h25oIHZp4buHbiDEkOG6oWkgaOG7jWMgWSBkxrDhu6NjIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1598016828152!5m2!1svi!2s";   
+                    break;
+                }
+                case "location2":
+                {
+                    map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.707145314885!2d106.65754181474875!3d10.75703849233467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef1efebf7d7%3A0x9014ce53b8910a58!2zQuG7h25oIHZp4buHbiBDaOG7oyBS4bqreQ!5e0!3m2!1svi!2s!4v1598016858078!5m2!1svi!2s";
+                    break;
+                }
+                case "location3":
+                {
+                    map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.767124574079!2d106.67772001474879!3d10.752422692337841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0229e6c5c5%3A0xc23ac2a87e65214c!2zQuG7h25oIHZp4buHbiBOaGnhu4d0IMSQ4bubaQ!5e0!3m2!1svi!2s!4v1598021148412!5m2!1svi!2s";
+                    break;
+                }
+                case "location4":
+                {
+                    map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3685932657854!2d106.70027551474904!3d10.783055692316996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f49837fb3b1%3A0x40292ba4f0715549!2zQuG7h25oIHZp4buHbiBOaGkgxJHhu5NuZyAtIEPhu5VuZyAz!5e0!3m2!1svi!2s!4v1598021252998!5m2!1svi!2s"
+                    break;
+                }
+                case "location5":
+                {
+                    map.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7225382335705!2d106.65959281474883!3d10.755854092335518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ef0359b2f71%3A0xb1228743c8a02efa!2zQuG7h25oIHZp4buHbiBIw7luZyBWxrDGoW5n!5e0!3m2!1svi!2s!4v1598021429100!5m2!1svi!2s";
+                    break;
+                }
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
