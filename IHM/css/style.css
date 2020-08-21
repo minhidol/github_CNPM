@@ -21,6 +21,11 @@ aside {
     border-bottom: 3px solid #1D8EF7;
 }
 
+aside .item:hover {
+    box-shadow: 0px 5px 10px black;
+    font-size: large;
+}
+
 .profile {
     padding: 20px;
     border-bottom: 1px solid black;
@@ -33,6 +38,10 @@ aside {
 
 .item {
     padding: 20px;
+}
+
+.item.active {
+    background-color: rgb(109, 104, 104);
 }
 
 .item:nth-child(even) {
@@ -147,13 +156,27 @@ main {
     padding: 5px;
 }
 
-.news h5 {
+.news h5.news-header {
     padding: 2px;
     border-bottom: 1px solid black;
 }
 
 .news table {
     width: 100%;
+    border: none;
+}
+
+.news-table td {
+    border: none;
+}
+
+.news-table tr td a {
+    text-decoration: none;
+    color: black;
+}
+
+.news-table tr td a:hover {
+    color: #33bbff;
 }
 
 .news-text {
@@ -164,10 +187,48 @@ main {
     text-align: right   ;
 }
 
-<<<<<<< HEAD
+.news-list {
+    margin-top: 20px;
+    display: none;
+}
 
-=======
->>>>>>> f2c611a13001485d1c1f0338ad28cf70ffa18fd0
+.media {
+    margin-bottom: 20px;
+}
+
+.media-body:nth-child(odd) {
+    border-right: 1px solid black;
+}
+
+.media-left img {
+    width: 300px;
+    height: 150px;
+}
+
+.media-body {
+    padding: 10px;
+}
+
+.media-body span {
+    font-size: smaller;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.media-heading {
+    padding: 5px;
+}
+
+.media-heading a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.media-heading a:hover {
+    color: #33bbff;
+}
+
 .page6 {
     background-color: #33bbff;
 }
@@ -179,7 +240,7 @@ main p {
 }
 
 main table {
-    border: #000 solid 2px;
+    /* border: #000 solid 2px; */
 }
 
 .submit {
@@ -198,14 +259,10 @@ main table {
     top: 100px
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f2c611a13001485d1c1f0338ad28cf70ffa18fd0
 div#right_bar
 {
     background-color:#DEDEDE;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
     font-family: Roboto Slab;
 }
@@ -226,22 +283,18 @@ td#pays
     width:100px;
 }
 table, td {
-    border:1px solid black;
-    margin:0px auto;
+    /* border:1px solid black; */
+    
 
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> f2c611a13001485d1c1f0338ad28cf70ffa18fd0
 /*right sidebar */
 .right-sidebar {
     grid-area: rightside;
     background-color: #DADADA;
     border-top: 3px solid #1D8EF7;
     border-bottom: 3px solid #1D8EF7;
-    padding: 20px;
-    text-align: center;
+    /* padding: 20px;
+    text-align: center; */
 }
 
 .case-number {
@@ -250,20 +303,20 @@ table, td {
 }
 
 table.case-detail {
-    margin: auto;
+    /* margin: auto; */
 }
 
 table.case-detail .number {
     color: red;
     font-weight: bold;
     text-align: left;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 table.case-detail .country {
     color: black;
     font-weight: bold;
-    text-align: left;
+    /* text-align: left; */
 }
 
 /* footer */ 
@@ -329,9 +382,7 @@ footer p {
     color: white;
     margin: auto;
 }
-<<<<<<< HEAD
 
-=======
 *{
     box-sizing: border-box;
 }
@@ -361,7 +412,7 @@ main {
  }  
  .column-3-6-2
  {
-    width:70%;
+    width:60%;
  }
  
  [class^=column]
@@ -496,4 +547,29 @@ div#part_2 ul {
     padding: 5px;
     background-color: #33bbff;
 }
->>>>>>> f2c611a13001485d1c1f0338ad28cf70ffa18fd0
+
+td.number 
+{
+    /* font-size:1.2019rem; */
+
+}
+td.country
+{
+    /* font-size: 1.2019rem; */
+}
+table.case-detail tr a 
+{
+    
+}
+.scrollspy-example {
+    position: relative;
+    height: 300px;
+    margin-top: 0;
+    overflow: auto;
+    width: 100%;
+    float: right;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 10px;
+}
+

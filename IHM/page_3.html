@@ -3,25 +3,54 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <title>Demo</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="./css/style_right_bar.css" />
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style_right_bar.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-
-</head>
+      <style>
+        input[type=checkbox] + label
+        {
+          display:block;
+          margin:0.2em;
+        }
+        input[type=checkbox]
+        {
+          display: none;
+        }
+        input[type=checkbox] + label:before{
+          content:"\2714";
+          border:0.2em solid rgb(36, 32, 32);
+          border-radius:0.2em;
+          width:1em;
+          height:1em;
+          margin-right:0.3em;
+          padding-left:0.2em;
+          padding-right:0.2em;
+          vertical-align:bottom;
+          color:transparent;
+          background-color: white;
+          
+        }
+        input[type=checkbox]:checked + label:before
+        {
+          background-color:#FFF;
+          color:black;
+        }
+      </style>
+  </head>
 <body>
+    
+
     <!--Left sidebar-->
     <aside class="">
         <div class="profile">
@@ -29,16 +58,16 @@
             <h5>Thông tin người dùng </h5>
         </div>
         <div class="item">
-            <a href="#" class="link">Trang chủ <i class="fa fa-home"></i></a>
+            <a href="#" class="link">Bước 1: Điền thông tin <i class="fa fa-check text-primary"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Tiến hành kiểm tra <i class="fa fa-edit"></i></a>
+            <a href="#" class="link">Bước 2: Đo thân nhiệt <i class="fa fa-check text-primary"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Tin tức <i class="fa fa-cloud"></i></a>
+            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-ellipsis-h"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Thông tin & hỗ trợ <i class="fa fa-exclamation-circle"></i></a>
+            <a href="#" class="link">Bước 4: Kết nối</i></a>
         </div>
     </aside>
     <!--End left sidebar-->
@@ -48,172 +77,156 @@
         <!-- <img src="./images/Header.png" class="header-img"> -->
         <img src="./images/Ellipse.png" class="ellipse">
         <img src="./images/logo.png" class="logo">
-        <h5 class="text-uppercase heading">Kiểm tra tình trạng sức khoẻ</h>
+        <h5 class="text-uppercase heading">Kiểm tra tình trạng sức khoẻ</h5>
     </div>
     <!--End Header-->
 
     <!--Main-->
-    <main>
-        <div class ="column-2-6">
-            <img src="images/m.jpeg" id="users">
-            <h4>Vui lòng bậc Camera</h4>
-            <div class="_button">
-                <button type="button" class="btn btn-danger" style="width:100px">Hủy</button>
-                <button type="button" class="btn btn-success" style="width:100px">Xác nhận</button>
+        <main style="background-color:grey" id="main">
+            <div style="margin-left:30%;width:40%;margin-top:5%;" id="camera">
+                <button type="button" class="btn btn-primary" style="margin-left:25%" id="_button"> 
+                    <svg width="150px" height="150px" viewBox="0 0 16 16" class="bi bi-camera" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
+                        <path fill-rule="evenodd" d="M15 12V6a1 1 0 0 0-1-1h-1.172a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 9.173 3H6.828a1 1 0 0 0-.707.293l-.828.828A3 3 0 0 1 3.172 5H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                        <path fill-rule="evenodd" d="M8 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                        <path d="M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                    </svg>
+                </button>
             </div>
-            <div class="scanning">
-                <h5>Trạng thái scanning:</h5>
-                <h4>100%</h4>
+            <div id="warning">
+                <p style="text-align:center; background-color:#ffc107;color:#212529;;border:1px solid black;width:30%;margin:0px auto; margin-top:10px">Vui lòng bậc camera để kiểm tra nhiệt độ</p>
             </div>
-        </div>
-        <div class="column-4-6">
-            <h4 class="status" style="font-size: 30px;">Tình trạng</h4>
-            <p style="margin-left:3%;font-size:20px;">Nhiệt độ: 39°C</p>
-
-            <h5 style="margin-left:3%;font-size: 20px;">Triệu chứng nhiễm bệnh covid 19:</h5>
-             <div class="column-3-6-1">
-                    <div class="checkbox">
-                <label>
-            <input type="checkbox" value="">
-            <span class="cr" ><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                Đau đầu
-          </label>
-        </div>
-        <div class="checkbox" style="margin-top:10px">
-          <label>
-            <input type="checkbox" value="" checked>
-            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                Đau họng
-          </label>
-        </div>
-        <div class="checkbox" style="margin-top:10px">
-            <label>
-              <input type="checkbox" value="" checked>
-              <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                  Tiêu chảy
-            </label>
-          </div>
-        </div>
-    <div class="column-3-6-2">
-        <div class="checkbox" style="margin-top:10px">
-          <label>
-            <input type="checkbox" value="">
-            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                Khó thở
-          </label>
-        </div>
-        <div class= "checkbox" style="margin-top:10px">
-          <label>
-            <input type="checkbox" value="" checked>
-            <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                Mất khả năng nói hoặc cử động
-          </label>
-        </div>
-        <div class="checkbox" style="margin-top:10px">
-            <label>
-              <input type="checkbox" value="" checked>
-              <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                Mất vị giác hoặc khứu giác
-            </label>
-          </div>
-    </div><br>
-    <div id="2_button" style="margin-left: 50%;margin-top:20%">
-    <button type="button" class="btn btn-success" style="width:100px; background-color:rgb(0, 247, 255);font-size:16px;">Quay lại</button>
-    <button type="button" class="btn btn-success" style="width:100px;font-size:16px">Xác nhận</button>
-        </div>
-</div>        
-</div>
+            
+            <!-- <form action="/action_page.php">
+                <div class="form-check">
+                  <label class="form-check-label" for="check1">
+                    <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked> Đau đầu
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Đau họng 
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="check2">
+                    <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Tiêu chảy
+                  </label>
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+              <form action="/action_page.php">
+                  <div class="form-check">
+                    <label class="form-check-label" for="check1">
+                      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>  Khó thở
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="check2">
+                      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Mất khả năng nói hoặc cử động  
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="check2">
+                      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">Mất vị giác hoặc khứu giác
+                    </label>
+                  </div>
+                 
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form> -->
     </main>
     <!--End Main-->
 
     <!--Right sidebar-->
     <div class="right-sidebar" id="right_bar">
-        <h6 style="font-weight: bold;">Tổng số ca: </h6>
-        <p class="total">19 869 127</p>
-        <p id = "case" style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
-        <table class="case-detail">
-            </tr>
-            <tr>
-                <td class="number">5 044 864</td>
-                <td class="country">USA</td>
-            </tr>
-            <tr>
-                <td class="number">3 035 422</td>
-                <td class="country">Brazil</td>
-            </tr>
-            <tr>
-                <td class="number">2 215 074</td>
-                <td class="country">India</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">559 859</td>
-                <td class="country">Korea</td>
-            </tr>
-            <tr>
-                <td class="number">480 278</td>
-                <td class="country">Mexico</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-        </table>
+        <div class="bs-example" data-example-id="embedded-scrollspy">
+            <div class="scrollspy-example" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <h6 style="font-weight: bold; text-align: center;">Tổng số ca: </h6>
+            <p class="total" style=" text-align: center; color:red;font-size: 18px;">19 869 127</p>
+            <p id = "case" style="color: #1D8EF7; font-weight: bold;margin-top:-10px;text-align: center;margin-left:20px;margin-right:20px">Số ca theo Quốc gia/Khu vực</p>
+            <div class="case-detail" style="margin-left:10px;width:100%">
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">5 044 864</span><span style="color:black;margin-left:15px">USA</span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;padding-top:-150px"><span style="color:red">3 035 422</span><span style="color:black;margin-left:15px">Brazil      </span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">2 215 074</span><span style="color:black;margin-left:15px">India</span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">890 799</span><span style="color:black;margin-left:15px">Russia</span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">559 859</span><span style="color:black;margin-left:15px">Korea</span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">559 859</span><span style="color:black;margin-left:15px">Korea</span></a>
+                    <br>
+                    <hr>
+                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">480 278</span><span style="color:black;margin-left:15px">Mexico</span></a>
+            </div>
+        </div>
     </div>
-    <!--End right sidebar-->
+    </div>
+  
+        
 
+      
     <!--Footer-->
-    <footer>
-      <div class="row">
-          <div class="box col-4">
-              <h5 class="footer-header text-uppercase">Tài trợ: </h5>
-              <p class="text-uppercase">Tài trợ dự án</p>
-              <ul class="sponsor list-unstyled" style="margin-left: 15px;">
-                  <li><a href="#">Tổ chức giáo dục Việt Nam</a></li>
-                  <li><a href="#">Tổ chức y tế thế giới WHO</a></li>
-                  <li><a href="#">Bộ y tế Việt Nam</a></li>
-                  <li><a href="#">Công đoàn y tế Việt Nam</a></li>
-              </ul>
-          </div>
-          <div class="box col-4">
-              <h5 class="footer-header text-uppercase"> Liên hệ </h5>
-              <p class="text-uppercase">Thông tin liên hệ: </p>
-              <p><i class="fas fa-phone"></i>  099-999-9999</p>
-              <p><i class="fas fa-envelope"></i> &nbsp; groupD_ihm@gmail.com</p>
-              <p><i class="fas fa-map-marker-alt"></i> 227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh</p>
-              <div class="social">
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-          </div>
-          <div class="box col-4">
-              <h5 class="footer-header text-uppercase">Hỗ trợ: </h5>
-              <p class="text-uppercase"><b>Giáo viên hướng dẫn</b></p>
-              <ul class="instructor list-unstyled" style="margin-left: 15px;">
-                  <li>TS. Thái Lê Vinh</li>
-                  <li>ThS. Hồ Thị Hoàng Vy</li>
-              </ul>
-              <p class="text-uppercase"><b>Hotline: </b><i class="fas fa-phone"></i>  0337907047</p>
-          </div>
-      </div>
-  </footer>
-  <!--End footer-->
-  <div class="credit">
-      <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
-  </div>
-
+   <footer>
+        <div class="row">
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase">Tài trợ: </h5>
+                <p class="text-uppercase">Tài trợ dự án</p>
+                <ul class="sponsor list-unstyled" style="margin-left: 15px;">
+                    <li><a href="#">Tổ chức giáo dục Việt Nam</a></li>
+                    <li><a href="#">Tổ chức y tế thế giới WHO</a></li>
+                    <li><a href="#">Bộ y tế Việt Nam</a></li>
+                    <li><a href="#">Công đoàn y tế Việt Nam</a></li>
+                </ul>
+            </div>
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase"> Liên hệ </h5>
+                <p class="text-uppercase">Thông tin liên hệ: </p>
+                <p><i class="fas fa-phone"></i>  099-999-9999</p>
+                <p><i class="fas fa-envelope"></i> &nbsp; groupD_ihm@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh</p>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                  </div>
+            </div>
+            <div class="box col-4">
+                <h5 class="footer-header text-uppercase">Hỗ trợ: </h5>
+                <p class="text-uppercase"><b>Giáo viên hướng dẫn</b></p>
+                <ul class="instructor list-unstyled" style="margin-left: 15px;">
+                    <li>TS. Thái Lê Vinh</li>
+                    <li>ThS. Hồ Thị Hoàng Vy</li>
+                </ul>
+                <p class="text-uppercase"><b>Hotline: </b><i class="fas fa-phone"></i>  0337907047</p>
+            </div>
+        </div>
+    </footer>
+    <!--End footer-->
+    <div class="credit">
+        <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
+    </div>
+    <script>
+      function return_pagehome(){
+          location.href = "page_3.html";
+      }
+  </script>
+<!------ Include the above in your HEAD tag ---------->
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/page.js" type="text/javascript"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+    <script src="js/page.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

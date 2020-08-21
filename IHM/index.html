@@ -21,14 +21,14 @@
             <img src="./images/Ellipse.png" alt="Avatar">
             <h5>Thông tin người dùng </h5>
         </div>
-        <div class="item">
+        <div class="item active">
             <a href="#" class="link">Trang chủ <i class="fa fa-home"></i></a>
         </div>
         <div class="item">
             <a href="#" class="link">Tiến hành kiểm tra <i class="fa fa-edit"></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Tin tức <i class="fa fa-cloud"></i></a>
+            <a href="#" class="link" id="news-button">Tin tức <i class="fa fa-cloud"></i></a>
         </div>
         <div class="item">
             <a href="#" class="link">Thông tin & hỗ trợ <i class="fa fa-exclamation-circle"></i></a>
@@ -62,25 +62,156 @@
             <a href="#" class="btn btn-primary">Tiến hành kiểm tra</a>
         </div>
         <div class="news">
-            <h5 class="news-header">Tin tức COVID-19</h5>
-            <table>
+            <h5 class="news-header text-uppercase text-info">Tin tức COVID-19</h5>
+            <table class="news-table">
                 <tr>
-                  <td class="news-text">1. Thêm 10 ca tử vong tại Hà Nội</td>
-                  <td class="news-date">14:08 - 10/08/2020</td>
+                    <td class="news-text"><a href="">1. Thêm 10 ca tử vong tại Hà Nội</a></td>
+                    <td class="news-date">14:08 - 10/08/2020</td>
                 </tr>
                 <tr>
-                  <td class="news-text">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</td>
-                  <td class="news-date">22:30 - 09/08/2020</td>
+                    <td class="news-text"><a href="">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</a></td>
+                    <td class="news-date">22:30 - 09/08/2020</td>
                 </tr>
                 <tr>
-                  <td class="news-text">3. Dịch bệnh bùng phát tại Đà Nẵng</td>
-                  <td class="news-date">10:30 - 07/08/2020</td>
+                    <td class="news-text"><a href="">3. Dịch bệnh bùng phát tại Đà Nẵng</a></td>
+                    <td class="news-date">10:30 - 07/08/2020</td>
                 </tr>
                 <tr>
-                  <td class="news-text">4. Nước ta tạm thời chưa ghi nhận ca mắc mới</td>
-                  <td class="news-date">09:30 - 07/08/2020</td>
+                    <td class="news-text"><a href="">4. Nước ta tạm thời chưa ghi nhận thêm ca mắc mới</a></td>
+                    <td class="news-date">09:30 - 07/08/2020</td>
                 </tr>
-              </table>
+            </table>
+            <div class="news-list">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Covid-19: Số ca nhiễm lên 993</a>
+                                </h5>
+                                <p>Ngày 19/8 ghi nhận 4 ca nhiễm. Tổng số ca lên 993, trong đó 525 ca khỏi, 25 ca tử vong.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Diễn viên Hàn mắc Covid-19</a>
+                                </h5>
+                                <p><span>Hàn QUốc</span> - Diễn viên Seo Sung Jong - hiện đóng cùng Hwang Jung Eum trong "To All The Guys Who Loved Me" - dương tính với Covid-19, hôm 19/8.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">5 bệnh nhân Covid-19 xuất viện</a>
+                                </h5>
+                                <p>
+                                    <span>THỪA THIÊN - HUẾ</span> - 5 bệnh nhân Covid-19 chuyển từ Quảng Nam, Đà Nẵng ra Bệnh viện Trung ương Huế cơ sở 2 điều trị, xuất viện chiều 19/8.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Qúa trình phê duyệt vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Quyền phê duyệt vaccine thuộc cơ quan quản lý dược mỗi quốc gia, vì vậy các tiêu chuẩn có sự khác biệt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Brazil thử nghiệm thêm vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Cơ quan quản lý y tế Brazil phê duyệt thử nghiệm lâm sàng loại vaccine Covid-19 thứ tư, từ công ty dược phẩm Mỹ Johnson & Johnson.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news6.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Sự ra đời của vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Vaccine Covid-19 có tốc độ phát triển nhanh nhất trong lịch sử y học, chỉ 67 ngày kể từ khi bùng dịch. Vaccine thường phải thử trên động vật rồi đến 3 giai đoạn trên người, nhưng cũng có vaccine đi tắt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news7.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Seoul siết biện pháp chống Covid-19</a>
+                                </h5>
+                                <p>
+                                    Hàn Quốc hôm nay thắt chặt các biện pháp chống Covid-19 tại Seoul và các khu vực lân cận khi số ca nhiễm nCoV mới tại nước này tăng cao kỷ lục.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!--End Main-->
@@ -173,6 +304,7 @@
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
 
+    <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
