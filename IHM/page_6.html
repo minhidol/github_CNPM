@@ -13,53 +13,9 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!------ Include the above in your HEAD tag ---------->
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-        .title_main{
-            margin-left: 10px;
-            margin-top: 20px;
-            height: 30px;
-        }
-        .title_main input{
-            width: 100px;
-            margin-left: 10px;
-        }
-
-        .content_p6{
-            margin-left: 10px;
-            height: auto;
-            margin-top: 0px;
-            margin-bottom: 50px;
-        }
-        .content_p6 .nb_pp{
-            text-align: center;
-            background-color: #b3ecff;
-            line-height: 230px;
-            
-        }
-        .content_p6 .content_pb .row{
-            margin-top: 25px;
-            padding-left: 20px;
-        }
-        .sbm{
-            width: 150px;
-            margin-left: 42%;
-            margin-top: -20px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            background-color: #99ccff;
-            color:black;
-        }
-        .sbm:hover{
-            color: white;
-            background-color: #0080ff;
-        }
-    </style>
 </head>
 <body>
     <!--Left sidebar-->
@@ -75,16 +31,16 @@
             </p>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 1: Điền thông tin <i class="fa fa-check text-primary"></i></a>
+            <a href="#" class="link">Bước 1: Điền thông tin <i class="fa fa-check "></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 2: Đo thân nhiệt <i class="fa fa-check text-primary"></i></a>
+            <a href="#" class="link">Bước 2: Đo thân nhiệt <i class="fa fa-check "></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-check text-primary"></i></a>
+            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-check "></i></a>
         </div>
         <div class="item">
-            <a href="#" class="link text-primary">Bước 4: Kết nối <i class="fa fa-ellipsis-h text-dark"></i></a>
+            <a href="#" class="link">Bước 4: Kết nối <i class="fa fa-ellipsis-h"></i></a>
         </div>
     </aside>
     <!--End left sidebar-->
@@ -101,35 +57,67 @@
 
     <!--Main-->
     <main>
-       <label class="title_main">Số người tiếp xúc: <input type="number" class="nb" name="nb_people"/></label>
-       <div class="content_p6 row">
+        <h3 style="padding-top: 3%; text-align: center; font-weight:bold;">THIẾT LẬP MẠNG LƯỚI CỘNG ĐỒNG</h3>
+        <h5 style="margin-left: 5%; font-size: 17px;">Hướng dẫn: chúng tôi sẽ dựa trên thông tin bạn cung cấp ban đầu để giúp chính phủ có thể giám sát người 
+            dân một cách dễ dàng hơn. Nói một cách khác, hệ thống này sẽ dựa trên tương tác giữa người dùng thông qua chức năng định vị. Từ đó
+            phát hiện những nguy cơ, rủi ro cho người dùng.</h5>
+        <div class="info-head">
+        <label for="people" style="display: inline-block; width: 15%; margin-left: 23%;">Số người tiếp xúc: </label>
+        <input type="number" value="4" class="nb" name="nb_people"/><br><br>
+
+    <div class="object-graph" style="background-color: #dadada; margin-left: 7%; margin-right: 7%; ">
+        <div class="content_p6 row" style="margin-left: 9%; margin-bottom: 2%; ">
             <div class="col-2 nb_pp">
-                Người thứ 1
+                <b>Đối tượng A</b>
             </div>
-            <div class="col-5 content_pb" style="border-left: 1px solid blue; background-color: #b3ecff;">
-                <div class="row">
-                    SĐT: 0123456789
-                </div>
-                <div class="row">
-                    Thời gian tiếp xúc: 9h30 - 07/10/2020
-                </div>
-                <div class="row">
-                    Dấu hiệu: Bình thường
-                </div>
-                <div class="row">Tên: ABC</div>
-                <div class="row">
-                    <p>Tuổi: xxx </p>
-                    <a href="#" class="btn btn-primary" style="margin-left: 270px; margin-top: 30px;"><i style="font-size:15px" class="fa">&#xf061;</i></a>
-                </div>
+            <div class="content_pb" style="width: 85% !important; height: 160px; border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
+                    
             </div>
-            <div class="col-5">
-                <img src="/IHM/images/luffy.png" width="98%" height="300px"/>
+        </div>
+        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%;">
+            <div class="col-2 nb_pp">
+                <b>Đối tượng B</b>
+            </div>
+            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
+               
+            </div>
+        </div>
+        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%;">
+            <div class="col-2 nb_pp">
+                <b>Đối tượng C</b>
+            </div>
+            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
+               
+            </div>
+        </div>
+        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%; ">
+            <div class="col-2 nb_pp">
+                <b>Đối tượng D</b>
+            </div>
+            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
+               
+            </div>
+        </div>
+        <div class="add-delete" style="margin-left: 45%;">
+            <button id="ctnbutton" type="submit" class="submit">Thêm đối tượng</button>
+            <button id="ctnbutton" type="submit" class="submit">Xóa đối tượng</button>
+        </div>
+        <br>
+        
+        <br><br>
+        
+    </div>
+        <h5 style="margin-left: 10%; font-size: 17px; margin-top: 2%;">Đây là hệ thống mạng lưới cộng đồng hiện tại của bạn:</h5>
+            <div style="width:100%;">
+                <img src="/IHM/images/graph.png" height="300px"  style="border: 3px solid rgb(119, 0, 0); margin-left: 20%; margin-top: 3%">
             </div>
            
        </div>
-       <button type="submit" class="sbm" data-toggle="modal" data-target="#Confirm_Form">Xác nhận</button>
-       
-
+       <br>
+        <div class="text-center">
+            <button id="ctnbutton" type="submit" data-toggle="modal" data-target="#Confirm_Form" class="submit">Tiếp tục</button>
+        </div>
+        <br>
        <div class="modal fade" role="dialog" id="Confirm_Form">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -153,14 +141,15 @@
           </div>
         </div>
       </div>
+        </div>
     </main>
     <!--End Main-->
 
     <!--Right sidebar-->
-    <div class="right-sidebar">
+    <div class="right-sidebar" id="right_bar">
         <h6 style="font-weight: bold;">Tổng số ca: </h6>
-        <p class="case-number">19 869 127</p>
-        <p style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+        <p class="total">19 869 127</p>
+        <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
         <table class="case-detail">
             </tr>
             <tr>

@@ -550,30 +550,30 @@ div.status-box {
     grid-template-rows: 4em auto;
     /* grid-template-columns: auto; */
     grid-template-areas: "status" "recommendation";
-    border: 3px solid #1D8EF7;
+    border: 3px solid #3f0000;
 }
 
 div.status {
     grid-area: status;
 }
 
-div.recommendation {
-    grid-area: recommendation;
-    display: grid;
-    grid-template-columns: 30em auto;
-    grid-template-areas: "part1 part2";
+.recommendation{
+    color: rgb(133, 0, 0);
 }
 
 div#part_1 {
     grid-area: part1;
-    margin-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 16px;
 }
 
 div#part_2 {
     grid-area: part2;
-    margin-left: 30px;
-    margin-right: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 5px;
+    font-size: 16px;
 }
 
 div#part_2 ul {
@@ -583,50 +583,65 @@ div#part_2 ul {
 
 .recommend-title {
     padding: 5px;
-    background-color: #1D8EF7;
+    background-color: #e4e4e4;
 }
 
 .recommendation ul {
     padding: 5px;
-    background-color: #33bbff;
+    background-color: #e0e0e0;
 }
 main{
     width: 100%;
+    color:rgb(145, 0, 0);
 }
 .info{
     border-bottom: 1px solid #8a0000;
 }
-.info{
-    display:flex;
-    width: 100%;
-}
 .info-detailed{
-    padding-left: 0%;
-}
-.info1{
-    border-right: 1px solid black;
-}
-.info2{
-    border-left: 1px solid black;
+    text-align: center;
+    padding-top: 3%;
 }
 label{
     display: inline-block;
     clear: left;
-    width: 25%;
+    width: 10%;
     text-align: right;
     margin-right: 2%;
     margin-top: 2%;
 }
-input, textarea{
+input, textarea, select{
     display: inline-block;
-    width: 50%;
+    width: 40%;
 }
 input[type="number"]{
-    width: 15%;
+    display: inline-block;
+    width: 38%;
 }
 input[type="file"]{
     display: inline-block;
-    width: 50%;
+    width: 40%;
+}
+button:hover
+{
+    cursor: pointer;
+    background: rgb(179, 0, 0);
+}
+.image-browse
+{
+    display: inline-block;
+    clear: left;
+    width: 30% !important;
+}
+#vid
+{
+    width: 20%;
+    height: 10%px;
+    position: relative;
+}
+.box-form
+{
+    margin: 3%;
+    background: #dadada;
 }
 
 /* scanning camera */ 
@@ -640,7 +655,7 @@ input[type="file"]{
 
 .loading-bar {
     height: 5px;
-    background-color: #aff;
+    background-color: rgb(175, 0, 44);
     width: 1%;
     position: relative;
     transition: linear;

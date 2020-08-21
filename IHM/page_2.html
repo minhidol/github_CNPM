@@ -57,20 +57,26 @@
     <!--Main-->
     <main>
         <div class="info">
-            <div class="info-detailed info1" style="width:100%;">
-                <h3 style="text-align:center">Thông tin cá nhân</h3>
+            <div class="box-form">
+            <div class="info-detailed" style="width:100%;">
+                <h3 style="text-align:center; font-weight: bold;">Thông tin cá nhân</h3>
+                <p style="text-align:center; font-size: 15px; width: 46%; margin-left:27%">
+                    Thông tin bạn cung cấp cho chúng tôi sẽ được bảo mật bởi chính phủ cũng như tổ chức của chúng tôi.
+                </p>
+                <hr>
+                
                 <form method="post" action="#">
                     <label for="name" id="name">Họ và tên:<span></span> </label>
-                    <input type="text" name="fullname" id="fullname">
+                    <input type="text" name="fullname" id="fullname" required>
                     <span id="warn1" style="font-size: 25px; color: red;">*</span><br>
                     <label for="address">Địa chỉ: </label>
-                    <input type="text" name="address" id="address">
+                    <input type="text" name="address" id="address" required>
                     <span id="warn2" style="font-size: 25px; color: red;">*</span><br>
                     <label for="address">SĐT: </label>
-                    <input type="text" name="address" id="address">
+                    <input type="text" name="address" id="phoneNum" required>
                     <span id="warn3" style="font-size: 25px; color: red;">*</span><br>
                     <label for="address">CMND: </label>
-                    <input type="text" name="address" id="address">
+                    <input type="text" name="address" id="citizenId" required>
                     <span id="warn4" style="font-size: 25px; color: red;">*</span><br>
                     <label for="gender">Giới tính: </label>
                     <select name="gender" id="gender">
@@ -81,10 +87,16 @@
                     <span id="warn5" style="font-size: 25px; color: red;">*</span><br>
                     <label for="description">Mô tả</label>
                     <textarea id="description" name="description" rows="3"></textarea>
+                    <span id="warn5" style="font-size: 25px; color: red;">*</span><br>
                 </form>
-            </div>
-            <div class="info-detailed info2" style="width:100%;">
-                <h3 style="text-align:center">Thông tin sức khỏe</h3>
+                <hr>
+                <h3 style="text-align:center;font-weight: bold;">Thông tin sức khỏe</h3>
+                <p style="text-align:center; font-size: 15px; width: 80%; margin-left:10%">
+                    Để đảm bảo kết quả chuẩn đoán của chúng tôi về sức khỏe được chuẩn xác, 
+                    cũng như chung tay đóng góp cho cộng đồng. Mời bạn nhập vui lòng minh bạch trong thông tin khái báo. 
+                </p>
+                <hr>
+                
                 <form method="post" action="#" class="info-user">
                     <label for="status">Bệnh lý: </label>
                     <input type="textarea" name="health-status" id="health-status" row="6"><br>
@@ -94,15 +106,16 @@
                     <label for="weight">Cân nặng </label>
                     <input type="number" name="weight" id="weight">
                     <span id="warn7" style="font-size: 25px; color: red;">*</span><br>
-                    <label for="img">Ảnh cá nhân:</label><input type="file" id="img" name="img" accept="image/*">
+                    <label id="image-browse" for="img">Ảnh:</label>
+                    <input type="file" id="imgLoad" name="img" accept="images/*" >
                 </form>
-                <p id="notice" style="font-size: 15px; color: red; padding-left: 27%">Đây là thông tin cung cấp cho chính phủ, (*) yêu cầu phải khai báo chính xác, trung thực.</p>
-                <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
-                <a href="page_3.html"><button submit" id="submit-page2" style="display:inline-block; margin-right:15%; width:15%; margin-left: 70%" onclick="next()">Hoàn tất</button></a>
-                <span id="error-page2" style="font-size: 25px; color: red;"></span><br>
+                
+                <p id="notice" style="font-size: 15px; color: red;">Đây là thông tin cung cấp cho chính phủ, (*) yêu cầu phải khai báo chính xác, trung thực.</p>
+                <span id="error-page2" style="font-size: 25px; color: red;"></span>
+                <br><a id="done" href="page_3.html"><button style="color:white;" id="ctnbutton" type="submit" class="submit" onclick="next()">Hoàn tất</button></a><br><br>
+            </div>
             </div>
         </div>
-        
     </main>
     <!--End Main-->
 
@@ -110,7 +123,7 @@
     <div class="right-sidebar" id="right_bar">
         <h6 style="font-weight: bold;">Tổng số ca: </h6>
         <p class="total">19 869 127</p>
-        <p id = "case" style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+        <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
         <table class="case-detail">
             </tr>
             <tr>

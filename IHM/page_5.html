@@ -13,12 +13,6 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Demo</title>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body>
@@ -65,34 +59,45 @@
             <h2 class="text-center text-uppercase text-success" style="margin: 15px auto;"> <span class="fa fa-check"></span> Cơ thể bình thường</h2>
         </div>
         <div class="recommendation">
-            <div id="part_1" class="text-left">
+            <div id="part_1">
                 <div class="recommend-title ">
-                    <h5 class="text-center">Điều bạn phải lưu ý và tự cách ly</h5>
+                    
+                    <h5 class="text-center" style="font-size: 20px; font-weight: bold;">Điều bạn phải lưu ý và tự cách ly</h5>
+                    <h5 style="font-size: 17px;">
+                    Tình hình dịch bệnh đang ngày càng trở nên nghiêm trọng và phức tạp, bởi lẽ đó, hãy trang bị cho bản thân một vốn kiến thức để cùng chung
+                    tay đẩy lùi dịch Covid-19 cũng như bảo vệ cộng đồng và xã hội. Sau đây, chúng tôi xin trình bày với các bạn những điều cần lưu ý trong sinh
+                    hoạt hằng ngày cũng như một chế độ dinh dưỡng thiết yếu để nâng cao đề kháng trong mùa dịch này:
+                    </h5>
+                    <img src="images/advice.png" style="width: 100%;">
                 </div>
+                
                 <ul class="list-unstyled">
                     <li>
                         <p>A. Hạn chế tối đa ra ngoài, chỉ khi thực sự cần thiết</p>
                     </li>
                     <li>
-                        <p>B. Đeo khẩu trang khi ra ngoài, giữ khoảng cách 2m</p>
+                        <p>B. Tránh đưa tay lên mắt, mũi, miệng; Hạn chế tiếp xúc gần trong khoảng cách 1m với người có biểu hiện sốt, ho, khó thở</p>
                     </li>
                     <li>
-                        <p>C. Thường xuyên rửa tay bằng xà phòng và dung dịch sát khuẩn</p>
+                        <p>C. Thường xuyên rửa tay bằng xà phòng dưới vòi nước chảy hoặc rửa tay bằng dung dịch rửa tay có cồn</p>
                     </li>
                     <li>
-                        <p>D. Thường xuyên vệ sinh nhà cửa, sinh hoạt lành mạnh</p>
+                        <p>D. Thường xuyên lau chùi vật dụng bằng chất tẩy rửa thông thường</p>
                     </li>
                     <li>
                         <p>E. Đo và kiểm tra thân nhiệt thường xuyên</p>
                     </li>
                     <li>
-                        <p>F. Đảm bảo chế độ dinh dưỡng phù hợp</p>
+                        <p>F. Che miệng, mũi khi ho, hắt hơi bằng khăn giấy hoặc khuỷu tay áo</p>
+                    </li>
+                    <li>
+                        <p>G. Đeo khẩu trang khi đến nơi công cộng, trên các phương tiện giao thông</p>
                     </li>
                 </ul>
             </div>
             <div id="part_2">
                 <div class="recommend-title ">
-                    <h5 class="text-center">Chế độ dinh dưỡng</h5>
+                    <h5 class="text-center" style="font-size: 20px; font-weight: bold;">Chế độ dinh dưỡng</h5>
                 </div>
                 <ul class="list-unstyled">
                     <li>
@@ -118,8 +123,13 @@
                         </li>
                     </ol>
                 </div>
-                <a href="page_6.html"><button class="btn btn-primary" style="float: right;">Tiếp tục</button></a>
-            </div>
+                <div class="text-center">
+                <a href="page_6.html"><button style="color:white;" id="ctnbutton" type="submit" class="submit">Tiếp tục</button>
+                </div>
+                </div>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
     <!--End Main-->
@@ -128,7 +138,7 @@
     <div class="right-sidebar" id="right_bar">
         <h6 style="font-weight: bold;">Tổng số ca: </h6>
         <p class="total">19 869 127</p>
-        <p id = "case" style="color: #1D8EF7; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+        <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
         <table class="case-detail">
             </tr>
             <tr>
