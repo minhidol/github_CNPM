@@ -161,8 +161,22 @@ main {
     border-bottom: 1px solid black;
 }
 
-/* .news table {
+.news table {
     width: 100%;
+    border: none;
+}
+
+.news-table td {
+    border: none;
+}
+
+.news-table tr td a {
+    text-decoration: none;
+    color: black;
+}
+
+.news-table tr td a:hover {
+    color: #33bbff;
 }
 
 .news-text {
@@ -171,10 +185,11 @@ main {
 
 .news-date {
     text-align: right   ;
-} */
+}
 
 .news-list {
     margin-top: 20px;
+    display: none;
 }
 
 .media {
