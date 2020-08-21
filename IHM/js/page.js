@@ -38,7 +38,7 @@ camera.onclick = function()
    '                 '  + 
    '             </div>  '  + 
    '           </div>  '  + 
-   '           <button type="button" class="btn btn-success" style="width:100px" id="confirm" onclick="return confirm()">Xác nhận</button>   '  + 
+   '           <button type="button" class="btn btn-success" style="width:100px" id="confirm" onclick="return confirm()" disabled>Xác nhận</button>   '  + 
    '       </div>   '  + 
    '            ' ; 
    var main = document.getElementById("main");
@@ -171,8 +171,9 @@ function Scanning() {
             clearInterval(interval); 
             scanning.innerText = 'RESCAN'; 
             img.src = 'images/m.jpeg';
-            alert('Qúa trình kiểm tra hoàn tất ! Vui lòng nhấn xác nhận để thực hiện bước tiếp theo.')
+            alert('Qúa trình kiểm tra hoàn tất ! Vui lòng nhấn xác nhận để thực hiện bước tiếp theo.'); 
             bar.style.display = 'none'; 
+            document.getElementById('confirm').disabled = false; 
         }
         else {
             width++; 
