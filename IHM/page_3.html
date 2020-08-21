@@ -46,9 +46,14 @@
           background-color:#FFF;
           color:black;
         }
+        footer
+        {
+          transition-delay: 10s;
+        } 
+
       </style>
   </head>
-<body>
+<body id="body">
     
 
     <!--Left sidebar-->
@@ -83,6 +88,12 @@
 
     <!--Main-->
         <main style="background-color:grey" id="main">
+          <button class="btn btn-primary">
+            <span class="spinner-border spinner-border-sm"></span>
+            Loading..
+          </button>
+          
+          
             <div style="margin-left:30%;width:40%;margin-top:5%;" id="camera">
                 <button type="button" class="btn btn-primary" style="margin-left:25%" id="_button"> 
                     <svg width="150px" height="150px" viewBox="0 0 16 16" class="bi bi-camera" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
@@ -214,6 +225,7 @@
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
     <script>
+     
       function return_pagehome(){
           location.href = "page_3.html";
       }

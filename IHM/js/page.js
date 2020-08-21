@@ -1,4 +1,3 @@
-
 var camera = document.getElementById("_button");
 
 camera.onclick = function()
@@ -71,15 +70,12 @@ function confirm()
     '                         <label class="form-check-label" for="check6">Mất vị giác hoặc khứu giác</label>  '  + 
     '                       </form>  '  + 
     '                     </div>  '  + 
-    '                     <div id="2_button" style="margin-left: 75%;margin-top:23%">   '  + 
-    '                         <button type="button" class="btn btn-success" style="width:100px;font-size:16px">Xác nhận</button>   '  + 
+    '                     <div id="2_button" style="margin-left: 75%;margin-top:23%">  '  + 
+    
+    '                         <button type="button" class="btn btn-success" style="width:100px;font-size:16px" onclick="warning()">Xác nhận</button>   '  + 
     '                                   </div>    '  + 
     '                </div>  ' ; 
     var main = document.getElementById("main");
     main.innerHTML = html;
 
 }
-
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
