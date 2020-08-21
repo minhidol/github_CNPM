@@ -21,6 +21,11 @@ aside {
     border-bottom: 3px solid #1D8EF7;
 }
 
+aside .item:hover {
+    box-shadow: 0px 5px 10px black;
+    font-size: large;
+}
+
 .profile {
     padding: 20px;
     border-bottom: 1px solid black;
@@ -33,6 +38,10 @@ aside {
 
 .item {
     padding: 20px;
+}
+
+.item.active {
+    background-color: rgb(109, 104, 104);
 }
 
 .item:nth-child(even) {
@@ -147,12 +156,12 @@ main {
     padding: 5px;
 }
 
-.news h5 {
+.news h5.news-header {
     padding: 2px;
     border-bottom: 1px solid black;
 }
 
-.news table {
+/* .news table {
     width: 100%;
 }
 
@@ -162,8 +171,48 @@ main {
 
 .news-date {
     text-align: right   ;
+} */
+
+.news-list {
+    margin-top: 20px;
 }
 
+.media {
+    margin-bottom: 20px;
+}
+
+.media-body:nth-child(odd) {
+    border-right: 1px solid black;
+}
+
+.media-left img {
+    width: 300px;
+    height: 150px;
+}
+
+.media-body {
+    padding: 10px;
+}
+
+.media-body span {
+    font-size: smaller;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.media-heading {
+    padding: 5px;
+}
+
+.media-heading a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.media-heading a:hover {
+    color: #33bbff;
+}
 
 .page6 {
     background-color: #33bbff;
@@ -176,7 +225,7 @@ main p {
 }
 
 main table {
-    border: #000 solid 2px;
+    /* border: #000 solid 2px; */
 }
 
 .submit {
@@ -199,7 +248,7 @@ main table {
 div#right_bar
 {
     background-color:#DEDEDE;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
     font-family: Roboto Slab;
 }
@@ -220,8 +269,8 @@ td#pays
     width:100px;
 }
 table, td {
-    border:1px solid black;
-    margin:0px auto;
+    /* border:1px solid black; */
+    
 
 }
 
@@ -231,8 +280,8 @@ table, td {
     background-color: #DADADA;
     border-top: 3px solid #1D8EF7;
     border-bottom: 3px solid #1D8EF7;
-    padding: 20px;
-    text-align: center;
+    /* padding: 20px;
+    text-align: center; */
 }
 
 .case-number {
@@ -241,20 +290,20 @@ table, td {
 }
 
 table.case-detail {
-    margin: auto;
+    /* margin: auto; */
 }
 
 table.case-detail .number {
     color: red;
     font-weight: bold;
     text-align: left;
-    padding-right: 20px;
+    /* padding-right: 20px; */
 }
 
 table.case-detail .country {
     color: black;
     font-weight: bold;
-    text-align: left;
+    /* text-align: left; */
 }
 
 /* footer */ 
@@ -349,7 +398,7 @@ main {
  }  
  .column-3-6-2
  {
-    width:70%;
+    width:60%;
  }
  
  [class^=column]
@@ -435,4 +484,77 @@ main {
 .checkbox label input[type="checkbox"]:disabled + .cr,
 .radio label input[type="radio"]:disabled + .cr {
     opacity: .5;
+}
+
+/* Page 5 */
+div.status-box {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 4em auto;
+    /* grid-template-columns: auto; */
+    grid-template-areas: "status" "recommendation";
+    border: 3px solid #1D8EF7;
+}
+
+div.status {
+    grid-area: status;
+}
+
+div.recommendation {
+    grid-area: recommendation;
+    display: grid;
+    grid-template-columns: 30em auto;
+    grid-template-areas: "part1 part2";
+}
+
+div#part_1 {
+    grid-area: part1;
+    margin-left: 10px;
+}
+
+div#part_2 {
+    grid-area: part2;
+    margin-left: 30px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+div#part_2 ul {
+    height: 130px;
+    overflow-y: scroll;
+}
+
+.recommend-title {
+    padding: 5px;
+    background-color: #1D8EF7;
+}
+
+.recommendation ul {
+    padding: 5px;
+    background-color: #33bbff;
+}
+
+td.number 
+{
+    /* font-size:1.2019rem; */
+
+}
+td.country
+{
+    /* font-size: 1.2019rem; */
+}
+table.case-detail tr a 
+{
+    
+}
+.scrollspy-example {
+    position: relative;
+    height: 300px;
+    margin-top: 0;
+    overflow: auto;
+    width: 100%;
+    float: right;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    padding: 10px;
 }

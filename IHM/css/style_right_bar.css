@@ -2,7 +2,7 @@
 div#right_bar
 {
     background-color:#DEDEDE;
-    text-align: center;
+    /* text-align: center; */
     font-weight: bold;
     font-family: Roboto Slab;
 }
@@ -24,6 +24,6 @@ td#pays
 }
 table, td {
     border:1px solid black;
-    margin:0px auto;
-
+    /* margin:0px auto; */
+    /* padding: 5px; */
 }
