@@ -155,6 +155,15 @@ function confirm()
 
 }
 
+function page()
+{
+    location.href ="page_4.html";
+}
+function page5()
+{
+    location.href ="page_5.html";
+}
+
 var width = 0;
 var interval; 
 function Scanning() {
