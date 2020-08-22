@@ -660,3 +660,26 @@ button:hover
     position: relative;
     transition: linear;
 }
+
+main{
+    
+}
+.box_page3
+{
+    background-color: #c4c4c4;
+    padding-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 2%;
+
+}
+.box_page3 label
+{
+    display: inline-block;
+    clear: left;
+    width: 10%;
+    text-align: left;
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-left: 35% !important;
+}
