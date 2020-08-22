@@ -52,32 +52,29 @@ function confirm()
     var html = '';
     if(list_product.nhietdo < 37)
     {
-    html =  '    <div class="column-4-6" style="margin-left:0">  '  + 
-    '                       <h4 class="status" style="font-size: 30px;">Tình trạng</h4> =  '  + 
-    '                                       <p style="margin-left:3%;font-size:25px;color:red;font-weight: bold;">Nhiệt độ: '+ list_product.nhietdo +'°C</p>  '  + 
-    '                                       <h5 style="margin-left:3%;font-size: 20px;"><span style="text-align:center;">Triệu chứng nhiễm bệnh covid 19:</h5>     '  + 
-    '                                       <div class="column-3-6-1" style="margin-left:15px;margin-top:10px;margin-right:0px">   '  + 
+    html =  ' <div class="column-4-6" style="margin-left:0">  '  + 
+    '                       <h4 class="status" style="font-size: 30px;">Tình trạng cơ thể</h4> =  '  + 
+    '                                       <p style="margin-left:3%;font-size:25px;color:red;font-weight: bold;">Nhiệt độ: '+ list_product.nhietdo +'°C</p>  ' 
+    +'<div class="notification" style=" padding-left: 15%; padding-right: 15%; text-align:center; font-sỉze: 10px !important";>Lưu ý: Nhiệt độ cơ thể của bạn không ổn định, để kết quả kiểm tra trở nên chính xác hơn, bạn hãy vui lòng thông báo những thông tin sau đây:</div>'+
+    '                                       <br><h5 style="margin-left:3%;font-size: 18px;"><span style="text-align:center;">Triệu chứng nhiễm Covid-19:</h5>     '  + 
+    '                                       <div class="box_page3">   '  + 
     '                                           <form>   '  + 
     '                                                 <input type="checkbox" id="check1" name="fruit-1" value="something">    '  + 
-    '                                                 <label class="form-check-label" for="check1" style="width:100%">Đau họng</label>   '  + 
-    '                                               <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">    '  + 
-    '                                                 <label class="form-check-label" for="check2"style="width:90.5%">Đau cổ</label>    '  + 
-    '                                                 <input type="checkbox" class="form-check-input" id="check3" name="option2" value="something">    '  + 
-    '                                                 <label class="form-check-label" for="check3"style="width:99.5%">Tiêu chảy</label>   '  + 
-    '                                           </form>   '  + 
-    '                                       </div>    '  + 
-    '                                       <div class="column-3-6-2" style="margin-top:10px">   '  + 
-    '                                         <form>   '  + 
-    '                                           <input type="checkbox" id="check4" name="fruit-1" value="something" checked>    '  + 
-    '                                           <label class="form-check-label" for="check4" style="width:50%">Khó thở</label>    '  + 
-    '                                           <input type="checkbox" class="form-check-input" id="check5" name="option2" value="something">    '  + 
-    '                                           <label class="form-check-label" for="check5" style="width:90%">Mất khả năng nói hoặc cử động  </label>    '  + 
-    '                                           <input type="checkbox" class="form-check-input" id="check6" name="option2" value="something">     '  + 
-    '                                           <label class="form-check-label" for="check6"style="width:81.5%">Mất vị giác hoặc khứu giác</label>     '  + 
-    '                                         </form>     '  + 
+    '                                                 <label class="form-check-label" for="check1" style="width:100%">Đau họng</label>  '  + 
+    '                                                 <input type="checkbox"  id="check2" name="option2" value="something">    '  + 
+    '                                                 <label class="form-check-label" for="check2" style="width:100%">Đau cổ</label>    '  + 
+    '                                                 <input type="checkbox"  id="check3" name="option2" value="something">    '  + 
+    '                                                 <label class="form-check-label" for="check3" style="width:100%">Tiêu chảy</label>   '  + 
+            '                                         <input type="checkbox" id="check4" name="fruit-1" value="something" checked>    '  + 
+            '                                         <label class="form-check-label" for="check4" style="width:100%">Khó thở</label>    '  + 
+            '                                         <input type="checkbox" class="form-check-input" id="check5" name="option2" value="something">    '  + 
+            '                                         <label class="form-check-label" for="check5" style="width:100%">Mất khả năng nói hoặc cử động  </label>    '  + 
+            '                                         <input type="checkbox" class="form-check-input" id="check6" name="option2" value="something">     '  + 
+            '                                         <label class="form-check-label" for="check6"style="width:100%">Mất vị giác hoặc khứu giác</label>     '  + 
+    '                                           </form>     '  + 
     '                                       </div>      '  + 
-    '                                       <div id="2_button" style="margin-left: 75%;margin-top:23%">    '  + 
-    '                                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Xác nhận</button>  '  + 
+    '                                       <div id="2_button" style="margin-left: 45%; margin-bottom: 10%; margin-top: 3%;">    '  + 
+    '                                         <button type="button" style="color:white;" data-toggle="modal" id="ctnbutton" data-target="#myModal" class="submit">Tiếp tục</button>  '  + 
     '     '  + 
     '                                          '  + 
     '                                         <div class="modal fade" id="myModal" role="dialog">  '  + 
@@ -104,31 +101,29 @@ function confirm()
     }
     else {
         html =  '    <div class="column-4-6" style="margin-left:0">  '  + 
-        '                       <h4 class="status" style="font-size: 30px;">Tình trạng</h4> =  '  + 
-        '                                       <p style="margin-left:3%;font-size:25px;color:red;font-weight: bold;">Nhiệt độ: '+ list_product.nhietdo +'°C</p>  '  + 
-        '                                       <h5 style="margin-left:3%;font-size: 20px;"><span style="text-align:center;">Triệu chứng nhiễm bệnh covid 19:</h5>     '  + 
-        '                                       <div class="column-3-6-1" style="margin-left:15px;margin-top:10px;margin-right:0px">   '  + 
-        '                                           <form>   '  + 
-        '                                                 <input type="checkbox" id="check1" name="fruit-1" value="something">    '  + 
-        '                                                 <label class="form-check-label" for="check1" style="width:100%">Đau họng</label>   '  + 
-        '                                               <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">    '  + 
-        '                                                 <label class="form-check-label" for="check2"style="width:90.5%">Đau cổ</label>    '  + 
-        '                                                 <input type="checkbox" class="form-check-input" id="check3" name="option2" value="something">    '  + 
-        '                                                 <label class="form-check-label" for="check3"style="width:99.5%">Tiêu chảy</label>   '  + 
-        '                                           </form>   '  + 
-        '                                       </div>    '  + 
-        '                                       <div class="column-3-6-2" style="margin-top:10px">   '  + 
-        '                                         <form>   '  + 
-        '                                           <input type="checkbox" id="check4" name="fruit-1" value="something" checked>    '  + 
-        '                                           <label class="form-check-label" for="check4" style="width:50%">Khó thở</label>    '  + 
-        '                                           <input type="checkbox" class="form-check-input" id="check5" name="option2" value="something">    '  + 
-        '                                           <label class="form-check-label" for="check5" style="width:90%">Mất khả năng nói hoặc cử động  </label>    '  + 
-        '                                           <input type="checkbox" class="form-check-input" id="check6" name="option2" value="something">     '  + 
-        '                                           <label class="form-check-label" for="check6"style="width:81.5%">Mất vị giác hoặc khứu giác</label>     '  + 
-        '                                         </form>     '  + 
-        '                                       </div>      '  + 
-        '                                       <div id="2_button" style="margin-left: 75%;margin-top:23%">    '  + 
-        '                                         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Xác nhận</button>  '  + 
+        '                       <h4 class="status" style="font-size: 30px;">Tình trạng cơ thể</h4> =  '  + 
+        '                                       <p style="margin-left:3%;font-size:25px;color:red;font-weight: bold;">Nhiệt độ: '+ list_product.nhietdo +'°C</p>  ' 
+        +'<div class="notification" style="padding-left: 15%; padding-right: 15%; text-align:center; font-sỉze: 15px !important;">Lưu ý: Nhiệt độ cơ thể của bạn không ổn định, để kết quả kiểm tra trở nên chính xác hơn, bạn hãy vui lòng thông báo những thông tin sau đây:</div>'+
+        '                                       <br><h5 style="margin-left:3%;font-size: 18px;"><span style="text-align:center;">Triệu chứng nhiễm Covid-19:</h5>     '  + 
+        '                                       <div class="box_page3">   '  + 
+    '                                           <form>   '  + 
+    '                                                 <input type="checkbox" id="check1" name="fruit-1" value="something">    '  + 
+    '                                                 <label class="form-check-label" for="check1" style="width:100%">Đau họng</label>  '  + 
+    '                                                 <input type="checkbox"  id="check2" name="option2" value="something">    '  + 
+    '                                                 <label class="form-check-label" for="check2" style="width:100%">Đau cổ</label>    '  + 
+    '                                                 <input type="checkbox"  id="check3" name="option2" value="something">    '  + 
+    '                                                 <label class="form-check-label" for="check3" style="width:100%">Tiêu chảy</label>   '  + 
+            '                                         <input type="checkbox" id="check4" name="fruit-1" value="something" checked>    '  + 
+            '                                         <label class="form-check-label" for="check4" style="width:100%">Khó thở</label>    '  + 
+            '                                         <input type="checkbox" class="form-check-input" id="check5" name="option2" value="something">    '  + 
+            '                                         <label class="form-check-label" for="check5" style="width:100%">Mất khả năng nói hoặc cử động  </label>    '  + 
+            '                                         <input type="checkbox" class="form-check-input" id="check6" name="option2" value="something">     '  + 
+            '                                         <label class="form-check-label" for="check6"style="width:100%">Mất vị giác hoặc khứu giác</label>     '  + 
+    '                                           </form>     '  + 
+    '                                       </div>      '    + 
+        '                                       <div id="2_button" style="margin-left: 45%;margin-bottom: 10%; margin-top: 3%;">    '  + 
+        '  '+
+        '                                           <button type="button" style="color:white;" data-toggle="modal" id="ctnbutton" data-target="#myModal" class="submit">Tiếp tục</button>'  + 
         '     '  + 
         '                                          '  + 
         '   <div class="modal fade" id="myModal" role="dialog">  '  + 
