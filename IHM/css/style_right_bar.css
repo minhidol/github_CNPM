@@ -3,8 +3,7 @@
 .right-sidebar
 {
     font-family: 'Bitter', serif !important;
-    border-left: 1px solid #2e0000;
-    border-right: 1px solid #2e0000;
+    border: 1px solid #2e0000;
 }
 
 div#right_bar
@@ -33,5 +32,7 @@ td#pays
 table, td {
     border:1px solid rgb(73, 0, 0);
     margin:0px auto;
-    padding: 5px;
+    width:100%;
+    /* padding: 5px; */
 }
+

@@ -1,28 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
 body {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    grid-template-columns: 18em auto 17em;
-    /* grid-template-areas: "nav-aside content"; */
-    grid-template-areas: 
-    "nav-aside header header"
-    "nav-aside main rightside"
-    "footer footer footer"
-    "credit credit credit";
     font-family: 'Bitter', serif !important;
+    width:98%;
+    height:auto;
+    margin:0 auto;
 }
 
 /* left sidebar */
+nav#navbar 
+{
 
-aside {
+    margin-top:20px;
+    
+    
+    width:100%;
+}
+*{
+    box-sizing: border-box;
+}
+nav
+{
+    margin-top:20px;
+    display:flex;
+    justify-content:space-around;
+    /* align-items:center; */
+    min-height: height 8vh;
+    text-align:center;
+      
+}
+.nav-links{
+    display:flex;   
+    justify-content:space-around;
+    width:40%;
+}
+.nav-links {
+    list-style: none;
+}
+div.burger
+{
+    width:25px;
+    height:5px;
+    background-color:red;
+    margin:5px;
+}
+div#navbar1
+{
+    margin:0 auto;
+    /* width:90%; */
+}
+ul#nav123 li 
+{
+    margin-right:10px;
+    margin-top:10px;
+}
+a#button_acceuil
+{
+    text-decoration:none;
+    background-color:white;
+    color:red;
+    border:1px solid red;
+    padding: 5px 10px;
+    border-radius: 10px;
+    /* margin-right:10px; */
+    
+}
+a#thkt
+{
+    text-decoration:none;
+    background-color:red;
+    color:white;
+    border:1px solid red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+a#thkt:hover {
+    color:rgb(196, 176, 176);
+}
+a#button_acceuil:hover {
+    background-color:rgb(243, 232, 232);
+    background-color:rgb(136, 8, 8);
+}
+#image-header #logo {
+    margin-top:10px
+}
+#image-header #logo2 
+{
+    margin-top:-5%;
+}
+#name_hethong 
+{
+    text-align: center;
+    margin-top:10px;
+    color:red;
+}
+/* aside {
     
     grid-area: nav-aside;
     background-color: #9b1700;
     display: flex;
     flex-direction: column;
     /* border: 1px solid rgb(78, 78, 78); */
-    border-top: 1px solid #2e0000;
+    /* border-top: 1px solid #2e0000;
     border-right: 1px solid #2e0000;
     border-left: 1px solid #2e0000;
 
@@ -31,7 +110,7 @@ aside {
 aside .item:hover {
     background-color: #cc0000;
     font-size: large;
-}
+} */ */
 
 .profile {
     padding: 25px;
@@ -94,7 +173,7 @@ aside i {
 /* header */ 
 
 .header {
-    grid-area: header;
+    
     padding: 0;
     position: relative;
     margin: 0;
@@ -146,15 +225,29 @@ aside i {
 }
 
 /* main */
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-rows: auto auto;
-    /* grid-template-columns: auto; */
-    grid-template-areas: "intro" "news";
-    border: 1px solid #8a0000;
+div#container{
+    display: block;
+    clear: both;
+    margin-top:1%;
+    width:100%;
+    float:left;
+    
+    
 }
-
+div#content {
+    border: 1px solid #8a0000;
+    width:73%;
+    float:left;
+    
+}
+div#xephang
+{
+    margin-left:2%;
+    width:25%;
+    float:left;
+    
+   
+}
 /* content */
 .intro {
     grid-area: intro;
@@ -163,6 +256,7 @@ main {
     margin-bottom: 5px;
     border-bottom: 2px solid #8a0000;
 }
+
 
 .intro-text {
     padding: 10px;
@@ -273,7 +367,7 @@ main {
     background-color: #dadada;
 }
 
-main p {
+/* main p {
     font-size: 20px;
     font-style: bold;
     font-family: Roboto Slab;
@@ -281,7 +375,7 @@ main p {
 
 main table {
     border: #000 solid 2px;
-}
+} */
 
 .submit {
     background-color: #f71d1d;
@@ -337,8 +431,9 @@ table, td {
     grid-area: rightside;
     color: rgb(0, 0, 0);
     background-color: DADADA !important;
-    padding: 20px;
+    
     text-align: center;
+    width:100%;
 }
 .right-sidebar h6{
     font-size: 20px;
@@ -349,7 +444,7 @@ table, td {
 
 table.case-detail {
     width: 96% !important;
-    margin: auto;
+    margin: 0 auto;
 }
 
 table.case-detail .number {
@@ -364,23 +459,24 @@ table.case-detail .country {
 }
 
 /* footer */ 
-footer {
-    grid-area: footer;
+div#footer {
+    
     background-color: #9b1700;
     padding: 10px;
     border: 2px solid #2e0000;
+    clear:both;
 }
 
-footer .row {
+div#footer .row {
     line-height: 1.35rem;
 }
 
-footer .footer-header {
+div#footer .footer-header {
     font-weight: bold;
     color: #ffae00;
 }
 
-footer p {
+div#footer p {
     color: white;
 }
 
@@ -429,10 +525,7 @@ footer p {
 *{
     box-sizing: border-box;
 }
-main {
-    display: block;
-    clear: both;
-}
+
 .column-2-6 
 {
     width:30.333333%;
@@ -480,10 +573,6 @@ main {
     text-align: center;
     font-weight: bold;
  }
-#2_button 
-{
-    margin-left:100px;
-}
  .checkbox label:after, 
 .radio label:after {
     content: '';
