@@ -206,23 +206,24 @@ div#container{
     
     
 }
-div#content {
-    border: 1px solid #8a0000;
-    width:73%;
-    float:left;
-    
-}
+
 div#xephang
 {
     margin-left:2%;
     width:25%;
-    float:left;
+    clear:both;
     
    
 }
+div#tintuc
+{
+    clear:both;
+    text-align:center;
+}
+
 /* content */
 .intro {
-    grid-area: intro;
+
     padding: 25px;
     padding-bottom: 5px;
     margin-bottom: 5px;
@@ -338,16 +339,34 @@ div#xephang
 .page6 {
     background-color: #dadada;
 }
-
-/* main p {
-    font-size: 20px;
-    font-style: bold;
-    font-family: Roboto Slab;
+#billing_city 
+{
+    margin-top:12px;
+    height:34px;
+    width:100%;
+    padding: 6px 12px;
+    font-size:13px;
+    line-height:1.42857143;
+    color:#555;
+    background-color: #fff;
+    background-image: none;
+    border:1px solid #ccc;
+    border-radius: 4px;
+    
+}
+a#step1
+{
+    color: #1a73e8;
+    text-decoration: none;
+}
+svg
+{   fill: #1a73e8;
+    width: 1.25rem;
+}
+svg:not(:root) {
+    overflow: hidden;
 }
 
-main table {
-    border: #000 solid 2px;
-} */
 
 .submit {
     background-color: #f71d1d;
@@ -651,16 +670,40 @@ div#part_2 ul {
     padding: 5px;
     background-color: #e0e0e0;
 }
-main{
-    width: 100%;
-    color:rgb(145, 0, 0);
-}
+
 .info{
+    width:70%;
     border-bottom: 1px solid #8a0000;
+    float:left;
+    color:rgb(145, 0, 0);
+
+}
+.right-bar
+{
+    margin-top:2.5%;
+    margin-bottom: 10px;
+    width:30%;
+    float:right;
+    border:1px solid rgb(99, 85, 85);
+    border-radius:5px;
+}
+div.right-bar h4
+{
+    padding-top:30px;
+}
+ul li {
+    padding-top:20px;
+    list-style-type: none;
 }
 .info-detailed{
     text-align: center;
     padding-top: 3%;
+}
+@media only screen and (max-width: 768px){
+    .right-bar, .info{
+        float: none;
+        width: 100%;
+    }
 }
 label{
     display: inline-block;
@@ -722,9 +765,7 @@ button:hover
     transition: linear;
 }
 
-main{
-    
-}
+
 .box_page3
 {
     background-color: #c4c4c4;
@@ -743,4 +784,18 @@ main{
     margin-right: 2%;
     margin-top: 2%;
     margin-left: 35% !important;
+}
+
+input.input-text {
+    margin-top: 12px;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
