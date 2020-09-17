@@ -672,12 +672,19 @@ div#part_2 ul {
 }
 
 .info{
-    width:70%;
+    margin-top:20px;
+    width:68%;
     border-bottom: 1px solid #8a0000;
     float:left;
     color:rgb(145, 0, 0);
 
 }
+/* @media only screen and (max-width: 700px){
+    .map{
+        
+        width: 100%;
+    }
+} */
 .right-bar
 {
     margin-top:2.5%;
@@ -698,10 +705,8 @@ ul li {
 .info-detailed{
     text-align: center;
     padding-top: 3%;
-    border:1px solid rgb(122, 109, 109);
-    border-radius:10px;
 }
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 768px){
     .right-bar, .info{
         float: none;
         width: 100%;
@@ -750,22 +755,6 @@ button:hover
     background: #dadada;
 }
 
-/* scanning camera */ 
-.loading-bar-box {
-    width: 100%;
-    background-color: rgba(155, 155, 255, 0.36);
-    transition: width 10s linear;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.loading-bar {
-    height: 5px;
-    background-color: rgb(175, 0, 44);
-    width: 1%;
-    position: relative;
-    transition: linear;
-}
 
 
 .box_page3
