@@ -693,7 +693,6 @@ main{
 label{
     display: inline-block;
     clear: left;
-    width: 10%;
     text-align: right;
     margin-right: 2%;
     margin-top: 2%;
@@ -765,10 +764,20 @@ main{
 .box_page3 label
 {
     display: inline-block;
-    clear: left;
     width: 10%;
     text-align: left;
     margin-right: 2%;
     margin-top: 2%;
     margin-left: 35% !important;
+}
+
+/* Page 3 */ 
+.symptomes-list {
+    margin-right: auto;
+    margin-left: auto;
+    list-style: none;
+}
+
+input[type="checkbox"] {
+    width: auto;
 }
