@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="js/page.js"></script>
       <style>
-        input[type=checkbox] + label
+        /* input[type=checkbox] + label
         {
           display:block;
           margin:0.2em;
@@ -46,7 +46,20 @@
         footer
         {
           transition-delay: 10s;
-        } 
+        }  */
+
+        .symptomes {
+            margin: 10px auto;
+            list-style: none;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        td div {
+            width: 300px;
+        }
 
       </style>
   </head>
@@ -91,52 +104,42 @@
 
     <!--Main-->
     <main style="background-color:rgb(255, 255, 255)" id="main">
-                <div style="margin-left:28%;width:40%;margin-top:5%;" id="camera">
-                    <button type="button" class="btn btn-primary" style="margin-left:25%" id="_button"> 
-                        <svg width="150px" height="150px" viewBox="0 0 16 16" class="bi bi-camera" fill="currentColor" xmlns="http://www.w3.org/2000/svg" >
-                            <path fill-rule="evenodd" d="M15 12V6a1 1 0 0 0-1-1h-1.172a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 9.173 3H6.828a1 1 0 0 0-.707.293l-.828.828A3 3 0 0 1 3.172 5H2a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
-                            <path fill-rule="evenodd" d="M8 11a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                            <path d="M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
-                        </svg>
-                    </button>
-                </div>
-                <div id="warning">
-                    <p style="text-align:center; background-color:#ffc107;color:#212529;;border:1px solid black;width:50%;margin-left:25%; margin-top:10px">Vui lòng bậc camera để kiểm tra nhiệt độ</p>
-                </div>
-        </main>
+        <h2>Est ce que vous avez un des symptômes ci-dessous ?</h2>
+        <ul class="symptomes">
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+            <li>
+                <label for="">Fievre ou frisson</label>
+            </li>
+        </ul>
+    </main>
     <!--End Main-->
 
-    <!--Right sidebar-->
-    <!-- <div class="right-sidebar" id="right_bar">
-        <div class="bs-example" data-example-id="embedded-scrollspy">
-            <div class="scrollspy-example" data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-            <h6 style="font-weight: bold; text-align: center;">Tổng số ca: </h6>
-            <p class="total" style=" text-align: center; color:red;font-size: 18px;">19 869 127</p>
-            <p id = "case" style="color: #1D8EF7; font-weight: bold;margin-top:-10px;text-align: center;margin-left:20px;margin-right:20px">Số ca theo Quốc gia/Khu vực</p>
-            <div class="case-detail" style="margin-left:10px;width:100%">
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">5 044 864</span><span style="color:black;margin-left:15px">USA</span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;padding-top:-150px"><span style="color:red">3 035 422</span><span style="color:black;margin-left:15px">Brazil      </span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">2 215 074</span><span style="color:black;margin-left:15px">India</span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">890 799</span><span style="color:black;margin-left:15px">Russia</span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">559 859</span><span style="color:black;margin-left:15px">Korea</span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">559 859</span><span style="color:black;margin-left:15px">Korea</span></a>
-                    <br>
-                    <hr>
-                    <a href="" style="margin-left:10px;font-size: 1.2019rem;text-decoration:none;"><span style="color:red">480 278</span><span style="color:black;margin-left:15px">Mexico</span></a>
-            </div>
-        </div>
-    </div>
-    </div> -->
     <div class="right-sidebar" id="right_bar">
         <h6 style="font-weight: bold;">Tổng số ca: </h6>
         <p class="total">19 869 127</p>
