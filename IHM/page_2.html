@@ -57,38 +57,56 @@
                     <form style="width:100%;">
                         <div id="info" style="width:50%; float:left; margin-left:2%">
                             <div id="info1" style="width:80%">
-                                <span class="input-wrapper"><input type="text" class="input-text "  id="validationDefault01" placeholder="Họ và tên" value=""required></span>  
-                                <span class="input-wrapper"><input type="tel" class="input-text "  id="validationDefault02" placeholder="Điện thoại" value="" autocomplete="tel" required></span>
+                                <span class="input-wrapper"><input type="text" class="input-text "  id="validationDefault01" placeholder="Họ và tên" value="" onblur="CheckValidName(this)"></span>  
+                                <br>
+                                <div id="textField"></div>
+                                <span class="input-wrapper"><input type="tel" class="input-text "  id="validationDefault02" placeholder="Điện thoại" value="" autocomplete="tel" onblur="CheckValidPhone(this)"></span>
+                                <br>
+                                <div id="textField_phone"></div>                              
                             </div>
                             <div id="info2" style="width:80%">
-                                <span class="input-wrapper" style="width:100%;"><input type="text" class="input-text "  id="validationDefault03" placeholder="Địa chỉ" value="" required></span><span class="input-wrapper">
+                                <span class="input-wrapper" style="width:100%;"><input type="text" class="input-text "  id="validationDefault03" placeholder="Địa chỉ" value="" onblur="CheckValidAdress(this)"></span><span class="input-wrapper">
+                                <br>
+                                <div id="textField_Address"></div>
                             </div>
                             <div id="info4" style="width:80%">
-                                <span class="input-wrapper" style="width:100%"><input id="validationDefault04" type="text" class="input-text "  id="address" placeholder="CMND" value="" required></span><span class="input-wrapper">
+                                <span class="input-wrapper" style="width:100%"><input id="validationDefault04" type="text" class="input-text "  id="address" placeholder="CMND" value="" onblur="CheckValidCMND(this)"></span><span class="input-wrapper">
+                                <br>
+                                <div id="textField_CMND"></div> 
                             </div>
                             <div id="info6" style="width:80%">
-                                <span class="input-wrapper"><select id="billing_city" value="" class="select " autocomplete="address-level2" data-allow_clear="true" data-placeholder="giới tính" required>
+                                <span class="input-wrapper"><select id="billing_city" value="" class="select " autocomplete="address-level2" data-allow_clear="true" data-placeholder="giới tính" onblur="CheckValidGenre()">
                                     <option value="" selected="selected">Giới tính</option><option value="Nam">Nam</option><option value="Nữ">Nữ</option><option value="Khác">Khác</option>
                                 </select></span>
+                                <br>
+                                <div id="textField_Genre"></div> 
                             </div>
                         </div>
                         <div id="thongtinrieng" style="width:45%; float:right">
                             <div id="info7" style="width:80%">
-                                <span class="input-wrapper"><input type="text" class="input-text "  id="validationDefault01" placeholder="Chiều cao" value=""required></span>  
-                                <span class="input-wrapper"><input type="tel" class="input-text "  id="validationDefault02" placeholder="Cân nặng" value="" autocomplete="tel" required></span>
+                                <span class="input-wrapper"><input type="text" class="input-text "  id="validationDefault05" placeholder="Chiều cao (cm)" value=""onblur="CheckValid_Height(this)"></span>  
+                                <br> 
+                                <div id="textField_Height"></div> 
+                                <span class="input-wrapper"><input type="tel" class="input-text "  id="validationDefault06" placeholder="Cân nặng (kg)" value="" autocomplete="tel" onblur=" CheckValid_Weight(this)"></span>
+                                <br> 
+                                <div id="textField_Weight"></div> 
                             </div>
                             <div id="info8" style="width:80%">
-                                <span class="input-wrapper" style="width:100%"><input id="validationDefault04" type="text" class="input-text "  id="address" placeholder="Bệnh lý" value="" required></span><span class="input-wrapper">
+                                <span class="input-wrapper" style="width:100%"><input id="validationDefault07" type="text" class="input-text "  id="address" placeholder="Bệnh lý" value="" onblur="CheckValid_BenhLy(this)"></span><span class="input-wrapper">
+                                <br> 
+                                <div id="textField_Benhly"></div> 
                             </div>
                             <div id="info9" style="width:80%">
-                                <span class="input-wrapper" style="width:100%"><input id="validationDefault04" type="file" class="input-text "  id="address" placeholder="Bệnh lý" value="" required></span><span class="input-wrapper">
+                                <span class="input-wrapper" style="width:100%"><input id="validationDefault08" type="file" class="input-text "  id="address" placeholder="Bệnh lý" value="" onblur="CheckValid_Img(this)"></span><span class="input-wrapper">
+                                <br> 
+                                <div id="textField_Img"></div>         
                             </div>
                         </div>
                     </form>
                     <div id="note" style="clear:both">
                         <p id="notice" style="font-size: 15px; color: red;">Đây là thông tin cung cấp cho chính phủ, (*) yêu cầu phải khai báo chính xác, trung thực.</p>
                         <span id="error-page2" style="font-size: 25px; color: red;"></span>
-                        <br><a id="done" href="page_3.html"><button style="color:white;" id="ctnbutton" type="submit" class="submit" onclick="next()">Hoàn tất</button></a><br><br>
+                        <br><a id="done"><button style="color:white;" id="ctnbutton" type="submit" class="submit" onclick="Valid_Submit()">Hoàn tất</button></a><br><br>
                     </div>    
                 </div>
             </div>
@@ -170,7 +188,7 @@
     <div class="credit">
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
-
+    
 
 
     <script src="js/page2.js" type="text/javascript"></script>
