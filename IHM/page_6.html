@@ -182,8 +182,7 @@
                 
                             $("#list").click(function(){
                                 var img = document.createElement('img'); 
-                                img.src = "images/diagram.png";
-                                document.getElementById('list_object').appendChild(img);
+                                
                                 load_data();
                             });
                         });
@@ -196,6 +195,8 @@
                                     var sql = "SELECT * FROM items ORDER BY id DESC";
                                     transaction.executeSql(sql, undefined, function(transaction, result){
                                         if(result.rows.length){
+                                            img.src = "images/diagram.png";
+                                            document.getElementById('list_object').appendChild(img);
                                             for(var i = result.rows.length-1; i >= 0; i--){
                                                 var row = result.rows.item(i);
                                                 var name = row.name;
