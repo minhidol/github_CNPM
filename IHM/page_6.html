@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Demo</title>
+    <title>Page6</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="./css/style_right_bar.css" />
-    <link rel="stylesheet" href="./css/page2.css" />
+    <link rel="stylesheet" href="./css/page6.css" />
     <script type="text/javascript" src="js/script.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
@@ -49,150 +49,34 @@
       </nav>
       <div id="container">
         <div class="info">
-            <div class="box-form">
                 <div class="info-detailed" style="width:100%;">
-                    <p style="margin-left: 15%; margin-right: 15%;"">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
+                    <p style="margin-left: 15%; margin-right: 15%;">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
                         đối tượng bạn đã tiếp xúc dưới đây để chúng tôi có thể quản lý và thông báo sớm nhất về tình trạng của bạn.</p>
-                    <div class="container" style="margin-left: 27%;">
-                        <div class="row" >
-                            <form action="">
+                            <form action="" style="width:60%; margin-left:30px; margin-top:20px; margin-left: 30%; margin-right: 30%;">
                                 <fieldset>
                                     <legend>Họ và tên</legend>
-                                    <input type="text" class="form-control" name="" id="name"/>
+                                    <input type="text" class="form-control" name="" id="name" style="width:70%"/>
                                     <legend>Địa chỉ</legend>
-                                    <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;">
+                                    <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;width:70%">
                                     <legend>Số điện thoại</legend>
-                                    <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 100%;">
-                                    <button type="button" id="create" class="btn btn-info">Tạo bảng</button>
-                                    <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
-                                    <button type="button" id="remove" class="btn btn-danger">Xóa bảng</button>
-                                    <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
+                                    <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 70%;">
                                 </fieldset>
                             </form>
-                            <hr>
-                        </div>
-                        
-                        <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
-                        <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
-                            
-                        </table>
-                        <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
-                        <a href="index.html"><button type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
-       
-                    </div>
-                    <script>
-                        var db = openDatabase("itemDB","1.0","itemDB",65535);
-                        $(function(){
-                            
-                            $("#create").click(function(){
-                                db.transaction(function(transaction){
-                                    var sql = "CREATE TABLE items" + 
-                                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                    "name VARCHAR(100) NOT NULL," +
-                                    "adress VARCHAR(300) NOT NULL," +
-                                    "numberphone INT(10) NOT NULL)";
-                                    transaction.executeSql(sql,undefined,
-                                    function(){
-                                        alert("Data is created successfully");
-                                        
-                                    },function(){
-                                        alert("Table is already being created");
-                                    })
-                                });
-                                document.getElementById("list_object").innerHTML= "List of objects";
-                                load_data();
-                            });
-                
-                            $("#remove").click(function(){
-                                if(!confirm("Are you sure to delete this table?","")) return;;
-                                db.transaction(function(transaction){
-                                    var sql = "DROP TABLE items";
-                                    transaction.executeSql(sql, undefined,
-                                    function(){
-                                        alert("Table is deleted successfully");
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                       
-                                    })
-                                });
-                                document.getElementById("list_object").innerHTML = "";
-                                load_data();
-                            });
-                
-                
-                            $("#insert").click(function(){
-                                var name = $("#name").val();
-                                var adr = $("#adress").val();
-                                var numberphone = $("#numberphone").val();
-                                db.transaction(function(transaction){
-                                    var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
-                                    transaction.executeSql(sql,[name, adr,numberphone], function(){
-                                        alert("New item is added successfully");
-                                        
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                    })
-                                });
-                                
-                                load_data();
-                            });
-                
-                            $("#list").click(function(){
-                                var img = document.createElement('img'); 
-                                img.src = "images/diagram.png";
-                                document.getElementById('list_object').appendChild(img);
-                                load_data();
-                            });
-                        });
-                        function load_data(){
-                            $("#itemlist").children().remove();
-                                db.transaction(function(transaction){
-                                    var sql = "SELECT * FROM items ORDER BY id DESC";
-                                    transaction.executeSql(sql, undefined, function(transaction, result){
-                                        if(result.rows.length){
-                                            for(var i = result.rows.length-1; i >= 0; i--){
-                                                var row = result.rows.item(i);
-                                                var name = row.name;
-                                                var id = row.id;
-                                                var adr = row.adress;
-                                                var numberphone = row.numberphone;
-                                                $("#itemlist").append("<tr><td class='col-id'>" + id + "</td><td class='col-name'>" 
-                                                    + name + "</td><td class='col-adr'>" + adr + "</td><td class='col-nbp'>" + numberphone + "</td></tr>");
-                                            }
-                                        }
-                                        else{
-                                            $("#itemlist").append("<tr><td colspan='3' align='center'> No Item Found</td></tr>");
-                                        }
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                    })
-                                });
-                                
-                        }
-                    </script>
-                    <style>
-                        .col-id{
-                            width: 10%;
-                            text-align: center;
-                        }
-                        .col-name{
-                            width: 20%;
-                            text-align: left;
-                        }
-                        .col-adr{
-                            width: 40%;
-                            text-align: left;
-                        }
-                        .col-nbp{
-                            width: 30%;
-                            text-align: left;
-                        }
-                        legend{
-                            font-size: 16px;
-                            text-align: left;
-                        }
-                    </style>
+                <div id="button">
+                    <button type="button" id="create" class="btn btn-info">Tạo bảng</button>
+                    <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
+                    <button type="button" id="remove" class="btn btn-danger">Xóa bảng</button>
+                    <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
                 </div>
+                <hr>
+                <div>
+                <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
+                <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
+                </table>
+                
+                    <p>Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
+                    <a href="index.html"><button type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+                </div>        
             </div>
         </div>
         <div class="right-bar">
@@ -272,7 +156,118 @@
     <div class="credit">
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
+    <script>
+        var db = openDatabase("itemDB","1.0","itemDB",65535);
+        $(function(){
+            
+            $("#create").click(function(){
+                db.transaction(function(transaction){
+                    var sql = "CREATE TABLE items" + 
+                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                    "name VARCHAR(100) NOT NULL," +
+                    "adress VARCHAR(300) NOT NULL," +
+                    "numberphone INT(10) NOT NULL)";
+                    transaction.executeSql(sql,undefined,
+                    function(){
+                        alert("Data is created successfully");
+                        
+                    },function(){
+                        alert("Table is already being created");
+                    })
+                });
+                document.getElementById("list_object").innerHTML= "List of objects";
+                load_data();
+            });
 
+            $("#remove").click(function(){
+                if(!confirm("Are you sure to delete this table?","")) return;;
+                db.transaction(function(transaction){
+                    var sql = "DROP TABLE items";
+                    transaction.executeSql(sql, undefined,
+                    function(){
+                        alert("Table is deleted successfully");
+                    }, function(transaction, err){
+                        alert(err.message);
+                       
+                    })
+                });
+                document.getElementById("list_object").innerHTML = "";
+                load_data();
+            });
+
+
+            $("#insert").click(function(){
+                var name = $("#name").val();
+                var adr = $("#adress").val();
+                var numberphone = $("#numberphone").val();
+                db.transaction(function(transaction){
+                    var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
+                    transaction.executeSql(sql,[name, adr,numberphone], function(){
+                        alert("New item is added successfully");
+                        
+                    }, function(transaction, err){
+                        alert(err.message);
+                    })
+                });
+                
+                load_data();
+            });
+
+            $("#list").click(function(){
+                var img = document.createElement('img'); 
+                img.src = "images/diagram.png";
+                document.getElementById('list_object').appendChild(img);
+                load_data();
+            });
+        });
+        function load_data(){
+            $("#itemlist").children().remove();
+                db.transaction(function(transaction){
+                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                    transaction.executeSql(sql, undefined, function(transaction, result){
+                        if(result.rows.length){
+                            for(var i = result.rows.length-1; i >= 0; i--){
+                                var row = result.rows.item(i);
+                                var name = row.name;
+                                var id = row.id;
+                                var adr = row.adress;
+                                var numberphone = row.numberphone;
+                                $("#itemlist").append("<tr><td class='col-id'>" + id + "</td><td class='col-name'>" 
+                                    + name + "</td><td class='col-adr'>" + adr + "</td><td class='col-nbp'>" + numberphone + "</td></tr>");
+                            }
+                        }
+                        else{
+                            $("#itemlist").append("<tr><td colspan='3' align='center'> No Item Found</td></tr>");
+                        }
+                    }, function(transaction, err){
+                        alert(err.message);
+                    })
+                });
+                
+        }
+    </script>
+    <style>
+        .col-id{
+            width: 10%;
+            text-align: center;
+        }
+        .col-name{
+            width: 20%;
+            text-align: left;
+        }
+        .col-adr{
+            width: 40%;
+            text-align: left;
+        }
+        .col-nbp{
+            width: 30%;
+            text-align: left;
+        }
+        legend{
+            font-size: 16px;
+            text-align: left;
+        }
+    </style>
 
 
     <script src="js/page2.js" type="text/javascript"></script>
