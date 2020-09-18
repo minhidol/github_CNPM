@@ -3,198 +3,238 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="./css/style_right_bar.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title>Demo</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <!------ Include the above in your HEAD tag ---------->
-
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style_right_bar.css" />
+    <link rel="stylesheet" href="./css/page2.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
-    <!--Left sidebar-->
-    <aside class="">
-        <div class="profile">
-            <img src="./images/avatar.png" alt="Avatar" heigh="92px" width="92px">
-            <h5>Thông tin người dùng </h5>
-            <p>
-                Tên đăng nhập: <span id="username">ihmk18vpD</span><br>
-                Giới tính: <span id="gender">Nam</span><br>
-                Quốc tịch: <span id="nation">Việt Nam</span><br>
+    <div id="header">
+        <div id="image-header">
+            <img src="./images/Header.png" height="170px"class="header-img" id="logo">
+            <img src="./images/layout_set_logo.png" class="ellipse" id="logo2">
+        </div>
+        <div id="name_hethong">
+            <h5>HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h5>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:0px">
+        <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul id="nav123"class="navbar-nav m-auto">
+            <li>
+                <a id="button_acceuil" href="#">Trang chủ</a>
+              </li>
+            <li>
+              <a  id="button_acceuil" href="#">Tiến hành kiểm tra</a>
+            </li>
+            <li class="">
+              <a  id="button_acceuil" href="#">Tin tức</a>
+            </li>
+            <li class="">
+              <a id="button_acceuil" class="" href="#">Thông tin & hỗ trợ</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+      <div id="container">
+        <div class="info">
+            <div class="box-form">
+                <div class="info-detailed" style="width:100%;">
+                    <p style="margin-left: 15%; margin-right: 15%;"">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
+                        đối tượng bạn đã tiếp xúc dưới đây để chúng tôi có thể quản lý và thông báo sớm nhất về tình trạng của bạn.</p>
+                    <div class="container" style="margin-left: 27%;">
+                        <div class="row" >
+                            <form action="">
+                                <fieldset>
+                                    <legend>Họ và tên</legend>
+                                    <input type="text" class="form-control" name="" id="name"/>
+                                    <legend>Địa chỉ</legend>
+                                    <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;">
+                                    <legend>Số điện thoại</legend>
+                                    <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 100%;">
+                                    <button type="button" id="create" class="btn btn-info">Tạo bảng</button>
+                                    <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
+                                    <button type="button" id="remove" class="btn btn-danger">Xóa bảng</button>
+                                    <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
+                                </fieldset>
+                            </form>
+                            <hr>
+                        </div>
+                        
+                        <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
+                        <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
+                            
+                        </table>
+                        <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
+                        <a href="index.html"><button type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+       
+                    </div>
+                    <script>
+                        var db = openDatabase("itemDB","1.0","itemDB",65535);
+                        $(function(){
+                            
+                            $("#create").click(function(){
+                                db.transaction(function(transaction){
+                                    var sql = "CREATE TABLE items" + 
+                                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                    "name VARCHAR(100) NOT NULL," +
+                                    "adress VARCHAR(300) NOT NULL," +
+                                    "numberphone INT(10) NOT NULL)";
+                                    transaction.executeSql(sql,undefined,
+                                    function(){
+                                        alert("Data is created successfully");
+                                        
+                                    },function(){
+                                        alert("Table is already being created");
+                                    })
+                                });
+                                document.getElementById("list_object").innerHTML= "List of objects";
+                                load_data();
+                            });
                 
-            </p>
+                            $("#remove").click(function(){
+                                if(!confirm("Are you sure to delete this table?","")) return;;
+                                db.transaction(function(transaction){
+                                    var sql = "DROP TABLE items";
+                                    transaction.executeSql(sql, undefined,
+                                    function(){
+                                        alert("Table is deleted successfully");
+                                    }, function(transaction, err){
+                                        alert(err.message);
+                                       
+                                    })
+                                });
+                                document.getElementById("list_object").innerHTML = "";
+                                load_data();
+                            });
+                
+                
+                            $("#insert").click(function(){
+                                var name = $("#name").val();
+                                var adr = $("#adress").val();
+                                var numberphone = $("#numberphone").val();
+                                db.transaction(function(transaction){
+                                    var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
+                                    transaction.executeSql(sql,[name, adr,numberphone], function(){
+                                        alert("New item is added successfully");
+                                        
+                                    }, function(transaction, err){
+                                        alert(err.message);
+                                    })
+                                });
+                                
+                                load_data();
+                            });
+                
+                            $("#list").click(function(){
+                                var img = document.createElement('img'); 
+                                img.src = "images/diagram.png";
+                                document.getElementById('list_object').appendChild(img);
+                                load_data();
+                            });
+                        });
+                        function load_data(){
+                            $("#itemlist").children().remove();
+                                db.transaction(function(transaction){
+                                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                                    transaction.executeSql(sql, undefined, function(transaction, result){
+                                        if(result.rows.length){
+                                            for(var i = result.rows.length-1; i >= 0; i--){
+                                                var row = result.rows.item(i);
+                                                var name = row.name;
+                                                var id = row.id;
+                                                var adr = row.adress;
+                                                var numberphone = row.numberphone;
+                                                $("#itemlist").append("<tr><td class='col-id'>" + id + "</td><td class='col-name'>" 
+                                                    + name + "</td><td class='col-adr'>" + adr + "</td><td class='col-nbp'>" + numberphone + "</td></tr>");
+                                            }
+                                        }
+                                        else{
+                                            $("#itemlist").append("<tr><td colspan='3' align='center'> No Item Found</td></tr>");
+                                        }
+                                    }, function(transaction, err){
+                                        alert(err.message);
+                                    })
+                                });
+                                
+                        }
+                    </script>
+                    <style>
+                        .col-id{
+                            width: 10%;
+                            text-align: center;
+                        }
+                        .col-name{
+                            width: 20%;
+                            text-align: left;
+                        }
+                        .col-adr{
+                            width: 40%;
+                            text-align: left;
+                        }
+                        .col-nbp{
+                            width: 30%;
+                            text-align: left;
+                        }
+                        legend{
+                            font-size: 16px;
+                            text-align: left;
+                        }
+                    </style>
+                </div>
+            </div>
         </div>
-        <div class="item">
-            <a href="#" class="link">Bước 1: Điền thông tin <i class="fa fa-check "></i></a>
+        <div class="right-bar">
+            <h4>Các bước để thực hiện khai báo y tế</h4>
+            <ul id="list">
+                <li>
+                    <a href="#" id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 1: Khai báo thông tin cá nhân
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 2: Khai báo triệu chứng nhiễm bệnh
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 3: Lời khuyên
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="step1"  style="font-weight: bold;">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 4: Khoanh vùng
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="item">
-            <a href="#" class="link">Bước 2: Đo thân nhiệt <i class="fa fa-check "></i></a>
-        </div>
-        <div class="item">
-            <a href="#" class="link">Bước 3: Lời khuyên <i class="fa fa-check "></i></a>
-        </div>
-        <div class="item">
-            <a href="#" class="link">Bước 4: Kết nối <i class="fa fa-ellipsis-h"></i></a>
-        </div>
-    </aside>
-    <!--End left sidebar-->
-
-    <!--Header-->
-    <div class="header">
-        <!-- <img src="./images/Header.png" class="header-img"> -->
-        <img src="./images/Header.png" class="header-img">
-        <img src="./images/Ellipse.png" class="ellipse">
-        <img src="./images/logo.png" class="logo">
-        <h5>HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h5>
-    </div>
-    <!--End Header-->
-
-    <!--Main-->
-    <main>
-        <h3 style="padding-top: 3%; text-align: center; font-weight:bold;">THIẾT LẬP MẠNG LƯỚI CỘNG ĐỒNG</h3>
-        <h5 style="margin-left: 5%; font-size: 17px;">Hướng dẫn: chúng tôi sẽ dựa trên thông tin bạn cung cấp ban đầu để giúp chính phủ có thể giám sát người 
-            dân một cách dễ dàng hơn. Nói một cách khác, hệ thống này sẽ dựa trên tương tác giữa người dùng thông qua chức năng định vị. Từ đó
-            phát hiện những nguy cơ, rủi ro cho người dùng.</h5>
-        <div class="info-head">
-        <label for="people" style="display: inline-block; width: 15%; margin-left: 23%;">Số người tiếp xúc: </label>
-        <input type="number" value="4" class="nb" name="nb_people"/><br><br>
-
-    <div class="object-graph" style="background-color: #dadada; margin-left: 7%; margin-right: 7%; ">
-        <div class="content_p6 row" style="margin-left: 9%; margin-bottom: 2%; ">
-            <div class="col-2 nb_pp">
-                <b>Đối tượng A</b>
-            </div>
-            <div class="content_pb" style="width: 85% !important; height: 160px; border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
-                    
-            </div>
-        </div>
-        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%;">
-            <div class="col-2 nb_pp">
-                <b>Đối tượng B</b>
-            </div>
-            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
-               
-            </div>
-        </div>
-        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%;">
-            <div class="col-2 nb_pp">
-                <b>Đối tượng C</b>
-            </div>
-            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
-               
-            </div>
-        </div>
-        <div class="content_p6 row" style="margin-left: 9%; margin-top: 2%; margin-bottom: 2%; ">
-            <div class="col-2 nb_pp">
-                <b>Đối tượng D</b>
-            </div>
-            <div class="content_pb" style=" width: 85% !important; height: 160px;  border: 2px solid rgb(146, 124, 0); background-color: #f7d22d;">
-               
-            </div>
-        </div>
-        <div class="add-delete" style="margin-left: 45%;">
-            <button id="ctnbutton" type="submit" class="submit">Thêm đối tượng</button>
-            <button id="ctnbutton" type="submit" class="submit">Xóa đối tượng</button>
-        </div>
-        <br>
-        
-        <br><br>
-        
-    </div>
-        <h5 style="margin-left: 10%; font-size: 17px; margin-top: 2%;">Đây là hệ thống mạng lưới cộng đồng hiện tại của bạn:</h5>
-            <div style="width:100%;">
-                <img src="/IHM/images/graph.png" height="300px"  style="border: 3px solid rgb(119, 0, 0); margin-left: 20%; margin-top: 3%">
-            </div>
-           
-       </div>
-       <br>
-        <div class="text-center">
-            <button id="ctnbutton" type="submit" data-toggle="modal" data-target="#Confirm_Form" class="submit">Tiếp tục</button>
-        </div>
-        <br>
-       <div class="modal fade" role="dialog" id="Confirm_Form">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="modal-title h4 text-center text-info">Xác nhận thành công</div>
-              <button type="button" class="close" data-dismiss ="modal">&times;</button>
-            </div>
-
-            <div class="modal-body">
-              <p>Cảm ơn bạn đã cung cấp thông tin cho chúng tôi, nhấp nút tiếp tục để trở về trang chủ</p>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="return_pagehome()">Tiếp tục</button>
-            </div>
-            <script>
-                function return_pagehome(){
-                    location.href = "index.html";
-                }
-            </script>
-          </div>
+        <div id="tintuc">
+            <h4>Tin tức liên quan đến covid 19</h4>
         </div>
       </div>
-        </div>
-    </main>
+   
+
     <!--End Main-->
-
-    <!--Right sidebar-->
-    <div class="right-sidebar" id="right_bar">
-        <h6 style="font-weight: bold;">Tổng số ca: </h6>
-        <p class="total">19 869 127</p>
-        <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
-        <table class="case-detail">
-            </tr>
-            <tr>
-                <td class="number">5 044 864</td>
-                <td class="country">USA</td>
-            </tr>
-            <tr>
-                <td class="number">3 035 422</td>
-                <td class="country">Brazil</td>
-            </tr>
-            <tr>
-                <td class="number">2 215 074</td>
-                <td class="country">India</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">559 859</td>
-                <td class="country">Korea</td>
-            </tr>
-            <tr>
-                <td class="number">480 278</td>
-                <td class="country">Mexico</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-        </table>
-    </div>
-    <!--End right sidebar-->
-
-    <!--Footer-->
-    <footer>
+    
+    <div id="footer">
         <div class="row">
-            <div class="box col-4">
+            <div class="box col-3">
                 <h5 class="footer-header text-uppercase">Tài trợ: </h5>
                 <p class="text-uppercase">Tài trợ dự án</p>
                 <ul class="sponsor list-unstyled" style="margin-left: 15px;">
@@ -204,11 +244,12 @@
                     <li><a href="#">Công đoàn y tế Việt Nam</a></li>
                 </ul>
             </div>
-            <div class="box col-4">
+            <div class="box col-6">
                 <h5 class="footer-header text-uppercase"> Liên hệ </h5>
                 <p class="text-uppercase">Thông tin liên hệ: </p>
                 <p><i class="fas fa-phone"></i>  099-999-9999</p>
-                <p><i class="fas fa-envelope"></i> &nbsp; groupD_ihm@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> &nbsp; groupD@gmail.com</p>
+                <br>
                 <p><i class="fas fa-map-marker-alt"></i> 227 Đ. Nguyễn Văn Cừ, Phường 4, Quận 5, Thành phố Hồ Chí Minh</p>
                 <div class="social">
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -217,7 +258,7 @@
                     <a href="#"><i class="fab fa-youtube"></i></a>
                   </div>
             </div>
-            <div class="box col-4">
+            <div class="box col-3">
                 <h5 class="footer-header text-uppercase">Hỗ trợ: </h5>
                 <p class="text-uppercase"><b>Giáo viên hướng dẫn</b></p>
                 <ul class="instructor list-unstyled" style="margin-left: 15px;">
@@ -227,13 +268,14 @@
                 <p class="text-uppercase"><b>Hotline: </b><i class="fas fa-phone"></i>  0337907047</p>
             </div>
         </div>
-    </footer>
-    <!--End footer-->
+    </div>
     <div class="credit">
         <p>&copy; Bản quyền thuộc Đại học quốc gia TPHCM - Trường Đại học Khoa Học Tự Nhiên</p>
     </div>
 
 
+
+    <script src="js/page2.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
