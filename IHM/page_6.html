@@ -76,7 +76,7 @@
                         
                         <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
                         <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
-                            
+                            <img style="margin-left:-62%;" id="img_list">
                         </table>
                         <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
                         <a ><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
@@ -163,30 +163,53 @@
                            
 
                             $("#insert").click(function(){
-                                add_table();
-                                var name = $("#name").val();
-                                var adr = $("#adress").val();
-                                var numberphone = $("#numberphone").val();
-                                db.transaction(function(transaction){
-                                    var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
-                                    transaction.executeSql(sql,[name, adr,numberphone], function(){
-                                        alert("New item is added successfully");
-                                        
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                    })
-                                });
-                                
-                                load_data();
+                                if($("#name").val() != "" && $("#adress").val() != "" && $("#numberphone").val() != "")
+                                {
+                                    add_table();
+                                    var name = $("#name").val();
+                                    var adr = $("#adress").val();
+                                    var numberphone = $("#numberphone").val();
+                                    db.transaction(function(transaction){
+                                        var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
+                                        transaction.executeSql(sql,[name, adr,numberphone], function(){
+                                            alert("New item is added successfully");
+                                            
+                                        }, function(transaction, err){
+                                            alert(err.message);
+                                        })
+                                    });
+                                    
+                                    load_data();
+                                }
+                                else{
+                                    alert("Thiếu thông tin, đề nghị điền đầy đủ thông tin");
+                                }
                             });
                 
                             $("#list").click(function(){
-                                var img = document.createElement('img'); 
+                                db.transaction(function(transaction){
+                                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                                    transaction.executeSql(sql, undefined, function(transaction, result){
+                                        if(result.rows.length){
+                                            var img = document.createElement('img');
+                                            img.src = "images/diagram.png";
+                                            document.getElementById('img_list').src = "images/diagram.png";
+                                            
+                                            load_data();
+                                        }
+                                        else{
+                                            alert("Danh sách đối tượng rỗng");
+                                        }
+                                    }, function(transaction, err){
+                                        alert("Danh sách đối tượng rỗng");
+                                    })
+                                });
                                 
-                                load_data();
+                                
                             });
                         });
                         function load_data(){
+                            
                             document.getElementById("name").value = "";
                             document.getElementById("adress").value = "";
                             document.getElementById("numberphone").value = "";
@@ -195,8 +218,6 @@
                                     var sql = "SELECT * FROM items ORDER BY id DESC";
                                     transaction.executeSql(sql, undefined, function(transaction, result){
                                         if(result.rows.length){
-                                            img.src = "images/diagram.png";
-                                            document.getElementById('list_object').appendChild(img);
                                             for(var i = result.rows.length-1; i >= 0; i--){
                                                 var row = result.rows.item(i);
                                                 var name = row.name;
