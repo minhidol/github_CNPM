@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
 body {
-    font-family: 'Bitter', serif !important;
+    font-family: sans-serif;
     width:98%;
     height:auto;
     margin:0 auto;
@@ -15,6 +15,7 @@ nav#navbar
 }
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 .nav-links{
@@ -206,10 +207,13 @@ div#container{
     
     
 }
-div#content {
-    border: 1px solid #8a0000;
-    width:73%;
+div.content {
+    margin-top:20px;
+    width:68%;
+    border-bottom: 1px solid #8a0000;
     float:left;
+    color:rgb(145, 0, 0);
+    border:1px solid #8a0000;
     
 }
 div#xephang
@@ -370,7 +374,7 @@ div#right_bar
     background-color:#DEDEDE;
     text-align: center;
     font-weight: bold;
-    font-family: Roboto Slab;
+    font-family: sans-serif;
 }
 p#total 
 {
@@ -393,7 +397,15 @@ table, td {
     margin:0px auto;
 
 }
-
+div.right-bar
+{
+    margin-top:2.5%;
+    margin-bottom: 10px;
+    width:30%;
+    float:right;
+    border:1px solid rgb(99, 85, 85);
+    border-radius:5px;
+}
 .box{
     padding-top: 2%;
     padding-left: 3%;
@@ -420,14 +432,16 @@ table.case-detail {
 }
 
 table.case-detail .number {
-    color: rgb(0, 0, 0);
+    color: black;
     text-align: left;
-    padding-right: 20px;
+    width:100%;
 }
 
 table.case-detail .country {
-    color: black;
+    color: rgb(0, 0, 0);
     text-align: left;
+    padding-right: 20px;
+    width:10%;
 }
 
 /* footer */ 
@@ -496,6 +510,12 @@ div#footer p {
 }
 *{
     box-sizing: border-box;
+}
+@media only screen and (max-width: 768px){
+    .right-bar, .content{
+        float: none;
+        width: 100%;
+    }
 }
 
 .column-2-6 

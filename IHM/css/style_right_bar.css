@@ -2,7 +2,7 @@
 
 .right-sidebar
 {
-    font-family: 'Bitter', serif !important;
+    font-family: sans-serif;
     border: 1px solid #2e0000;
 }
 
@@ -10,7 +10,7 @@ div#right_bar
 {
     background-color:#f37070;
     text-align: center;
-    font-family: Roboto Slab;
+    font-family: sans-serif;
 }
 .total
 {
