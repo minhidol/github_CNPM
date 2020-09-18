@@ -63,9 +63,9 @@
                                     <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;">
                                     <legend>Số điện thoại</legend>
                                     <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 100%;">
-                                    <button type="button" id="create" class="btn btn-info">Tạo bảng</button>
+                                
                                     <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
-                                    <button type="button" id="remove" class="btn btn-danger">Xóa bảng</button>
+                                    <button type="button" id="remove" class="btn btn-danger">Xóa danh sách</button>
                                     <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
                                 </fieldset>
                             </form>
@@ -77,14 +77,14 @@
                             
                         </table>
                         <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
-                        <a href="index.html"><button type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+                        <a href="index.html"><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
        
                     </div>
                     <script>
                         var db = openDatabase("itemDB","1.0","itemDB",65535);
                         $(function(){
                             
-                            $("#create").click(function(){
+                            /*$("#create").click(function(){
                                 db.transaction(function(transaction){
                                     var sql = "CREATE TABLE items" + 
                                     "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
@@ -101,8 +101,22 @@
                                 });
                                 document.getElementById("list_object").innerHTML= "List of objects";
                                 load_data();
-                            });
-                
+                            }); */
+                            function add_table(){
+                                db.transaction(function(transaction){
+                                    var sql = "CREATE TABLE items" + 
+                                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                                    "name VARCHAR(100) NOT NULL," +
+                                    "adress VARCHAR(300) NOT NULL," +
+                                    "numberphone INT(10) NOT NULL)";
+                                    transaction.executeSql(sql,undefined,
+                                    function(){     
+                                        
+                                    },function(){
+                                    })
+                                });
+                                document.getElementById("list_object").innerHTML= "List of objects";
+                            }
                             $("#remove").click(function(){
                                 if(!confirm("Are you sure to delete this table?","")) return;;
                                 db.transaction(function(transaction){
@@ -116,11 +130,22 @@
                                     })
                                 });
                                 document.getElementById("list_object").innerHTML = "";
-                                load_data();
+                                window.location = "http://127.0.0.1:5502/IHM/page_6.html";
+                            });
+                            $("#remove_table").click(function(){
+                                db.transaction(function(transaction){
+                                    var sql = "DROP TABLE items";
+                                    transaction.executeSql(sql, undefined,
+                                    function(){   
+                                    }, function(transaction, err){
+                                        
+                                    })
+                                });
+                                document.getElementById("list_object").innerHTML = "";
                             });
                 
-                
                             $("#insert").click(function(){
+                                add_table();
                                 var name = $("#name").val();
                                 var adr = $("#adress").val();
                                 var numberphone = $("#numberphone").val();
@@ -145,6 +170,9 @@
                             });
                         });
                         function load_data(){
+                            document.getElementById("name").value = "";
+                            document.getElementById("adress").value = "";
+                            document.getElementById("numberphone").value = "";
                             $("#itemlist").children().remove();
                                 db.transaction(function(transaction){
                                     var sql = "SELECT * FROM items ORDER BY id DESC";

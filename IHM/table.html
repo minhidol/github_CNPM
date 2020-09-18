@@ -40,8 +40,9 @@
             </form>
             <hr>
         </div>
-        <h3 style="width: 500px; margin-top: 50px; margin-left: 0%;">List of objects</h3>
-            <table class="table table-bordered table-hover" id="itemlist">
+        <!--<h3 style="width: 500px; margin-top: 50px; margin-left: 0%;">List of objects</h3>-->
+        <h3 id="list_object"></h3>
+        <table class="table table-bordered table-hover" id="itemlist">
             
         </table>
         
@@ -65,6 +66,9 @@
                         alert("Table is already being created");
                     })
                 });
+
+
+                document.getElementById("list_object").innerHTML= "List of objects";
                 load_data();
             });
 
@@ -80,6 +84,7 @@
                        
                     })
                 });
+                document.getElementById("list_object").innerHTML = "";
                 load_data();
             });
 
@@ -111,7 +116,7 @@
                     var sql = "SELECT * FROM items ORDER BY id DESC";
                     transaction.executeSql(sql, undefined, function(transaction, result){
                         if(result.rows.length){
-                            for(var i=0; i < result.rows.length; i++){
+                            for(var i=result.rows.length-1; i >= 0; i--){
                                 var row = result.rows.item(i);
                                 var name = row.name;
                                 var id = row.id;
