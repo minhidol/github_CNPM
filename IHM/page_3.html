@@ -6,62 +6,21 @@
     <title>Page3</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
     <link rel="stylesheet" href="./css/style_right_bar.css" />
     <link rel="stylesheet" href="./css/page3.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="js/page.js"></script>
-      <style>
-        /* input[type=checkbox] + label
-        {
-          display:block;
-          margin:0.2em;
-        }
-        input[type=checkbox]
-        {
-          display: none;
-        }
-        input[type=checkbox] + label:before{
-          content:"\2714";
-          border:0.2em solid rgb(36, 32, 32);
-          border-radius:0.2em;
-          width:1em;
-          height:1em;
-          margin-right:0.3em;
-          padding-left:0.2em;
-          padding-right:0.2em;
-          vertical-align:bottom;
-          color:transparent;
-          background-color: white;
-          
-        }
-        input[type=checkbox]:checked + label:before
-        {
-          background-color:#FFF;
-          color:black;
-        }
-        footer
-        {
-          transition-delay: 10s;
-        }  */
-
-        
-
-      </style>
   </head>
 <body>
-    
-
-    <!--Left sidebar-->
+       <!--Left sidebar-->
     <div id="header">
         <div id="image-header">
             <img src="./images/Header.png" height="170px"class="header-img" id="logo">
             <img src="./images/layout_set_logo.png" class="ellipse" id="logo2">
         </div>
         <div id="name_hethong">
-            <h5>HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h5>
+            <h4 style="font-size:25px;margin-top:10px; font-weight:500">HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h4>
         </div>
     </div>
 
@@ -71,121 +30,148 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul id="nav123"class="navbar-nav m-auto">
-            <li>
-                <a id="button_acceuil" href="#">Trang chủ</a>
-              </li>
-            <li>
-              <a  id="button_acceuil" href="#">Tiến hành kiểm tra</a>
-            </li>
-            <li class="">
-              <a  id="button_acceuil" href="#">Tin tức</a>
-            </li>
-            <li class="">
-              <a id="button_acceuil" class="" href="#">Thông tin & hỗ trợ</a>
-            </li>
-          </ul>
+            <ul id="nav123"class="navbar-nav m-auto">
+                <li>
+                    <a id="button_acceuil" href="index.html" style="font-size:19px; font-weight:590">Trang chủ</a>
+                  </li>
+                <li>
+                  <a  id="button_acceuil" href="page_2.html" style="font-size:19px; font-weight:590">Tiến hành kiểm tra</a>
+                </li>
+                <li class="">
+                  <a  id="button_acceuil" href="news.html" style="font-size:19px; font-weight:590">Tin tức</a>
+                </li>
+                <li class="">
+                  <a id="button_acceuil" class="" href="thongtinhotro.html" style="font-size:19px; font-weight:590">Thông tin & hỗ trợ</a>
+                </li>
+              </ul>
+
 
         </div>
       </nav>
     <!--End Header-->
 
-    <!--Main-->
-    <main style="background-color:rgb(255, 255, 255)" id="main3">
-        <h2 class="text-uppercase">Bạn có những triệu chứng nào dưới đây không ?</h2>
-        <form action="">
-            <ul class="symptomes-list">
+    <div id="container">
+        <div class="info">
+            <h2 style="text-align:center; margin-top:15px; font-weight:300">Bạn có những triệu chứng nào dưới đây không ?</h2>
+            <div>
+                <form action="">
+                    <ul class="symptomes-list" style="width:45%;float:left;">
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Sốt, cảm lạnh</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Ho</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Khó thở</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Mệt mỏi</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Đau nhức cơ</label>
+                        </li>
+                    </ul>
+                    <ul class="symptomes-list1"style="width:40%; float:left">
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Đau đầu</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Mất vị giác</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Đau họng</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Buồn nôn</label>
+                        </li>
+                        <li>
+                            <input type="checkbox">
+                            <label for="" class="symptomes">Tiêu chảy</label>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div style="clear:both">
+                <button type="submit" class="btn btn-primary" id="done-button">Hoàn tất khai báo</button>
+            </div> 
+        </div>
+        <div class="right-bar">
+            <h4 style="font-weight:500">Các bước để thực hiện khai báo y tế</h4>
+            <ul id="list">
                 <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Sốt, cảm lạnh</label>
+                    <p id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 1: Khai báo thông tin cá nhân
+                    </p>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Ho</label>
+                    <p id="step1" style="font-weight: bold;">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 2: Khai báo triệu chứng nhiễm bệnh
+                    </p>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Khó thở</label>
+                    <p id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 3: Lời khuyên
+                    </p>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Mệt mỏi</label>
+                    <p id="step1">
+                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                        Bước 4: Khoanh vùng
+                    </p>
                 </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Đau nhức cơ</label>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Đau đầu</label>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Mất vị giác</label>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Đau họng</label>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Buồn nôn</label>
-                </li>
-                <li>
-                    <input type="checkbox">
-                    <label for="" class="symptomes">Tiêu chảy</label>
-                </li>
-             </ul>
-        </form>
-        <button type="submit" class="btn btn-primary" id="done-button">Hoàn tất khai báo</button>
-    </main>
-    <!--End Main-->
-
-    <div class="right-sidebar" id="right_bar" style="position: relative;">
-        <h6 style="font-weight: bold;">Tổng số ca: </h6>
-        <p class="total">19 869 127</p>
-        <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
-        <table class="case-detail">
-            </tr>
-            <tr>
-                <td class="number">5 044 864</td>
-                <td class="country">USA</td>
-            </tr>
-            <tr>
-                <td class="number">3 035 422</td>
-                <td class="country">Brazil</td>
-            </tr>
-            <tr>
-                <td class="number">2 215 074</td>
-                <td class="country">India</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">559 859</td>
-                <td class="country">Korea</td>
-            </tr>
-            <tr>
-                <td class="number">480 278</td>
-                <td class="country">Mexico</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-            </tr>
-            <tr>
-                <td class="number">890 799</td>
-                <td class="country">Russia</td>
-        </table>
-    </div>
+            </ul>
+        </div>
+        <div id="tintuc" style='margin-top:20px;margin-bottom:10px; width:60%;font-weight:600;
+        color:rgb(238, 22, 22);'>
+            <h4 style="padding-top:20px">Tin tức liên quan đến covid 19</h4>
+            <table class="news-table" style="border:1px solid white">
+                <tr>
+                    <td class="news-text"><a href="">1. Thêm 10 ca tử vong tại Hà Nội</a></td>
+                    <td class="news-date">14:08 - 10/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</a></td>
+                    <td class="news-date">22:30 - 09/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">3. Dịch bệnh bùng phát tại Đà Nẵng</a></td>
+                    <td class="news-date">10:30 - 07/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">4. Nước ta tạm thời chưa ghi nhận thêm ca mắc mới</a></td>
+                    <td class="news-date">09:32 - 07/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">5. Thành phố Hồ Chí Minh ghi nhận thêm 2 ca nhiễm mới</a></td>
+                    <td class="news-date">13:48 - 14/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">6. Dịch covid-19 đã được kiểm soát, bắt đầu giãn cách xã hội</a></td>
+                    <td class="news-date">05:00 - 16/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">7. Một số trường đại học tại Hà Nội vẫn cho học sinh đi học bình thường</a></td>
+                    <td class="news-date">05:00 - 19/08/2020</td>
+                </tr>
+            </table>
+        </div>
+      </div>
+   
     <!--Footer-->
-   <footer>
+    <div id="footer">
         <div class="row">
             <div class="box col-3">
                 <h5 class="footer-header text-uppercase">Tài trợ: </h5>
