@@ -1,6 +1,6 @@
 const doneButton = document.getElementById("done-button"); 
 doneButton.onclick = () => {
-    var symptomes = document.querySelectorAll('main ul li input'); 
+    var symptomes = document.querySelectorAll('div div div form ul li input'); 
     var checked = 0; 
     var possibility; 
     for (var i = 0; i < symptomes.length; i++) {
