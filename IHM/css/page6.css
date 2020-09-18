@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
+*{
+    font-family: sans-serif;
+}
 body {
-    font-family: 'Bitter', serif !important;
+    font-family: sans-serif;
     width:98%;
     height:auto;
     margin:0 auto;
@@ -389,7 +392,7 @@ div#right_bar
     background-color:#DEDEDE;
     text-align: center;
     font-weight: bold;
-    font-family: Roboto Slab;
+    font-family: sans-serif;
 }
 p#total 
 {

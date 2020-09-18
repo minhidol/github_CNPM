@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Demo</title>
+    <title>Page6</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="./css/style_right_bar.css" />
-    <link rel="stylesheet" href="./css/page2.css" />
+    <link rel="stylesheet" href="./css/page6.css" />
     <script type="text/javascript" src="js/script.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
@@ -21,7 +21,7 @@
             <img src="./images/layout_set_logo.png" class="ellipse" id="logo2">
         </div>
         <div id="name_hethong">
-            <h5>HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h5>
+            <h4 style="font-size:25px;margin-top:10px; font-weight:500">HỆ THỐNG KIỂM TRA TÌNH TRẠNG COVID-19</h4>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top:0px">
@@ -30,344 +30,90 @@
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul id="nav123"class="navbar-nav m-auto">
-            <li>
-                <a id="button_acceuil" href="#">Trang chủ</a>
-              </li>
-            <li>
-              <a  id="button_acceuil" href="#">Tiến hành kiểm tra</a>   
-            </li>
-            <li class="">
-              <a  id="button_acceuil" href="#">Tin tức</a>
-            </li>
-            <li class="">
-              <a id="button_acceuil" class="" href="#">Thông tin & hỗ trợ</a>
-            </li>
-          </ul>
+            <ul id="nav123"class="navbar-nav m-auto">
+                <li>
+                    <a id="button_acceuil" href="index.html" style="font-size:19px; font-weight:590">Trang chủ</a>
+                  </li>
+                <li>
+                  <a  id="button_acceuil" href="page_2.html" style="font-size:19px; font-weight:590">Tiến hành kiểm tra</a>
+                </li>
+                <li class="">
+                  <a  id="button_acceuil" href="news.html" style="font-size:19px; font-weight:590">Tin tức</a>
+                </li>
+                <li class="">
+                  <a id="button_acceuil" class="" href="thongtinhotro.html" style="font-size:19px; font-weight:590">Thông tin & hỗ trợ</a>
+                </li>
+              </ul>
 
         </div>
       </nav>
       <div id="container">
         <div class="info">
-            <div class="box-form">
-                <div class="info-detailed" style="width:100%;">
-                    <p style="margin-left: 15%; margin-right: 15%;"">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
+            <div class="info-detailed" style="width:100%;">
+                <p style="margin-left: 15%; margin-right: 15%;">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
+                    đối tượng bạn đã tiếp xúc dưới đây để chúng tôi có thể quản lý và thông báo sớm nhất về tình trạng của bạn.</p>
+                        <form action="" style="width:60%; margin-left:30px; margin-top:20px; margin-left: 30%; margin-right: 30%;">
+                            <fieldset>
+                                <legend>Họ và tên</legend>
+                                <input type="text" class="form-control" name="" id="name" style="width:70%" onblur="Check_name()"/>
+                                <p id="textField"></p> 
+                                <legend>Địa chỉ</legend>
+                                <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;width:70%" onblur="Check_adress()">
+                                <p id="textField_address"></p>
+                                <legend>Số điện thoại</legend>
+                                <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 70%;" onblur="Check_numberphone()">
+                                <p id="textField_phone"></p>
+                            </fieldset>
+                        </form>
+            <div id="button">
+                <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
+                <button type="button" id="remove" class="btn btn-danger">Xóa danh sách</button>
+                <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
+            </div>
+            <hr>
+            <div>
+            <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
+            <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
+            </table>
+            
+                <p>Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
+                <a ><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+            </div>        
+        </div>
+                <!-- <div class="info-detailed" style="width:100%;">
+                    <p style="margin-left: 15%; margin-right: 15%;">Cám ơn các bạn đã tin tưởng và cung cấp thông tin cho chúng tôi, tiếp theo các bạn vui lòng cung cấp thông tin của các 
                         đối tượng bạn đã tiếp xúc dưới đây để chúng tôi có thể quản lý và thông báo sớm nhất về tình trạng của bạn.</p>
-                    <div class="container" style="margin-left: 27%;">
-                        <div class="row" >
-                            <form action="">
+                            <form action="" style="width:60%; margin-left:30px; margin-top:20px; margin-left: 30%; margin-right: 30%;">
                                 <fieldset>
                                     <legend>Họ và tên</legend>
-                                    <input type="text" class="form-control" name="" id="name" onblur="Check_name(this)"/>
-                                    <div id="textField"></div>
-                                    <legend style="float: left;">Địa chỉ</legend>
-                                    <input type="text" id="adress" name="" class="form-control" onblur="Check_adress(this)" style="margin-bottom: 20px;">
-                                    <div id="textadress"></div>
-                                    <legend style="float: left;">Số điện thoại</legend>
-                                    <input type="text" id="numberphone" name="" class="form-control" onblur="Check_numberphone(this)" style="margin-bottom: 20px; width: 100%;">
-                                    <div id="textphone"></div>
-                                    <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
-                                    <button type="button" id="remove" class="btn btn-danger">Xóa danh sách</button>
-                                    <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
+                                    <input type="text" class="form-control" name="" id="name" style="width:70%" onblur="ValidName()"/>
+                                    <p id="textField"></p> 
+                                    <legend>Địa chỉ</legend>
+                                    <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;width:70%" onblur="ValidAddress()">
+                                    <p id="textField_address"></p>
+                                    <legend>Số điện thoại</legend>
+                                    <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 70%;" onblur="ValidPhone()">
+                                    <p id="textField_phone"></p>
                                 </fieldset>
                             </form>
-                            <hr>
-                        </div>
-                        
-                        <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
-                        <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
-                            <img style="margin-left:-62%;" id="img_list">
-                        </table>
-                        <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
-                        <a ><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
-       
-                    </div>
-                    <script>
-                        var db = openDatabase("itemDB","1.0","itemDB",65535);
-                        $(function(){
-                            
-                            /*$("#create").click(function(){
-                                db.transaction(function(transaction){
-                                    var sql = "CREATE TABLE items" + 
-                                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                    "name VARCHAR(100) NOT NULL," +
-                                    "adress VARCHAR(300) NOT NULL," +
-                                    "numberphone INT(10) NOT NULL)";
-                                    transaction.executeSql(sql,undefined,
-                                    function(){
-                                        alert("Data is created successfully");
-                                        
-                                    },function(){
-                                        alert("Table is already being created");
-                                    })
-                                });
-                                document.getElementById("list_object").innerHTML= "List of objects";
-                                load_data();
-                            }); */
-                            function add_table(){
-                                db.transaction(function(transaction){
-                                    var sql = "CREATE TABLE items" + 
-                                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                    "name VARCHAR(100) NOT NULL," +
-                                    "adress VARCHAR(300) NOT NULL," +
-                                    "numberphone INT(10) NOT NULL)";
-                                    transaction.executeSql(sql,undefined,
-                                    function(){     
-                                        
-                                    },function(){
-                                    })
-                                });
-                                document.getElementById("list_object").innerHTML= "List of objects";
-                            }
-                            $("#remove").click(function(){
-                                if(!confirm("Are you sure to delete this table?","")) return;;
-                                db.transaction(function(transaction){
-                                    var sql = "DROP TABLE items";
-                                    transaction.executeSql(sql, undefined,
-                                    function(){
-                                        alert("Table is deleted successfully");
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                       
-                                    })
-                                });
-                                document.getElementById("list_object").innerHTML = "";
-                                window.location = "http://127.0.0.1:5502/IHM/page_6.html";
-                            });
-                            $("#remove_table").click(function(){
-                                db.transaction(function(transaction){
-                                    var sql = "SELECT * FROM items ORDER BY id DESC";
-                                    transaction.executeSql(sql, undefined, function(transaction, result){
-                                        if(result.rows.length){
-                                            var sql_t = "DROP TABLE items";
-                                            transaction.executeSql(sql_t, undefined,
-                                            function(){   
-                                            }, function(transaction, err){
-                                        
-                                            })
-                                            document.getElementById("list_object").innerHTML = "";
-                                            window.location = "http://127.0.0.1:5502/IHM/index.html";
-                                        }
-                                        else{
-                                            
-                                        }
-                                    }, function(transaction, err){
-                                        alert("Data is empty");
-                                        window.location = "http://127.0.0.1:5502/IHM/page_6.html";
-                                    })
-                                  
-                                });
-                                
-                            });
-                            
-                           
-
-                            $("#insert").click(function(){
-                                if($("#name").val() != "" && $("#adress").val() != "" && $("#numberphone").val() != "")
-                                {
-                                    add_table();
-                                    var name = $("#name").val();
-                                    var adr = $("#adress").val();
-                                    var numberphone = $("#numberphone").val();
-                                    db.transaction(function(transaction){
-                                        var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
-                                        transaction.executeSql(sql,[name, adr,numberphone], function(){
-                                            alert("New item is added successfully");
-                                            
-                                        }, function(transaction, err){
-                                            alert(err.message);
-                                        })
-                                    });
-                                    
-                                    load_data();
-                                }
-                                else{
-                                    alert("Thiếu thông tin, đề nghị điền đầy đủ thông tin");
-                                }
-                            });
-                
-                            $("#list").click(function(){
-                                db.transaction(function(transaction){
-                                    var sql = "SELECT * FROM items ORDER BY id DESC";
-                                    transaction.executeSql(sql, undefined, function(transaction, result){
-                                        if(result.rows.length){
-                                            var img = document.createElement('img');
-                                            img.src = "images/diagram.png";
-                                            document.getElementById('img_list').src = "images/diagram.png";
-                                            
-                                            load_data();
-                                        }
-                                        else{
-                                            alert("Danh sách đối tượng rỗng");
-                                        }
-                                    }, function(transaction, err){
-                                        alert("Danh sách đối tượng rỗng");
-                                    })
-                                });
-                                
-                                
-                            });
-                        });
-                        function load_data(){
-                            
-                            document.getElementById("name").value = "";
-                            document.getElementById("adress").value = "";
-                            document.getElementById("numberphone").value = "";
-                            $("#itemlist").children().remove();
-                                db.transaction(function(transaction){
-                                    var sql = "SELECT * FROM items ORDER BY id DESC";
-                                    transaction.executeSql(sql, undefined, function(transaction, result){
-                                        if(result.rows.length){
-                                            for(var i = result.rows.length-1; i >= 0; i--){
-                                                var row = result.rows.item(i);
-                                                var name = row.name;
-                                                var id = row.id;
-                                                var adr = row.adress;
-                                                var numberphone = row.numberphone;
-                                                $("#itemlist").append("<tr><td class='col-id'>" + id + "</td><td class='col-name'>" 
-                                                    + name + "</td><td class='col-adr'>" + adr + "</td><td class='col-nbp'>" + numberphone + "</td></tr>");
-                                            }
-                                        }
-                                        else{
-                                            $("#itemlist").append("<tr><td colspan='3' align='center'> No Item Found</td></tr>");
-                                        }
-                                    }, function(transaction, err){
-                                        alert(err.message);
-                                    })
-                                });
-                                
-                        }
-                        function Check_name(inputTxt)
-                        {
-                            console.log(inputTxt);
-                            var regx = /^[0-9a-zA-Z]+$/;
-                            var textField = document.getElementById("textField");
-                            var input = document.getElementById("name");
-                            if(inputTxt.value != '')
-                            {
-                                input.style.border = '1px solid #ccc';
-                                textField.textContent = ''
-                            }
-                            else
-                            {
-                                input.style.border = '1px solid red';
-                                textField.style.float = 'left';
-                                textField.textContent = '(*) Vui lòng nhập họ tên';
-                                textField.style.color ='red';
-                                textField.style.fontSize = '14px';
-                                textField.style.fontWeight = '200';
-                                textField.style.marginTop = '10px';
-                            }
-                        }
-                        function Check_adress(inputTxt)
-                        {
-                            console.log(inputTxt);
-                            var regx = /^[0-9a-zA-Z]+$/;
-                            var textField = document.getElementById("textadress");
-                            var input = document.getElementById("adress");
-                            if(inputTxt.value != '')
-                            {
-                                input.style.border = '1px solid #ccc';
-                                textField.textContent = ''
-                            }
-                            else
-                            {
-                                input.style.border = '1px solid red';
-                                textField.style.float = 'left';
-                                textField.textContent = '(*) Vui lòng nhập địa chỉ';
-                                textField.style.color ='red';
-                                textField.style.fontSize = '14px';
-                                textField.style.fontWeight = '200';
-                                textField.style.marginTop = '10px';
-                            }
-                        }
-                        function Check_numberphone(inputTxt)
-                        {
-                            var regx = /^[0-9a-zA-Z]+$/;
-                            var textField = document.getElementById("textphone");
-                            var input = document.getElementById("numberphone");
-                            String.prototype.isNumber = function(){return /^\d+$/.test(this);}
-                            if(inputTxt.value != '')
-                            {
-                                if(inputTxt.value.length > 11)
-                                {
-                                    input.style.border = '1px solid red';
-                                    textField.textContent = '(*) Số ký tự phải luôn luôn < 12';
-                                    textField.style.color ='red';
-                                    textField.style.textAlign = 'left';
-                                    textField.style.fontSize = '14px';
-                                    textField.style.fontWeight = '200';
-                                    textField.style.marginTop = '10px';
-                                }
-                                else if(inputTxt.value.length < 9)
-                                {
-
-                                    input.style.border = '1px solid red';
-                                    textField.textContent = '(*) Số điện thoại phải có ít nhất 9 chữ số';
-                                    textField.style.color ='red';
-                                    textField.style.textAlign = 'left';
-                                    textField.style.fontSize = '14px';
-                                    textField.style.fontWeight = '200';
-                                    textField.style.marginTop = '10px';
-                                }
-                                else 
-                                {
-                                    if(inputTxt.value.isNumber() != true)
-                                    {
-                                        input.style.border = '1px solid red';
-                                        textField.textContent = '(*) Số điện thoại không được chứa kí tự';
-                                        textField.style.color ='red';
-                                        textField.style.textAlign = 'left';
-                                        textField.style.fontSize = '14px';
-                                        textField.style.fontWeight = '200';
-                                        textField.style.marginTop = '10px';
-                                    }
-                                    else {
-                                    input.style.border = '1px solid #ccc';
-                                    textField.textContent = '';
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                input.style.border = '1px solid red';
-                                textField.style.textAlign = 'left';
-                                textField.textContent = '(*) Vui lòng nhập số điện thoại';
-                                textField.style.color ='red';
-                                textField.style.fontSize = '14px';
-                                textField.style.fontWeight = '200';
-                                textField.style.marginTop = '10px';
-                            }
-                        }
-                      
-                    </script>
-                    <style>
-                        .col-id{
-                            width: 10%;
-                            text-align: center;
-                        }
-                        .col-name{
-                            width: 20%;
-                            text-align: left;
-                        }
-                        .col-adr{
-                            width: 40%;
-                            text-align: left;
-                        }
-                        .col-nbp{
-                            width: 30%;
-                            text-align: left;
-                        }
-                        legend{
-                            font-size: 16px;
-                            text-align: left;
-                        }
-                    </style>
+                <div id="button">
+                    <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
+                    <button type="button" id="remove" class="btn btn-danger">Xóa danh sách</button>
+                    <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
                 </div>
-            </div>
+                <hr>
+                <div>
+                <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
+                <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
+                </table>
+                
+                    <p>Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
+                    <a ><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+                </div>        
+            </div> -->
         </div>
-        <div class="right-bar">
-            <h4>Các bước để thực hiện khai báo y tế</h4>
+        <div class="right-bar" style="margin-top:0px">
+            <h4 style="font-weight:500">Các bước để thực hiện khai báo y tế</h4>
             <ul id="list">
                 <li>
                     <a href="#" id="step1">
@@ -395,9 +141,41 @@
                 </li>
             </ul>
         </div>
-        <div id="tintuc">
-            <h4>Tin tức liên quan đến covid 19</h4>
+        <div id="tintuc" style='margin-top:20px;margin-bottom:10px; width:60%;font-weight:600;
+        color:rgb(238, 22, 22);'>
+            <h4 style="padding-top:20px">Tin tức liên quan đến covid 19</h4>
+            <table class="news-table" style="border:1px solid white">
+                <tr>
+                    <td class="news-text"><a href="">1. Thêm 10 ca tử vong tại Hà Nội</a></td>
+                    <td class="news-date">14:08 - 10/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</a></td>
+                    <td class="news-date">22:30 - 09/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">3. Dịch bệnh bùng phát tại Đà Nẵng</a></td>
+                    <td class="news-date">10:30 - 07/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">4. Nước ta tạm thời chưa ghi nhận thêm ca mắc mới</a></td>
+                    <td class="news-date">09:32 - 07/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">5. Thành phố Hồ Chí Minh ghi nhận thêm 2 ca nhiễm mới</a></td>
+                    <td class="news-date">13:48 - 14/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">6. Dịch covid-19 đã được kiểm soát, bắt đầu giãn cách xã hội</a></td>
+                    <td class="news-date">05:00 - 16/08/2020</td>
+                </tr>
+                <tr>
+                    <td class="news-text"><a href="">7. Một số trường đại học tại Hà Nội vẫn cho học sinh đi học bình thường</a></td>
+                    <td class="news-date">05:00 - 19/08/2020</td>
+                </tr>
+            </table>
         </div>
+      </div>
       </div>
    
 
@@ -445,7 +223,291 @@
     </div>
 
 
+    <script>
+        var db = openDatabase("itemDB","1.0","itemDB",65535);
+        $(function(){
+            
+            /*$("#create").click(function(){
+                db.transaction(function(transaction){
+                    var sql = "CREATE TABLE items" + 
+                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                    "name VARCHAR(100) NOT NULL," +
+                    "adress VARCHAR(300) NOT NULL," +
+                    "numberphone INT(10) NOT NULL)";
+                    transaction.executeSql(sql,undefined,
+                    function(){
+                        alert("Data is created successfully");
+                        
+                    },function(){
+                        alert("Table is already being created");
+                    })
+                });
+                document.getElementById("list_object").innerHTML= "List of objects";
+                load_data();
+            }); */
+            function add_table(){
+                db.transaction(function(transaction){
+                    var sql = "CREATE TABLE items" + 
+                    "(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
+                    "name VARCHAR(100) NOT NULL," +
+                    "adress VARCHAR(300) NOT NULL," +
+                    "numberphone INT(10) NOT NULL)";
+                    transaction.executeSql(sql,undefined,
+                    function(){     
+                        
+                    },function(){
+                    })
+                });
+                document.getElementById("list_object").innerHTML= "List of objects";
+            }
+            $("#remove").click(function(){
+                if(!confirm("Are you sure to delete this table?","")) return;;
+                db.transaction(function(transaction){
+                    var sql = "DROP TABLE items";
+                    transaction.executeSql(sql, undefined,
+                    function(){
+                        alert("Table is deleted successfully");
+                    }, function(transaction, err){
+                        alert(err.message);
+                       
+                    })
+                });
+                document.getElementById("list_object").innerHTML = "";
+                window.location = "http://127.0.0.1:5502/IHM/page_6.html";
+            });
+            $("#remove_table").click(function(){
+                db.transaction(function(transaction){
+                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                    transaction.executeSql(sql, undefined, function(transaction, result){
+                        if(result.rows.length){
+                            var sql_t = "DROP TABLE items";
+                            transaction.executeSql(sql_t, undefined,
+                            function(){   
+                            }, function(transaction, err){
+                        
+                            })
+                            document.getElementById("list_object").innerHTML = "";
+                            window.location = "http://127.0.0.1:5502/IHM/index.html";
+                        }
+                        else{
+                            
+                        }
+                    }, function(transaction, err){
+                        alert("Data is empty");
+                        window.location = "http://127.0.0.1:5502/IHM/page_6.html";
+                    })
+                  
+                });
+                
+            });
+            
+           
 
+            $("#insert").click(function(){
+                if($("#name").val() != "" && $("#adress").val() != "" && $("#numberphone").val() != "")
+                {
+                    add_table();
+                    var name = $("#name").val();
+                    var adr = $("#adress").val();
+                    var numberphone = $("#numberphone").val();
+                    db.transaction(function(transaction){
+                        var sql = "INSERT INTO items(name,adress,numberphone) VALUES(?,?,?)";
+                        transaction.executeSql(sql,[name, adr,numberphone], function(){
+                            alert("New item is added successfully");
+                            
+                        }, function(transaction, err){
+                            alert(err.message);
+                        })
+                    });
+                    
+                    load_data();
+                }
+                else{
+                    alert("Thiếu thông tin, đề nghị điền đầy đủ thông tin");
+                }
+            });
+
+            $("#list").click(function(){
+                db.transaction(function(transaction){
+                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                    transaction.executeSql(sql, undefined, function(transaction, result){
+                        if(result.rows.length){
+                            var img = document.createElement('img');
+                            img.src = "images/diagram.png";
+                            document.getElementById('img_list').src = "images/diagram.png";
+                            
+                            load_data();
+                        }
+                        else{
+                            alert("Danh sách đối tượng rỗng");
+                        }
+                    }, function(transaction, err){
+                        alert("Danh sách đối tượng rỗng");
+                    })
+                });
+                
+                
+            });
+        });
+        function load_data(){
+            
+            document.getElementById("name").value = "";
+            document.getElementById("adress").value = "";
+            document.getElementById("numberphone").value = "";
+            $("#itemlist").children().remove();
+                db.transaction(function(transaction){
+                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                    transaction.executeSql(sql, undefined, function(transaction, result){
+                        if(result.rows.length){
+                            for(var i = result.rows.length-1; i >= 0; i--){
+                                var row = result.rows.item(i);
+                                var name = row.name;
+                                var id = row.id;
+                                var adr = row.adress;
+                                var numberphone = row.numberphone;
+                                $("#itemlist").append("<tr><td class='col-id'>" + id + "</td><td class='col-name'>" 
+                                    + name + "</td><td class='col-adr'>" + adr + "</td><td class='col-nbp'>" + numberphone + "</td></tr>");
+                            }
+                        }
+                        else{
+                            $("#itemlist").append("<tr><td colspan='3' align='center'> No Item Found</td></tr>");
+                        }
+                    }, function(transaction, err){
+                        alert(err.message);
+                    })
+                });
+                
+        }
+        function Check_name()
+        {
+            var textField = document.getElementById("textField");
+            var input = document.getElementById("name");
+            if(input.value != '')
+            {
+                input.style.border = '1px solid #ccc';
+                textField.textContent = ''
+            }
+            else
+            {
+                input.style.border = '1px solid red';
+                textField.textContent = '(*) Vui lòng nhập họ tên';
+                textField.style.color ='red';
+                textField.style.fontSize = '14px';
+                textField.style.fontWeight = '200';
+                textField.style.marginTop = '10px';
+            }
+            
+        }
+        function Check_adress()
+        {
+            var textField = document.getElementById("textField_address");
+            var input = document.getElementById("adress");
+            if(input.value != '')
+            {
+                input.style.border = '1px solid #ccc';
+                textField.textContent = ''
+            }
+            else
+            {
+                input.style.border = '1px solid red';
+                textField.textContent = '(*) Vui lòng nhập địa chỉ';
+                textField.style.color ='red';
+                textField.style.fontSize = '14px';
+                textField.style.fontWeight = '200';
+                textField.style.marginTop = '10px';
+            }
+        }
+        function Check_numberphone()
+        {
+            var textField = document.getElementById("textField_phone");
+            var input = document.getElementById("numberphone");
+            String.prototype.isNumber = function(){return /^\d+$/.test(this);}
+            if(input.value != '')
+            {
+                if(input.value.length > 11)
+                {
+                    input.style.border = '1px solid red';
+                    textField.textContent = '(*) Số ký tự phải luôn luôn < 12';
+                    textField.style.color ='red';
+                    textField.style.fontSize = '14px';
+                    textField.style.fontWeight = '200';
+                    textField.style.marginTop = '10px';
+                }
+                else if(input.value.length < 9)
+                {
+
+                    if(input.value.isNumber() != true)
+                    {
+                        input.style.border = '1px solid red';
+                        textField.textContent = '(*) Số điện thoại không được chứa kí tự';
+                        textField.style.color ='red';
+                        textField.style.fontSize = '14px';
+                        textField.style.fontWeight = '200';
+                        textField.style.marginTop = '10px';
+                    }
+                    else 
+                    {
+                    input.style.border = '1px solid red';
+                    textField.textContent = '(*) Số điện thoại phải có ít nhất 9 chữ số';
+                    textField.style.color ='red';
+                    
+                    textField.style.fontSize = '14px';
+                    textField.style.fontWeight = '200';
+                    textField.style.marginTop = '10px';
+                    }
+                }
+                else 
+                {
+                    if(input.value.isNumber() != true)
+                    {
+                        input.style.border = '1px solid red';
+                        textField.textContent = '(*) Số điện thoại không được chứa kí tự';
+                        textField.style.color ='red';
+                        
+                        textField.style.fontSize = '14px';
+                        textField.style.fontWeight = '200';
+                        textField.style.marginTop = '10px';
+                    }
+                    else {
+                    input.style.border = '1px solid #ccc';
+                    textField.textContent = '';
+                    }
+                }
+            }
+            else
+            {
+                input.style.border = '1px solid red';
+                textField.textContent = '(*) Vui lòng nhập số điện thoại';
+                textField.style.color ='red';
+                textField.style.fontSize = '14px';
+                textField.style.fontWeight = '200';
+                textField.style.marginTop = '10px';
+            }
+        }
+      
+    </script>
+    <style>
+        .col-id{
+            width: 10%;
+            text-align: center;
+        }
+        .col-name{
+            width: 20%;
+            text-align: left;
+        }
+        .col-adr{
+            width: 40%;
+            text-align: left;
+        }
+        .col-nbp{
+            width: 30%;
+            text-align: left;
+        }
+        legend{
+            font-size: 16px;
+            text-align: left;
+        }
+    </style>
     <script src="js/page2.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
