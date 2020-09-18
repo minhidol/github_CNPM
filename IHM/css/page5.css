@@ -1,29 +1,3 @@
-main#main3 {
-    position: relative;
-    border: 1px solid blue;
-    padding: 10px;
-    height: auto;
-}
-
-
-.symptomes-list {
-    margin-right: auto;
-    margin-left: auto;
-    list-style: none;
-    height: auto;
-    line-height: auto;
-}
-
-
-input[type="checkbox"] {
-    width: auto;
-}
-
-button#done-button {
-    margin-bottom: 20px;
-    color: white;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
 
 body {
@@ -650,14 +624,12 @@ div#footer p {
 }
 
 /* Page 5 */
-div.status-box {
-    grid-area: main;
-    display: grid;
-    grid-template-rows: 4em auto;
-    /* grid-template-columns: auto; */
-    grid-template-areas: "status" "recommendation";
+/* div.status-box {
+    width:70%;
+    float:left;
+    color:rgb(145, 0, 0);
     border: 3px solid #3f0000;
-}
+} */
 
 div.status {
     grid-area: status;
@@ -697,12 +669,13 @@ div#part_2 ul {
     background-color: #e0e0e0;
 }
 
-.info{
-    margin-top:15px;
-    width:65%;
+.status-box{
+    margin-top:10px;
+    width:67%;
     border-bottom: 1px solid #8a0000;
     float:left;
     color:rgb(145, 0, 0);
+    border: 3px solid #7c6c6c;
 
 }
 .right-bar
@@ -729,7 +702,7 @@ ul li {
     border-radius:10px;
 }
 @media only screen and (max-width: 700px){
-    .right-bar, .info{
+    .right-bar, .status-box{
         float: none;
         width: 100%;
     }
