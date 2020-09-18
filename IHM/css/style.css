@@ -772,12 +772,3 @@ main{
 }
 
 /* Page 3 */ 
-.symptomes-list {
-    margin-right: auto;
-    margin-left: auto;
-    list-style: none;
-}
-
-input[type="checkbox"] {
-    width: auto;
-}
