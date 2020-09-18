@@ -73,7 +73,9 @@
             <hr>
             <div>
             <h3 id="list_object" style="width: 500px; margin-top: 1%; margin-left: -5%;  margin-bottom: 1%;"></h3>
+            <img id="imglist"/>;
             <table class="table table-bordered table-hover" style="margin-left: -30%; margin-bottom: 5%; border: 1px solid black !important;" id="itemlist">
+
             </table>
             
                 <p>Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
@@ -328,13 +330,14 @@
             });
 
             $("#list").click(function(){
+               
                 db.transaction(function(transaction){
                     var sql = "SELECT * FROM items ORDER BY id DESC";
                     transaction.executeSql(sql, undefined, function(transaction, result){
                         if(result.rows.length){
-                            var img = document.createElement('img');
-                            img.src = "images/diagram.png";
-                            document.getElementById('img_list').src = "images/diagram.png";
+                            
+                            document.getElementById('imglist').src = "images/diagram.png";
+                            
                             
                             load_data();
                         }
