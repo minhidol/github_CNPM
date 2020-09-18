@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>page_4</title>
+    <title>news</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="./css/style_right_bar.css" />
-    <link rel="stylesheet" href="./css/page4.css" />
+    <link rel="stylesheet" href="./css/news.css" />
     <style>
         .title_main{
             margin-left: 10px;
@@ -103,147 +103,191 @@
                   <a id="button_acceuil" class="" href="thongtinhotro.html">Thông tin & hỗ trợ</a>
                 </li>
               </ul>
+
         </div>
       </nav>
       <div id="container">
         <div class="info">
-            <div class="status" style="border: 1px solid black;">
-                <h2 class="text-center text-uppercase text-danger" style="margin: 15px auto;"> <span class="fas fa-times"></span> Cơ thể có nguy cơ mắc bệnh</h2>
-            </div>
-            <div class="content" style="background-color: #dadada;">
-                <div class="location-recom">
-                </div>
-                <table border="2" cellspacing="0" cellpadding="0" align="center">
-                    <tr colspan="2">
-                        <td colspan="3">
-                            <p align="center" style="text-indent: 10px; font-size: 17px;">
-                                Có dấu hiệu nhiễm COVID-19 - Liên hệ tổ chức y tế. Sau đây là những địa điểm đề xuất đáng tin cậy để xét nghiệm, bạn hãy vui lòng chọn địa điểm phù hợp cũng như là gần nhất:
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="map" style="padding: 1%; width:50%">
-                            <iframe id="frame" height='400' width='100%' style="border:2px solid #830000" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.7305199538746!2d106.66228201474868!3d10.755239892335908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efa87dc6d6d%3A0x4feb0a1e755b6d62!2zQuG7h25oIHZp4buHbiDEkOG6oWkgaOG7jWMgWSBkxrDhu6NjIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1598016828152!5m2!1svi!2s"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                        </td>
-                        <td class="all-location" style="width: 40%; padding: 1%;">
-                            <h3>ĐỊA ĐIỂM GẦN NHẤT:</h3>
-                            <div class="location" onclick="displayMap(this.id)" id="location1" style="border: 1px solid black;">
-                                <p>
-                                    Địa điểm 1: Bệnh viện Đại học Y Dược TPHCM<br>
-                                    Hotline: 096969969<br>
-                                    Khoảng cách: 1.21 km
-                                </p>
+            <div class="news">
+                <h3 style='font-weight:400; color:red; margin-bottom:25px; margin-top:20px'>Tin tức covid 19</h3>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news1.jpg" alt="">
+                                </a>
                             </div>
-                            <div class="location" onclick="displayMap(this.id)" id="location2" style="border: 1px solid black;">
-                                <p>
-                                    Địa điểm 2: Bệnh viện Chợ Rẫy TPHCM<br>    
-                                    Hotline: 096969969<br>
-                                    Khoảng cách: 1.51 km
-                                </p>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Covid-19: Số ca nhiễm lên 993</a>
+                                </h5>
+                                <p>Ngày 19/8 ghi nhận 4 ca nhiễm. Tổng số ca lên 993, trong đó 525 ca khỏi, 25 ca tử vong.</p>
                             </div>
-                            <div class="location" onclick="displayMap(this.id)" id="location3" style="border: 1px solid black;">
-                                <p>
-                                    Địa điểm 3: Bệnh viện Nhiệt đới TPHCM<br>
-                                    Hotline: 096969969<br>
-                                    Khoảng cách: 5.67 km
-                                </p>
-                            </div>
-                            <div class="location" onclick="displayMap(this.id)" id="location4" style="border: 1px solid black;">
-                                <p>
-                                    Địa điểm 4: Bệnh viện Nhi Đồng TPHCM<br>
-                                    Hotline: 096969969<br>
-                                    Khoảng cách: 3.12 km
-                                </p>
-                            </div>
-                            <div class="location" onclick="displayMap(this.id)" id="location5" style="border: 1px solid black;">
-                                <p>
-                                    Địa điểm 5: Bệnh viện Hùng Vương TPHCM<br>
-                                    Hotline: 096969969<br>
-                                    Khoảng cách: 2.50 km
-                                </p>
-                            </div>
-                        </td>
-                    </tr>     
-                </table>
-                <p>
-                    <div class="instruction" style="font-size: 15px; text-align:center;">
-                        Hướng dẫn:<br>
-                        Chú thích: cung cấp thông tin những người tiếp xúc và những nơi đã đi qua.<br>
-                        Tuân theo những chỉ đạo của cơ quan y tế.
-                        <br><a href="page_5.html"><button style="color:white;" id="ctnbutton" type="submit" class="submit">Tiếp tục</button></a><br><br>
-
+                        </div>
                     </div>
-                </p>
-            
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Diễn viên Hàn mắc Covid-19</a>
+                                </h5>
+                                <p><span>Hàn QUốc</span> - Diễn viên Seo Sung Jong - hiện đóng cùng Hwang Jung Eum trong "To All The Guys Who Loved Me" - dương tính với Covid-19, hôm 19/8.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">5 bệnh nhân Covid-19 xuất viện</a>
+                                </h5>
+                                <p>
+                                    <span>THỪA THIÊN - HUẾ</span> - 5 bệnh nhân Covid-19 chuyển từ Quảng Nam, Đà Nẵng ra Bệnh viện Trung ương Huế cơ sở 2 điều trị, xuất viện chiều 19/8.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Qúa trình phê duyệt vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Quyền phê duyệt vaccine thuộc cơ quan quản lý dược mỗi quốc gia, vì vậy các tiêu chuẩn có sự khác biệt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Brazil thử nghiệm thêm vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Cơ quan quản lý y tế Brazil phê duyệt thử nghiệm lâm sàng loại vaccine Covid-19 thứ tư, từ công ty dược phẩm Mỹ Johnson & Johnson.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news6.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Sự ra đời của vaccine Covid-19</a>
+                                </h5>
+                                <p>
+                                    Vaccine Covid-19 có tốc độ phát triển nhanh nhất trong lịch sử y học, chỉ 67 ngày kể từ khi bùng dịch. Vaccine thường phải thử trên động vật rồi đến 3 giai đoạn trên người, nhưng cũng có vaccine đi tắt.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="media">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img src="./images/news7.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">
+                                    <a href="#">Seoul siết biện pháp chống Covid-19</a>
+                                </h5>
+                                <p>
+                                    Hàn Quốc hôm nay thắt chặt các biện pháp chống Covid-19 tại Seoul và các khu vực lân cận khi số ca nhiễm nCoV mới tại nước này tăng cao kỷ lục.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
             </div>
+        </div>
         </div>
         <div class="right-bar">
-            <h4>Các bước để thực hiện khai báo y tế</h4>
-            <ul id="list">
-                <li>
-                    <a href="#" id="step1">
-                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
-                        Bước 1: Khai báo thông tin cá nhân
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="step1">
-                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
-                        Bước 2: Khai báo triệu chứng nhiễm bệnh
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="step1" style="font-weight: bold;">
-                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
-                        Bước 3: Lời khuyên
-                        <ul>
-                            <li>- Bệnh viện gần nhất</li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" id="step1">
-                        <svg class="article" viewBox="0 0 24 24"><path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
-                        Bước 4: Khoanh vùng
-                    </a>
-                </li>
-            </ul>
+            <div class="right-sidebar" id="right_bar">
+                <h6 style="font-weight: bold;">Tổng số ca: </h6>
+                <p class="total">19 869 127</p>
+                <p id = "case" style="color: #000000; font-weight: bold;">Số ca theo Quốc gia/Khu vực</p>
+                <table class="case-detail">
+                    <tr>
+                        <td class="number">5 044 864</td>
+                        <td class="country">USA</td>
+                    </tr>
+                    <tr>
+                        <td class="number">3 035 422</td>
+                        <td class="country">Brazil</td>
+                    </tr>
+                    <tr>
+                        <td class="number">2 215 074</td>
+                        <td class="country">India</td>
+                    </tr>
+                    <tr>
+                        <td class="number">890 799</td>
+                        <td class="country">Russia</td>
+                    </tr>
+                    <tr>
+                        <td class="number">559 859</td>
+                        <td class="country">Korea</td>
+                    </tr>
+                    <tr>
+                        <td class="number">480 278</td>
+                        <td class="country">Mexico</td>
+                    </tr>
+                    <tr>
+                        <td class="number">890 799</td>
+                        <td class="country">Russia</td>
+                    </tr>
+                    <tr>
+                        <td class="number">890 799</td>
+                        <td class="country">Russia</td>
+                    </tr>
+                    <tr>
+                        <td class="number">890 799</td>
+                        <td class="country">Russia</td>
+                </table>
+            </div>
         </div>
-        <div id="tintuc" style='margin-top:20px;margin-bottom:10px; width:60%;font-weight:600;
-        color:rgb(238, 22, 22);'>
-            <h4 style="padding-top:20px">Tin tức liên quan đến covid 19</h4>
-            <table class="news-table" style="border:1px solid white">
-                <tr>
-                    <td class="news-text"><a href="">1. Thêm 10 ca tử vong tại Hà Nội</a></td>
-                    <td class="news-date">14:08 - 10/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">2. Nhiều bệnh nhân có tình trạng diễn biến phức tạp</a></td>
-                    <td class="news-date">22:30 - 09/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">3. Dịch bệnh bùng phát tại Đà Nẵng</a></td>
-                    <td class="news-date">10:30 - 07/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">4. Nước ta tạm thời chưa ghi nhận thêm ca mắc mới</a></td>
-                    <td class="news-date">09:32 - 07/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">5. Thành phố Hồ Chí Minh ghi nhận thêm 2 ca nhiễm mới</a></td>
-                    <td class="news-date">13:48 - 14/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">6. Dịch covid-19 đã được kiểm soát, bắt đầu giãn cách xã hội</a></td>
-                    <td class="news-date">05:00 - 16/08/2020</td>
-                </tr>
-                <tr>
-                    <td class="news-text"><a href="">7. Một số trường đại học tại Hà Nội vẫn cho học sinh đi học bình thường</a></td>
-                    <td class="news-date">05:00 - 19/08/2020</td>
-                </tr>
-            </table>
+        <div id="tintuc">
+            <h4>Tin tức liên quan đến covid 19</h4>
         </div>
-      </div>
       </div>
    
 

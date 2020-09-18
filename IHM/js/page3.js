@@ -9,6 +9,7 @@ doneButton.onclick = () => {
         }
     }
     possibility = (checked / 10) * 100; 
+    alert('Nguy cơ nhiễm bệnh của bạn là: ' + possibility + '%'); 
     if (possibility >= 50) {
         location.href = 'page_4.html'; 
     }
