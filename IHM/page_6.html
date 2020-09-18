@@ -58,12 +58,14 @@
                             <form action="">
                                 <fieldset>
                                     <legend>Họ và tên</legend>
-                                    <input type="text" class="form-control" name="" id="name"/>
-                                    <legend>Địa chỉ</legend>
-                                    <input type="text" id="adress" name="" class="form-control" style="margin-bottom: 20px;">
-                                    <legend>Số điện thoại</legend>
-                                    <input type="text" id="numberphone" name="" class="form-control" style="margin-bottom: 20px; width: 100%;">
-                                
+                                    <input type="text" class="form-control" name="" id="name" onblur="Check_name(this)"/>
+                                    <div id="textField"></div>
+                                    <legend style="float: left;">Địa chỉ</legend>
+                                    <input type="text" id="adress" name="" class="form-control" onblur="Check_adress(this)" style="margin-bottom: 20px;">
+                                    <div id="textadress"></div>
+                                    <legend style="float: left;">Số điện thoại</legend>
+                                    <input type="text" id="numberphone" name="" class="form-control" onblur="Check_numberphone(this)" style="margin-bottom: 20px; width: 100%;">
+                                    <div id="textphone"></div>
                                     <button type="button" id="insert" class="btn btn-info">Thêm đối tượng</button>
                                     <button type="button" id="remove" class="btn btn-danger">Xóa danh sách</button>
                                     <button type="button" id="list" class="btn btn-info">Mạng lưới</button>
@@ -77,7 +79,7 @@
                             
                         </table>
                         <p style="margin-left: -25%; font-size: 14px;">Sau khi hoàn tất cung cấp thông tin, nhấp vào <b>Hoàn tất</b> và quay trở về trang chủ</p>
-                        <a href="index.html"><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
+                        <a ><button id="remove_table" type="submit" class="btn btn-success">Hoàn tất</button></a><br><br>
        
                     </div>
                     <script>
@@ -134,16 +136,32 @@
                             });
                             $("#remove_table").click(function(){
                                 db.transaction(function(transaction){
-                                    var sql = "DROP TABLE items";
-                                    transaction.executeSql(sql, undefined,
-                                    function(){   
-                                    }, function(transaction, err){
+                                    var sql = "SELECT * FROM items ORDER BY id DESC";
+                                    transaction.executeSql(sql, undefined, function(transaction, result){
+                                        if(result.rows.length){
+                                            var sql_t = "DROP TABLE items";
+                                            transaction.executeSql(sql_t, undefined,
+                                            function(){   
+                                            }, function(transaction, err){
                                         
+                                            })
+                                            document.getElementById("list_object").innerHTML = "";
+                                            window.location = "http://127.0.0.1:5502/IHM/index.html";
+                                        }
+                                        else{
+                                            
+                                        }
+                                    }, function(transaction, err){
+                                        alert("Data is empty");
+                                        window.location = "http://127.0.0.1:5502/IHM/page_6.html";
                                     })
+                                  
                                 });
-                                document.getElementById("list_object").innerHTML = "";
+                                
                             });
-                
+                            
+                           
+
                             $("#insert").click(function(){
                                 add_table();
                                 var name = $("#name").val();
@@ -197,6 +215,109 @@
                                 });
                                 
                         }
+                        function Check_name(inputTxt)
+                        {
+                            console.log(inputTxt);
+                            var regx = /^[0-9a-zA-Z]+$/;
+                            var textField = document.getElementById("textField");
+                            var input = document.getElementById("name");
+                            if(inputTxt.value != '')
+                            {
+                                input.style.border = '1px solid #ccc';
+                                textField.textContent = ''
+                            }
+                            else
+                            {
+                                input.style.border = '1px solid red';
+                                textField.style.float = 'left';
+                                textField.textContent = '(*) Vui lòng nhập họ tên';
+                                textField.style.color ='red';
+                                textField.style.fontSize = '14px';
+                                textField.style.fontWeight = '200';
+                                textField.style.marginTop = '10px';
+                            }
+                        }
+                        function Check_adress(inputTxt)
+                        {
+                            console.log(inputTxt);
+                            var regx = /^[0-9a-zA-Z]+$/;
+                            var textField = document.getElementById("textadress");
+                            var input = document.getElementById("adress");
+                            if(inputTxt.value != '')
+                            {
+                                input.style.border = '1px solid #ccc';
+                                textField.textContent = ''
+                            }
+                            else
+                            {
+                                input.style.border = '1px solid red';
+                                textField.style.float = 'left';
+                                textField.textContent = '(*) Vui lòng nhập địa chỉ';
+                                textField.style.color ='red';
+                                textField.style.fontSize = '14px';
+                                textField.style.fontWeight = '200';
+                                textField.style.marginTop = '10px';
+                            }
+                        }
+                        function Check_numberphone(inputTxt)
+                        {
+                            var regx = /^[0-9a-zA-Z]+$/;
+                            var textField = document.getElementById("textphone");
+                            var input = document.getElementById("numberphone");
+                            String.prototype.isNumber = function(){return /^\d+$/.test(this);}
+                            if(inputTxt.value != '')
+                            {
+                                if(inputTxt.value.length > 11)
+                                {
+                                    input.style.border = '1px solid red';
+                                    textField.textContent = '(*) Số ký tự phải luôn luôn < 12';
+                                    textField.style.color ='red';
+                                    textField.style.textAlign = 'left';
+                                    textField.style.fontSize = '14px';
+                                    textField.style.fontWeight = '200';
+                                    textField.style.marginTop = '10px';
+                                }
+                                else if(inputTxt.value.length < 9)
+                                {
+
+                                    input.style.border = '1px solid red';
+                                    textField.textContent = '(*) Số điện thoại phải có ít nhất 9 chữ số';
+                                    textField.style.color ='red';
+                                    textField.style.textAlign = 'left';
+                                    textField.style.fontSize = '14px';
+                                    textField.style.fontWeight = '200';
+                                    textField.style.marginTop = '10px';
+                                }
+                                else 
+                                {
+                                    if(inputTxt.value.isNumber() != true)
+                                    {
+                                        input.style.border = '1px solid red';
+                                        textField.textContent = '(*) Số điện thoại không được chứa kí tự';
+                                        textField.style.color ='red';
+                                        textField.style.textAlign = 'left';
+                                        textField.style.fontSize = '14px';
+                                        textField.style.fontWeight = '200';
+                                        textField.style.marginTop = '10px';
+                                    }
+                                    else {
+                                    input.style.border = '1px solid #ccc';
+                                    textField.textContent = '';
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                input.style.border = '1px solid red';
+                                textField.style.textAlign = 'left';
+                                textField.textContent = '(*) Vui lòng nhập số điện thoại';
+                                textField.style.color ='red';
+                                textField.style.fontSize = '14px';
+                                textField.style.fontWeight = '200';
+                                textField.style.marginTop = '10px';
+                            }
+                        }
+                      
                     </script>
                     <style>
                         .col-id{
